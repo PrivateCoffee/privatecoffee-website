@@ -1,0 +1,14 @@
+{
+    "services": [
+        {
+            "name": "Invidious",
+            "url": "https://invidious.private.coffee",
+            "description": "Watch YouTube videos without Google tracking you."
+        },
+        {
+            "name": "Nitter",
+            "url": "https://nitter.private.coffee",
+            "description": "Use Twitter without Twitter tracking you."
+        }
+    ]
+}
