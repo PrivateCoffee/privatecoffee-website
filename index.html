@@ -135,24 +135,19 @@
           <div class="service col-sm-4">
             <h3>Nitter (dead)</h3>
             <p>Use Twitter without Twitter tracking you. Currently not usable,
-              see <a href="https://github.com/zedeus/nitter/issues/922">the 
+              see <a href="https://github.com/zedeus/nitter/issues/919">the 
                 upstream issue</a> for more information.
               </a>
             </p>
             <div class="btn-group">
-              <a href="https://nitter.private.coffee" class="btn btn-primary"
+              <a href="https://nitter.private.coffee" class="btn btn-danger"
                 >Go to Nitter</a
               >
-              <a
-                href="#"
-                class="btn btn-primary dropdown-toggle dropdown-toggle-split"
-                data-bs-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <span class="sr-only">Toggle Dropdown</span>
-              </a>
-              <div
+              
+              <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Toggle Dropdown</span>
+              </button>
+              <ul
                 class="dropdown-menu"
                 x-placement="bottom-start"
                 style="
@@ -171,7 +166,7 @@
                   href="http://nitter.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion/"
                   >Tor (.onion)</a
                 >
-              </div>
+              </ul>
             </div>
           </div>
           <div class="service col-sm-4">
