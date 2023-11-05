@@ -12,10 +12,9 @@ footer a {
   margin-bottom: 20px;
 }
 
-/* Limit size of navbar logo and invert it */
+/* Limit size of navbar logo */
 .navbar-brand-img {
   max-height: 50px;
-  filter: invert(50%);
   margin-right: 10px;
 }
 
