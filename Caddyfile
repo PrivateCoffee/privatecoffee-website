@@ -1,0 +1,26 @@
+private.coffee www.private.coffee {
+	header Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+
+	header Access-Control-Allow-Origin https://element.private.coffee
+	header Access-Control-Allow-Methods "GET"
+	header Access-Control-Allow-Headers "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range"
+	header Access-Control-Expose-Headers "Content-Length,Content-Range"
+
+	header /.well-known/matrix/* Content-Type application/json
+	header /.well-known/matrix/* Access-Control-Allow-Origin *
+	respond /.well-known/matrix/server `{"m.server": "matrix.private.coffee:443"}`
+	respond /.well-known/matrix/client `{"m.homeserver":{"base_url":"https://matrix.private.coffee"}}`
+
+	@html {
+		path_regexp html /(.*).html
+	}
+
+	reverse_proxy @html localhost:9810
+
+	@assets {
+		path assets /assets/*
+	}
+
+	file_server
+	root @assets /srv/private.coffee
+}

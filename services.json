@@ -1,14 +1,230 @@
 {
     "services": [
         {
+            "name": "Matrix",
+            "url": "https://element.private.coffee",
+            "short_description": "Matrix is an open network for secure, decentralized communication.",
+            "long_description": "Private.coffee runs a Matrix server. You can use it to chat with other people at Private.coffee or around the world. Use it with a client of your choice, with https://matrix.private.coffee as the homeserver, or use our web client.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Element (Web client)",
+                    "url": "https://element.private.coffee"
+                }
+            ],
+            "exclude_from_simple": true
+        },
+        {
+            "name": "CryptPad",
+            "url": "https://cryptpad.private.coffee",
+            "short_description": "Private, encrypted, real-time collaborative editor.",
+            "long_description": "CryptPad is a private, encrypted, zero-knowledge, realtime collaborative editor, similar to Google Docs and Office 365.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to CryptPad",
+                    "url": "https://cryptpad.private.coffee"
+                }
+            ],
+            "exclude_from_simple": false
+        },
+        {
             "name": "Invidious",
             "url": "https://invidious.private.coffee",
-            "description": "Watch YouTube videos without Google tracking you."
+            "short_description": "Watch YouTube videos without Google tracking.",
+            "long_description": "Invidious is an alternative front-end to YouTube. It allows you to watch YouTube videos without Google tracking you.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Invidious",
+                    "url": "https://invidious.private.coffee"
+                }
+            ],
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Mastodon",
+            "url": "https://cuddly.space",
+            "short_description": "Mastodon is a decentralized social network.",
+            "long_description": "Mastodon is a decentralized social network. You can use it to post short messages, follow other people, and more.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Cuddly Space",
+                    "url": "https://cuddly.space"
+                },
+                {
+                    "name": "Go to Skrt Social",
+                    "url": "https://skrt.social"
+                }
+            ],
+            "exclude_from_simple": false
+        },
+        {
+            "name": "GotHub",
+            "url": "https://gothub.private.coffee",
+            "short_description": "Alternative GitHub interface that respects privacy.",
+            "long_description": "Gothub is an alternative GitHub interface that respects your privacy. It is currently in alpha, but you can browse and download repositories, and you can also clone them using git+https (although the text on the main page would disagree).",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to GotHub",
+                    "url": "https://gothub.private.coffee"
+                }
+            ],
+            "exclude_from_simple": false
+        },
+        {
+            "name": "redlib",
+            "url": "https://redlib.private.coffee",
+            "short_description": "redlib is a privacy-friendly alternative front-end to Reddit.",
+            "long_description": "redlib is a privacy-friendly alternative front-end to Reddit. It allows you to browse Reddit without being tracked.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Libreddit",
+                    "url": "https://libreddit.private.coffee",
+                    "alternatives": [
+                        {
+                            "name": "Tor (.onion)",
+                            "url": "http://libreddit.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion/"
+                        }
+                    ]
+                }
+            ],
+            "exclude_from_simple": true
+        },
+        {
+            "name": "AllTube",
+            "url": "https://alltube.private.coffee",
+            "short_description": "Download videos from YouTube, Vimeo, and more.",
+            "long_description": "AllTube is a video downloader powered by yt-dlp. It allows you to download videos from YouTube, Vimeo, and many other sites. You can also stream the download through our server for extra privacy.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to AllTube",
+                    "url": "https://alltube.private.coffee"
+                }
+            ],
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Indestructables",
+            "url": "https://indestructables.private.coffee",
+            "short_description": "Browse Instructables without being tracked.",
+            "long_description": "Indestructables allows you to browse Instructables without being tracked. (N.B.: We forked this project, our instance does not use the original code.)",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Indestructables",
+                    "url": "https://indestructables.private.coffee"
+                }
+            ],
+            "exclude_from_simple": false
+        },
+        {
+            "name": "NocoDB",
+            "url": "https://nocodb.private.coffee",
+            "short_description": "NocoDB is a self-hosted alternative to Airtable.",
+            "long_description": "NocoDB is a self-hosted alternative to Airtable. It allows you to create databases and tables, and to view and edit them in a spreadsheet-like interface. (Note: If you are unable to create tables upon registration, simply wait a minute or two, log out and then log in again.)",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to NocoDB",
+                    "url": "https://nocodb.private.coffee"
+                }
+            ],
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Penpot",
+            "url": "https://penpot.private.coffee",
+            "short_description": "Penpot is an open-source design and prototyping platform.",
+            "long_description": "Penpot is an open-source design and prototyping platform. It allows you to create designs and prototypes, and to collaborate with others.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Penpot",
+                    "url": "https://penpot.private.coffee"
+                }
+            ],
+            "exclude_from_simple": false
+        },
+        {
+            "name": "YOURLS",
+            "url": "https://private.cf",
+            "short_description": "URL shortener for creating handy links.",
+            "long_description": "Use our URL shortener at private.cf to turn long, complicated URLs into something more handy.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to private.cf",
+                    "url": "https://private.cf"
+                }
+            ],
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Rallly",
+            "url": "https://rallly.private.coffee",
+            "short_description": "Rallly is a free collaborative scheduling service for voting and polls.",
+            "long_description": "Rallly is a free collaborative scheduling service. It allows you to create polls and vote on them, similar to Doodle.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Rallly",
+                    "url": "https://rallly.private.coffee"
+                }
+            ],
+            "exclude_from_simple": false
+        },
+        {
+            "name": "LibreY",
+            "url": "https://librey.private.coffee",
+            "short_description": "Privacy-friendly metasearch engine.",
+            "long_description": "LibreY is an open-source, privacy-friendly metasearch engine. It allows you to search for web, image, video, torrents, and more, and it can also search onion sites.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to LibreY",
+                    "url": "https://librey.private.coffee"
+                }
+            ],
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Overleaf",
+            "url": "https://overleaf.private.coffee",
+            "short_description": "Overleaf is an online LaTeX editor for writing and sharing documents.",
+            "long_description": "Overleaf is an online LaTeX editor for writing and sharing documents. It allows you to write documents in LaTeX, and to collaborate with others.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Overleaf",
+                    "url": "https://overleaf.private.coffee"
+                }
+            ],
+            "exclude_from_simple": false
         },
         {
             "name": "Nitter",
             "url": "https://nitter.private.coffee",
-            "description": "Use Twitter without Twitter tracking you."
+            "short_description": "Nitter is a privacy-friendly alternative front-end to Twitter.",
+            "long_description": "Nitter is a privacy-friendly alternative front-end to Twitter. It allows you to browse Twitter without being tracked. Currently broken.",
+            "status": "NOK",
+            "links": [
+                {
+                    "name": "Go to Nitter",
+                    "url": "https://nitter.private.coffee",
+                    "alternatives": [
+                        {
+                            "name": "Tor (.onion)",
+                            "url": "http://nitter.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion/"
+                        }
+                    ]
+                }
+            ],
+            "exclude_from_simple": true
         }
     ]
 }
