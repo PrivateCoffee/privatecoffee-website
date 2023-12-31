@@ -78,7 +78,8 @@
             {% if link.alternatives %}
             <button
             type="button"
-            class="btn btn-danger dropdown-toggle dropdown-toggle-split"
+            class="btn dropdown-toggle dropdown-toggle-split
+              {% if service.status == "OK" %}btn-primary{% else %}btn-danger{% endif %}"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
