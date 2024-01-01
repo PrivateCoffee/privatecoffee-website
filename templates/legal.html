@@ -1,109 +1,19 @@
-<!DOCTYPE html>
-<!-- This file was created as part of the Private.coffee project
-     It is licensed under the MIT license
-     For more information, please visit https://private.coffee -->
-
-<html>
-  <head>
-    <title>Private.coffee</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/svg+xml" href="assets/img/logo-inv.svg" />
-    <link rel="stylesheet" href="assets/css/base.css" />
-    <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css" />
-    <script src="assets/dist/js/jquery.min.js"></script>
-    <script src="assets/dist/js/popper.min.js"></script>
-    <script src="assets/dist/js/bootstrap.min.js"></script>
-  </head>
-
-  <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-      <a class="navbar-brand" href="/">
-        <img
-          class="navbar-brand-img"
-          src="assets/img/logo-inv.svg"
-          alt="Private.coffee logo"
-        />
-        Private.coffee
-      </a>
-      <ul class="navbar-nav">
-        <ul class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbardrop"
-            data-bs-toggle="dropdown"
-            >Status Page</a
-          >
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="https://status.private.coffee"
-              >Clearnet</a
-            >
-            <a class="dropdown-item" href="http://status.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion/"
-              >Tor</a
-            >
-          </div>
-        </ul>
-      </ul>
-    </nav>
-
-    <section id="content">
-      <div class="container">
-        <h1>Legal Notice</h1>
-        <p>This is a legal notice for the website private.coffee</p>
-        <p>The website private.coffee is run by the following entity:</p>
-        <address>
-          Private.coffee<br />
-          c/o Klaus-Uwe Mitterer<br />
-          Gartengasse 22/7/3<br />
-          8010 Graz<br />
-          Austria<br />
-        </address>
-        <p>
-          Email:
-          <a href="mailto:support@private.coffee">support@private.coffee</a>
-        </p>
-      </div>
-    </section>
-
-    <footer class="page-footer font-small bg-dark text-white pt-4">
-      <div class="container text-center text-md-left">
-        <div class="row">
-          <div class="col-md-6 mt-md-0 mt-3">
-            <h5 class="text-uppercase">Private.coffee</h5>
-            <p>
-              Private.coffee is a collection of services that respect your
-              privacy.
-            </p>
-          </div>
-          <hr class="clearfix w-100 d-md-none pb-3" />
-          <div class="col-md-3 mb-md-0 mb-3">
-            <h5 class="text-uppercase">Legalese</h5>
-            <ul class="list-unstyled">
-              <li>
-                <a href="legal.html">Legal Notice</a>
-              </li>
-              <li>
-                <a href="privacy.html">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="terms.html">Terms of Service</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-3 mb-md-0 mb-3">
-            <h5 class="text-uppercase">Contact</h5>
-            <ul class="list-unstyled">
-              <li><a href="mailto:support@private.coffee">Email</a></li>
-              <li><a href="https://matrix.private.cf/#/#support:private.coffee">Matrix</a></li>
-              <li>
-                <a href="https://kumig.it/privatecoffee/">KumiGit</a> |
-                <a href="https://github.com/privatecoffee/">GitHub</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <h1>Legal Notice</h1>
+  <p>This is a legal notice for the website private.coffee</p>
+  <p>The website private.coffee is run by the following entity:</p>
+  <address>
+    Private.coffee<br />
+    c/o Klaus-Uwe Mitterer<br />
+    Gartengasse 22/7/3<br />
+    8010 Graz<br />
+    Austria<br />
+  </address>
+  <p>
+    Email:
+    <a href="mailto:support@private.coffee">support@private.coffee</a>
+  </p>
+</div>
+{% endblock %}

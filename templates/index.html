@@ -1,180 +1,83 @@
-<!DOCTYPE html>
-<!-- This file was created as part of the Private.coffee project
-     It is licensed under the MIT license
-     For more information, please visit https://private.coffee -->
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <h1>Welcome to Private.coffee</h1>
+  <p>
+    Private.coffee is a collection of services that respect your privacy.
+  </p>
+  <p>
+    Click on a service to go to it. Some services are also available using
+    Tor and/or I2P. Click the arrow behind the "Go to" link to see all
+    available versions.
+  </p>
 
-<html>
-  <head>
-    <title>Private.coffee</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/svg+xml" href="assets/img/logo-inv.svg" />
-    <link rel="stylesheet" href="assets/css/base.css" />
-    <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css" />
-    <script src="assets/dist/js/jquery.min.js"></script>
-    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-  </head>
-
-  <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-      <div class="container">
-        <a class="navbar-brand" href="/">
-          <img
-            class="navbar-brand-img"
-            src="assets/img/logo-inv.svg"
-            alt="Private.coffee logo"
-          />
-          Private.coffee
-        </a>
-        <ul class="navbar-nav">
-          <ul class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbardrop"
-              data-bs-toggle="dropdown"
-              >Status Page</a
-            >
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="https://status.private.coffee"
-                >Clearnet</a
-              >
-              <a
-                class="dropdown-item"
-                href="http://status.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion/"
-                >Tor</a
-              >
-            </div>
-          </ul>
-        </ul>
+  <div class="row" id="services">
+    {% for service in services.services %}
+    <div class="service col-sm-4">
+      <h3>{{ service.name }}</h3>
+      <p>
+        {{ service.long_description }}
+      </p>
+      {% for link in service.links %}
+      <div class="btn-group">
+      <a href="{{ link.url }}" class="btn 
+        {% if service.status == "OK" %}btn-primary{% else %}btn-danger{% endif %}"
+        >{{ link.name }}</a
+      >
+      {% if link.alternatives %}
+      <button
+      type="button"
+      class="btn dropdown-toggle dropdown-toggle-split
+        {% if service.status == "OK" %}btn-primary{% else %}btn-danger{% endif %}"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      <span class="visually-hidden">Toggle Dropdown</span>
+    </button>
+    <ul
+      class="dropdown-menu"
+      x-placement="bottom-start"
+      style="
+        position: absolute;
+        transform: translate3d(80px, 38px, 0px);
+        top: 0px;
+        left: 0px;
+        will-change: transform;
+      "
+    >
+      {% for alternative in link.alternatives %}
+      <a class="dropdown-item" href="{{ alternative.url }}"
+        >{{ alternative.name }}</a
+      >
+      {% endfor %}
+      </ul>
+      {% endif %}
       </div>
-    </nav>
+      {% endfor %}
+    </div>
+    {% endfor %}
 
-    <section id="content">
-      <div class="container">
-        <h1>Welcome to Private.coffee</h1>
-        <p>
-          Private.coffee is a collection of services that respect your privacy.
-        </p>
-        <p>
-          Click on a service to go to it. Some services are also available using
-          Tor and/or I2P. Click the arrow behind the "Go to" link to see all
-          available versions.
-        </p>
-
-        <div class="row" id="services">
-          {% for service in services.services %}
-          <div class="service col-sm-4">
-            <h3>{{ service.name }}</h3>
-            <p>
-              {{ service.long_description }}
-            </p>
-            {% for link in service.links %}
-            <div class="btn-group">
-            <a href="{{ link.url }}" class="btn 
-              {% if service.status == "OK" %}btn-primary{% else %}btn-danger{% endif %}"
-              >{{ link.name }}</a
-            >
-            {% if link.alternatives %}
-            <button
-            type="button"
-            class="btn dropdown-toggle dropdown-toggle-split
-              {% if service.status == "OK" %}btn-primary{% else %}btn-danger{% endif %}"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <span class="visually-hidden">Toggle Dropdown</span>
-          </button>
-          <ul
-            class="dropdown-menu"
-            x-placement="bottom-start"
-            style="
-              position: absolute;
-              transform: translate3d(80px, 38px, 0px);
-              top: 0px;
-              left: 0px;
-              will-change: transform;
-            "
-          >
-            {% for alternative in link.alternatives %}
-            <a class="dropdown-item" href="{{ alternative.url }}"
-              >{{ alternative.name }}</a
-            >
-            {% endfor %}
-            </ul>
-            {% endif %}
-            </div>
-            {% endfor %}
-          </div>
-          {% endfor %}
-
-          <div class="service col-sm-4">
-            <h3>Hosting</h3>
-            <p>
-              Need hosting for your privacy-related, social or wholesome
-              project? We might be able to share our resources with you for
-              free!
-            </p>
-            <a href="mailto:support@private.coffee" class="btn btn-primary"
-              >Get in touch!</a
-            >
-          </div>
-          <div class="service col-sm-4">
-            <h3>More?</h3>
-            <p>
-              We are working on more services. If you have any suggestions,
-              please let us know!
-            </p>
-            <a href="mailto:support@private.coffee" class="btn btn-primary"
-              >Get in touch!</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="page-footer font-small bg-dark text-white pt-4">
-      <div class="container text-center text-md-left">
-        <div class="row">
-          <div class="col-md-6 mt-md-0 mt-3">
-            <h5 class="text-uppercase">Private.coffee</h5>
-            <p>
-              Private.coffee is a collection of services that respect your
-              privacy.
-            </p>
-          </div>
-          <hr class="clearfix w-100 d-md-none pb-3" />
-          <div class="col-md-3 mb-md-0 mb-3">
-            <h5 class="text-uppercase">Legalese</h5>
-            <ul class="list-unstyled">
-              <li>
-                <a href="legal.html">Legal Notice</a>
-              </li>
-              <li>
-                <a href="privacy.html">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="terms.html">Terms of Service</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-3 mb-md-0 mb-3">
-            <h5 class="text-uppercase">Contact</h5>
-            <ul class="list-unstyled">
-              <li><a href="mailto:support@private.coffee">Email</a></li>
-              <li>
-                <a href="https://matrix.private.cf/#/#support:private.coffee"
-                  >Matrix</a
-                >
-              </li>
-              <li>
-                <a href="https://kumig.it/privatecoffee/">KumiGit</a> |
-                <a href="https://github.com/privatecoffee/">GitHub</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
+    <div class="service col-sm-4">
+      <h3>Hosting</h3>
+      <p>
+        Need hosting for your privacy-related, social or wholesome
+        project? We might be able to share our resources with you for
+        free!
+      </p>
+      <a href="mailto:support@private.coffee" class="btn btn-primary"
+        >Get in touch!</a
+      >
+    </div>
+    <div class="service col-sm-4">
+      <h3>More?</h3>
+      <p>
+        We are working on more services. If you have any suggestions,
+        please let us know!
+      </p>
+      <a href="mailto:support@private.coffee" class="btn btn-primary"
+        >Get in touch!</a
+      >
+    </div>
+  </div>
+</div>
+{% endblock %}
