@@ -7,9 +7,12 @@ footer a {
   color: #fff;
 }
 
-/*  Give service boxes a bottom margin */
+/*  Give service boxes a border */
 .service {
-  margin-bottom: 20px;
+  border: 1px black solid;
+  border-radius: 10px;
+  border-spacing: 10px;
+  padding: 10px;
 }
 
 /* Limit size of navbar logo */
