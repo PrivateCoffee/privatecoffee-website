@@ -12,6 +12,7 @@
                     "url": "https://element.private.coffee"
                 }
             ],
+            "exclude_from_index": false,
             "exclude_from_simple": true
         },
         {
@@ -26,6 +27,7 @@
                     "url": "https://cryptpad.private.coffee"
                 }
             ],
+            "exclude_from_index": false,
             "exclude_from_simple": false
         },
         {
@@ -40,6 +42,7 @@
                     "url": "https://invidious.private.coffee"
                 }
             ],
+            "exclude_from_index": false,
             "exclude_from_simple": false
         },
         {
@@ -58,6 +61,7 @@
                     "url": "https://skrt.social"
                 }
             ],
+            "exclude_from_index": false,
             "exclude_from_simple": false
         },
         {
@@ -72,6 +76,7 @@
                     "url": "https://gothub.private.coffee"
                 }
             ],
+            "exclude_from_index": false,
             "exclude_from_simple": false
         },
         {
@@ -86,7 +91,8 @@
                     "url": "https://redlib.private.coffee"
                 }
             ],
-            "exclude_from_simple": true
+            "exclude_from_index": false,
+            "exclude_from_simple": false
         },
         {
             "name": "AllTube",
@@ -100,6 +106,7 @@
                     "url": "https://alltube.private.coffee"
                 }
             ],
+            "exclude_from_index": false,
             "exclude_from_simple": false
         },
         {
@@ -114,6 +121,7 @@
                     "url": "https://indestructables.private.coffee"
                 }
             ],
+            "exclude_from_index": false,
             "exclude_from_simple": false
         },
         {
@@ -128,6 +136,7 @@
                     "url": "https://nocodb.private.coffee"
                 }
             ],
+            "exclude_from_index": false,
             "exclude_from_simple": false
         },
         {
@@ -142,6 +151,7 @@
                     "url": "https://penpot.private.coffee"
                 }
             ],
+            "exclude_from_index": false,
             "exclude_from_simple": false
         },
         {
@@ -156,6 +166,7 @@
                     "url": "https://private.cf"
                 }
             ],
+            "exclude_from_index": false,
             "exclude_from_simple": false
         },
         {
@@ -170,6 +181,7 @@
                     "url": "https://rallly.private.coffee"
                 }
             ],
+            "exclude_from_index": false,
             "exclude_from_simple": false
         },
         {
@@ -184,6 +196,7 @@
                     "url": "https://librey.private.coffee"
                 }
             ],
+            "exclude_from_index": false,
             "exclude_from_simple": false
         },
         {
@@ -198,6 +211,7 @@
                     "url": "https://overleaf.private.coffee"
                 }
             ],
+            "exclude_from_index": false,
             "exclude_from_simple": false
         },
         {
@@ -218,6 +232,22 @@
                     ]
                 }
             ],
+            "exclude_from_index": true,
+            "exclude_from_simple": true
+        },
+        {
+            "name": "Proxigram",
+            "url": "https://proxigram.private.coffee",
+            "short_description": "Proxigram is a privacy-friendly alternative front-end to Instagram.",
+            "long_description": "Proxigram is a privacy-friendly alternative front-end to Instagram. It allows you to browse Instagram without being tracked.",
+            "status": "NOK",
+            "links": [
+                {
+                    "name": "Go to Proxigram",
+                    "url": "https://proxigram.private.coffee"
+                }
+            ],
+            "exclude_from_index": true,
             "exclude_from_simple": true
         }
     ]

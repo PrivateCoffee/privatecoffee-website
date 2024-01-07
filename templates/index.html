@@ -13,6 +13,7 @@
 
   <div class="row" id="services">
     {% for service in services.services %}
+    {% if not service.exclude_from_index %}
     <div class="service col-sm-4">
       <h3>{{ service.name }}</h3>
       <p>
@@ -55,6 +56,7 @@
       </div>
       {% endfor %}
     </div>
+    {% endif %}
     {% endfor %}
 
     <div class="service col-sm-4">
