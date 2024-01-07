@@ -6,13 +6,19 @@ private.coffee www.private.coffee {
 	header Access-Control-Allow-Headers "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range"
 	header Access-Control-Expose-Headers "Content-Length,Content-Range"
 
-	header /.well-known/matrix/* Content-Type application/json
-	header /.well-known/matrix/* Access-Control-Allow-Origin *
-	respond /.well-known/matrix/server `{"m.server": "matrix.private.coffee:443"}`
-	respond /.well-known/matrix/client `{"m.homeserver":{"base_url":"https://matrix.private.coffee"}}`
+	@matrix {
+		path matrix /.well-known/matrix/*
+	}
 
 	@assets {
 		path assets /assets/*
+	}
+
+	handle @matrix {
+		header /.well-known/matrix/* Content-Type application/json
+		header /.well-known/matrix/* Access-Control-Allow-Origin *
+		respond /.well-known/matrix/server `{"m.server": "matrix.private.coffee:443"}`
+		respond /.well-known/matrix/client `{"m.homeserver":{"base_url":"https://matrix.private.coffee"}}`
 	}
 
 	handle @assets {
