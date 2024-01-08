@@ -218,7 +218,7 @@
             "name": "Nitter",
             "url": "https://nitter.private.coffee",
             "short_description": "Nitter is a privacy-friendly alternative front-end to Twitter.",
-            "long_description": "Nitter is a privacy-friendly alternative front-end to Twitter. It allows you to browse Twitter without being tracked. Currently broken.",
+            "long_description": "Nitter is a privacy-friendly alternative front-end to Twitter. It allows you to browse Twitter without being tracked. Currently not working so well.",
             "status": "NOK",
             "links": [
                 {
@@ -232,8 +232,8 @@
                     ]
                 }
             ],
-            "exclude_from_index": true,
-            "exclude_from_simple": true
+            "exclude_from_index": false,
+            "exclude_from_simple": false
         },
         {
             "name": "Proxigram",
