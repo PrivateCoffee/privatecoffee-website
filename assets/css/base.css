@@ -26,19 +26,3 @@ footer a {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
-/* Display a trans pride flag as background of the content area
-   Why? To trigger the people who'd ask, that's why. */
-#content {
-  background: linear-gradient(
-    0,
-    rgba(91, 206, 250, 0.1) 20%,
-    rgba(245, 169, 184, 0.1) 20%,
-    40%,
-    #ffffff 40%,
-    60%,
-    rgba(245, 169, 184, 0.1) 60%,
-    80%,
-    rgba(91, 206, 250, 0.1) 80%
-  );
-}
