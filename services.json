@@ -110,15 +110,15 @@
             "exclude_from_simple": false
         },
         {
-            "name": "Indestructables",
-            "url": "https://indestructables.private.coffee",
+            "name": "Structables",
+            "url": "https://structables.private.coffee",
             "short_description": "Browse Instructables without being tracked.",
-            "long_description": "Indestructables allows you to browse Instructables without being tracked. (N.B.: We forked this project, our instance does not use the original code.)",
+            "long_description": "Structables allows you to browse Instructables without being tracked.",
             "status": "OK",
             "links": [
                 {
-                    "name": "Go to Indestructables",
-                    "url": "https://indestructables.private.coffee"
+                    "name": "Go to Structables",
+                    "url": "https://structables.private.coffee"
                 }
             ],
             "exclude_from_index": false,
