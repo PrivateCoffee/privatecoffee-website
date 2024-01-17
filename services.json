@@ -173,7 +173,7 @@
             "name": "Rallly",
             "url": "https://rallly.private.coffee",
             "short_description": "Rallly is a free collaborative scheduling service for voting and polls.",
-            "long_description": "Rallly is a free collaborative scheduling service. It allows you to create polls and vote on them, similar to Doodle.",
+            "long_description": "Rallly is a free collaborative scheduling service. It allows you to create polls and vote on them, similar to Doodle. Pro features are enabled for free after signing in.",
             "status": "OK",
             "links": [
                 {
