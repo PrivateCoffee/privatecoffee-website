@@ -218,8 +218,8 @@
             "name": "Nitter",
             "url": "https://nitter.private.coffee",
             "short_description": "Nitter is a privacy-friendly alternative front-end to Twitter.",
-            "long_description": "Nitter is a privacy-friendly alternative front-end to Twitter. It allows you to browse Twitter without being tracked. Currently not working so well.",
-            "status": "NOK",
+            "long_description": "Nitter is a privacy-friendly alternative front-end to Twitter. It allows you to browse Twitter without being tracked.",
+            "status": "OK",
             "links": [
                 {
                     "name": "Go to Nitter",
