@@ -9,10 +9,12 @@ footer a {
 
 /*  Give service boxes a border */
 .service {
-  border: 1px black solid;
+  border: 1px #6F4E37 solid;
   border-radius: 10px;
   border-spacing: 10px;
-  padding: 10px;
+  padding: 30px;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 10px #6F4E37;
 }
 
 /* Limit size of navbar logo */
@@ -25,4 +27,8 @@ footer a {
 #content {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.bg-coffee {
+  background-color: #6F4E37;
 }
