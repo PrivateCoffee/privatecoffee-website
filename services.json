@@ -215,11 +215,26 @@
             "exclude_from_simple": false
         },
         {
+            "name": "Binternet",
+            "url": "https://binternet.private.coffee",
+            "short_description": "Binternet is a privacy-friendly alternative front-end to Pinterest.",
+            "long_description": "Binternet is a privacy-friendly alternative front-end to Pinterest. It allows you to browse Pinterest without being tracked.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Binternet",
+                    "url": "https://binternet.private.coffee"
+                }
+            ],
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "Nitter",
             "url": "https://nitter.private.coffee",
             "short_description": "Nitter is a privacy-friendly alternative front-end to Twitter.",
             "long_description": "Nitter is a privacy-friendly alternative front-end to Twitter. It allows you to browse Twitter without being tracked.",
-            "status": "OK",
+            "status": "NOK",
             "links": [
                 {
                     "name": "Go to Nitter",
