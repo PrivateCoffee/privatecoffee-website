@@ -65,6 +65,21 @@
             "exclude_from_simple": false
         },
         {
+            "name": "Forgejo",
+            "url": "https://git.private.coffee",
+            "short_description": "Forgejo is our in-house Git forge.",
+            "long_description": "Forgejo is our in-house Git forge. You can use it to host your Git repositories, and to collaborate with others.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Forgejo",
+                    "url": "https://git.private.coffee"
+                }
+            ],
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "GotHub",
             "url": "https://gothub.private.coffee",
             "short_description": "Alternative GitHub interface that respects privacy.",
