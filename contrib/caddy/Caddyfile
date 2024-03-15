@@ -14,6 +14,11 @@ private.coffee www.private.coffee {
 		path assets /assets/*
 	}
 
+	@security {
+		path security-well-known /.well-known/security.txt
+		path security /security.txt
+	}
+
 	handle @matrix {
 		header /.well-known/matrix/* Content-Type application/json
 		header /.well-known/matrix/* Access-Control-Allow-Origin *
@@ -24,6 +29,10 @@ private.coffee www.private.coffee {
 	handle @assets {
 		file_server
 		root * /srv/private.coffee
+	}
+
+	handle @security {
+		redir https://security.private.coffee/security.txt
 	}
 
 	handle {
