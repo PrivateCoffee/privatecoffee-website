@@ -80,6 +80,21 @@
             "exclude_from_simple": false
         },
         {
+            "name": "BigBlueButton",
+            "url": "https://bbb.private.coffee",
+            "short_description": "BigBlueButton is an open-source video conferencing system.",
+            "long_description": "BigBlueButton is an open-source video conferencing system. You can use it to hold video conferences, webinars, and more.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to BigBlueButton",
+                    "url": "https://bbb.private.coffee"
+                }
+            ],
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "GotHub",
             "url": "https://gothub.private.coffee",
             "short_description": "Alternative GitHub interface that respects privacy.",
