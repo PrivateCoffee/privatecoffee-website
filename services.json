@@ -46,6 +46,21 @@
             "exclude_from_simple": false
         },
         {
+            "name": "MyIP.Coffee",
+            "url": "https://myip.coffee",
+            "short_description": "Check your IP address.",
+            "long_description": "MyIP.Coffee allows you to check your current IPv4 and IPv6 addresses.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to MyIP.Coffee",
+                    "url": "https://myip.coffee"
+                }
+            ],
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "Piped",
             "url": "https://piped.private.coffee",
             "short_description": "Watch YouTube videos without Google tracking.",
