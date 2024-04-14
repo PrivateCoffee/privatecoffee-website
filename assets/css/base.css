@@ -63,3 +63,16 @@ footer a {
   font-weight: bold;
   text-align: center;
 }
+
+.support-us .btn {
+  font-size: 20px;  /* Adjust font size if needed */
+  padding: 10px 20px;  /* Adjust padding if needed */
+}
+
+.support-us {
+  background: #ffb6c1;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More intense shadow */
+}
