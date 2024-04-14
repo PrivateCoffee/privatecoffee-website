@@ -41,3 +41,25 @@ footer a {
 .title-font {
   font-family: 'Dancing Script', cursive;
 }
+
+.donation-details, .zvr-number, .contact-info {
+  background: #ffb6c1;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info a {
+  color: #005a87;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.zvr-number {
+  font-weight: bold;
+  text-align: center;
+}
