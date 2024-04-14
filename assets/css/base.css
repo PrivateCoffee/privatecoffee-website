@@ -4,7 +4,7 @@
 
 /* Make sure links in the footer are white  */
 footer a {
-  color: #fff !important;
+  color: #6b486b !important;
 }
 
 /*  Give service boxes a border */
@@ -15,6 +15,7 @@ footer a {
   padding: 30px;
   box-sizing: border-box;
   box-shadow: inset 0 0 10px #ffb6c1;
+  color: #6b486b;
 }
 
 /* Limit size of navbar logo */
@@ -36,10 +37,12 @@ footer a {
 .btn-primary {
   background-color: #ffb6c1 !important;
   border-color: #ffb6c1 !important;
+  color: #6b486b !important;
 }
 
 .title-font {
   font-family: 'Dancing Script', cursive;
+  color: #6b486b;
 }
 
 .donation-details, .zvr-number, .contact-info {
@@ -65,8 +68,9 @@ footer a {
 }
 
 .support-us .btn {
-  font-size: 20px;  /* Adjust font size if needed */
-  padding: 10px 20px;  /* Adjust padding if needed */
+  font-size: 20px;  
+  padding: 10px 20px;  
+  color: #6b486b;  
 }
 
 .support-us {
@@ -75,4 +79,8 @@ footer a {
   border-radius: 4px;
   margin-bottom: 20px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More intense shadow */
+}
+
+.text-mauve {
+  color: #6b486b;
 }
