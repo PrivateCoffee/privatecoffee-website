@@ -38,6 +38,7 @@ footer a {
   background-color: #ffb6c1 !important;
   border-color: #ffb6c1 !important;
   color: #6b486b !important;
+  font-size: large!important;
 }
 
 .title-font {
@@ -45,12 +46,12 @@ footer a {
   color: #6b486b;
 }
 
-.donation-details, .zvr-number, .contact-info {
+.donation-details, .zvr-number, .contact-info, .index-buttons {
   background: #ffb6c1;
   padding: 15px;
   border-radius: 4px;
   margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .contact-info a {
@@ -82,5 +83,5 @@ footer a {
 }
 
 .text-mauve {
-  color: #6b486b;
+  color: #6b486b!important;
 }
