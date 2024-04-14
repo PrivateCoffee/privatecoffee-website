@@ -79,7 +79,7 @@ footer a {
   padding: 15px;
   border-radius: 4px;
   margin-bottom: 20px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More intense shadow */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .text-mauve {
