@@ -4,7 +4,7 @@
 
 /* Make sure links in the footer are white  */
 footer a {
-  color: #fff;
+  color: #fff !important;
 }
 
 /*  Give service boxes a border */
@@ -19,7 +19,7 @@ footer a {
 
 /* Limit size of navbar logo */
 .navbar-brand-img {
-  max-height: 50px;
+  max-height: 150px;
   margin-right: 10px;
 }
 
@@ -31,4 +31,13 @@ footer a {
 
 .bg-coffee {
   background-color: #ffb6c1;
+}
+
+.btn-primary {
+  background-color: #ffb6c1 !important;
+  border-color: #ffb6c1 !important;
+}
+
+.title-font {
+  font-family: 'Dancing Script', cursive;
 }
