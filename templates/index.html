@@ -14,21 +14,21 @@
   <div class="row" id="services">
     {% for service in services.services %}
     {% if not service.exclude_from_index %}
-    <div class="service col-sm-4">
+    <div class="service col-sm-4 d-flex flex-column mb-4">
       <h3>{{ service.name }}</h3>
       <p>
         {{ service.long_description }}
       </p>
       {% for link in service.links %}
-      <div class="btn-group">
-      <a href="{{ link.url }}" class="btn 
+      <div class="btn-group mt-auto">
+      <a href="{{ link.url }}" class="btn mb-1
         {% if service.status == "OK" %}btn-primary{% else %}btn-danger{% endif %}"
         >{{ link.name }}</a
       >
       {% if link.alternatives %}
       <button
       type="button"
-      class="btn dropdown-toggle dropdown-toggle-split
+      class="btn dropdown-toggle dropdown-toggle-split mb-1
         {% if service.status == "OK" %}btn-primary{% else %}btn-danger{% endif %}"
       data-bs-toggle="dropdown"
       aria-expanded="false"
@@ -59,24 +59,24 @@
     {% endif %}
     {% endfor %}
 
-    <div class="service col-sm-4">
+    <div class="service col-sm-4 d-flex flex-column mb-4">
       <h3>Hosting</h3>
       <p>
         Need hosting for your privacy-related, social or wholesome
         project? We might be able to share our resources with you for
         free!
       </p>
-      <a href="mailto:support@private.coffee" class="btn btn-primary"
+      <a href="mailto:support@private.coffee" class="btn btn-primary mt-auto"
         >Get in touch!</a
       >
     </div>
-    <div class="service col-sm-4">
+    <div class="service col-sm-4 d-flex flex-column mb-4">
       <h3>More?</h3>
       <p>
         We are working on more services. If you have any suggestions,
         please let us know!
       </p>
-      <a href="mailto:support@private.coffee" class="btn btn-primary"
+      <a href="mailto:support@private.coffee" class="btn btn-primary mt-auto"
         >Get in touch!</a
       >
     </div>
