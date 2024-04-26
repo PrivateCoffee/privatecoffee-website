@@ -1,23 +1,54 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <div class="container text-mauve">
   <h1>Membership/Donations</h1>
-  <p>private.coffee is a non-profit organization dedicated to supporting privacy and digital sovereignty. We fund our server infrastructure through donations and membership fees.</p>
-    <p>Membership fees help cover the costs of server infrastructure, domain names, and other operating expenses. Likewise, all donations contribute towards these ongoing costs.</p>
-    <p>Supporting the private.coffee project is possible by joining our association or by making a direct donation.</p>
+  <p>
+    private.coffee is a non-profit organization dedicated to supporting privacy
+    and digital sovereignty. We fund our server infrastructure through donations
+    and membership fees.
+  </p>
+  <p>
+    Membership fees help cover the costs of server infrastructure, domain names,
+    and other operating expenses. Likewise, all donations contribute towards
+    these ongoing costs.
+  </p>
+  <p>
+    Supporting the private.coffee project is possible by joining our association
+    or by making a direct donation.
+  </p>
   <div class="donation-details">
     <p><b>Donations:</b></p>
-    <p>Bank private.coffee - Verein zur Förderung von Privatsphäre und digitaler Souveränität</p>
+    <p>
+      Bank private.coffee - Verein zur Förderung von Privatsphäre und digitaler
+      Souveränität
+    </p>
     <p>IBAN: AT35 2081 5000 4554 0812</p>
     <p>BIC: STSPAT2GXXX</p>
-    <p>For donation listing preferences, please specify in the note to payee.</p>
+    <p>
+      For donation listing preferences, please specify in the note to payee.
+    </p>
   </div>
 
-  <p class="zvr-number">Central Register of Associations (ZVR) Number: 1758485319</p>
-
-  <p class="contact-info">
-    Interested in joining the association? Reach out via email:
-    <a href="mailto:support@private.coffee">support@private.coffee</a>
-  </p>
+  <div class="zvr-number">
+    <p>Central Register of Associations (ZVR) Number: 1758485319</p>
+    <p>
+      Our statutes can be found in our Git
+      <a href="https://git.private.coffee/PrivateCoffee/statuten"
+        >in German (legally binding)</a
+      >
+      and
+      <a
+        href="https://git.private.coffee/PrivateCoffee/Statuten/src/branch/english"
+        >in English</a
+      >.
+    </p>
+    <p class="contact-info">
+      Interested in joining the association? Reach out via
+      <a href="mailto:support@private.coffee">email</a> or
+      <a href="https://matrix.private.cf/#/#private.coffee:private.coffee"
+        >Matrix</a
+      >
+      for more information.
+    </p>
+  </div>
 </div>
 {% endblock %}
