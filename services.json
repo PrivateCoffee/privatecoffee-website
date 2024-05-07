@@ -125,6 +125,21 @@
             "exclude_from_simple": false
         },
         {
+            "name": "HedgeDoc",
+            "url": "https://hedgedoc.private.coffee",
+            "short_description": "HedgeDoc is an open-source collaborative markdown editor.",
+            "long_description": "HedgeDoc is an open-source collaborative markdown editor. You can use it to write and edit documents in markdown, and to collaborate with others.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to HedgeDoc",
+                    "url": "https://hedgedoc.private.coffee"
+                }
+            ],
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "GotHub",
             "url": "https://gothub.private.coffee",
             "short_description": "Alternative GitHub interface that respects privacy.",
