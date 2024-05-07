@@ -65,7 +65,7 @@
             "url": "https://invidious.private.coffee",
             "short_description": "Watch YouTube videos without Google tracking.",
             "long_description": "Invidious is an alternative front-end to YouTube. It allows you to watch YouTube videos without Google tracking you.",
-            "status": "NOK",
+            "status": "OK",
             "links": [
                 {
                     "name": "Go to Invidious",
@@ -234,7 +234,7 @@
             "url": "https://private.cf",
             "short_description": "URL shortener for creating handy links.",
             "long_description": "Use our URL shortener at private.cf to turn long, complicated URLs into something more handy.",
-            "status": "OK",
+            "status": "NOK",
             "links": [
                 {
                     "name": "Go to private.cf",
@@ -256,8 +256,8 @@
                     "url": "https://rallly.private.coffee"
                 }
             ],
-            "exclude_from_index": false,
-            "exclude_from_simple": false
+            "exclude_from_index": true,
+            "exclude_from_simple": true
         },
         {
             "name": "LibreY",
