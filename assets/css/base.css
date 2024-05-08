@@ -1,87 +1,68 @@
-/* This file was developed as part of the Private.coffee project
-   It is licensed under the MIT license
-   See https://private.coffee for more information */
-
-/* Make sure links in the footer are white  */
-footer a {
-  color: #6b486b !important;
+:root,
+[data-bs-theme="light"] {
+  --bs-primary: #f570b9;
+  --bs-primary-rgb: 245, 112, 185;
+  --bs-primary-text-emphasis: #622d4a;
+  --bs-primary-bg-subtle: #fde2f1;
+  --bs-primary-border-subtle: #fbc6e3;
+  --bs-body-color: #232323;
+  --bs-body-color-rgb: 35, 35, 35;
+  --bs-secondary-color: rgba(35, 35, 35, 0.75);
+  --bs-secondary-color-rgb: 35, 35, 35, 0.75;
+  --bs-tertiary-color: rgba(35, 35, 35, 0.5);
+  --bs-tertiary-color-rgb: 35, 35, 35, 0.5;
+  --bs-body-font-family: Inconsolata, monospace;
 }
-
-/*  Give service boxes a border */
-.service {
-  border: 4px #d1ffdd solid;
-  border-radius: 15px;
-  border-spacing: 15px;
-  padding: 30px;
-  box-sizing: border-box;
-  box-shadow: inset 0 0 10px #d1f3ff;
-  color: #6b486b;
-}
-
-/* Limit size of navbar logo */
-.navbar-brand-img {
-  max-height: 150px;
-  margin-right: 10px;
-}
-
-/* Add a top/bottom padding to the content section */
-#content {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.bg-coffee {
-  background-color: #ffb6c1;
-}
-
 .btn-primary {
-  background-color: #ffb6c1 !important;
-  border-color: #ffb6c1 !important;
-  color: #6b486b !important;
-  font-size: large!important;
+  --bs-btn-color: #000000;
+  --bs-btn-bg: #f570b9;
+  --bs-btn-border-color: #f570b9;
+  --bs-btn-hover-color: #000000;
+  --bs-btn-hover-bg: #f785c4;
+  --bs-btn-hover-border-color: #f67ec0;
+  --bs-btn-focus-shadow-rgb: 37, 17, 28;
+  --bs-btn-active-color: #000000;
+  --bs-btn-active-bg: #f78dc7;
+  --bs-btn-active-border-color: #f67ec0;
+  --bs-btn-disabled-color: #000000;
+  --bs-btn-disabled-bg: #f570b9;
+  --bs-btn-disabled-border-color: #f570b9;
+  color: #fff;
 }
-
-.title-font {
-  font-family: 'Dancing Script', cursive;
-  color: #6b486b;
+.btn-outline-primary {
+  --bs-btn-color: #f570b9;
+  --bs-btn-border-color: #f570b9;
+  --bs-btn-focus-shadow-rgb: 245, 112, 185;
+  --bs-btn-hover-color: #000000;
+  --bs-btn-hover-bg: #f570b9;
+  --bs-btn-hover-border-color: #f570b9;
+  --bs-btn-active-color: #000000;
+  --bs-btn-active-bg: #f570b9;
+  --bs-btn-active-border-color: #f570b9;
+  --bs-btn-disabled-color: #f570b9;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #f570b9;
 }
-
-.donation-details, .zvr-number, .contact-info, .index-buttons {
-  background: #ffb6c1;
-  padding: 15px;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+h2 .special-header {
+  font-size: 10rem !important;
 }
-
-.contact-info a {
-  color: #005a87;
-  text-decoration: none;
+.special-header {
+  font-size: 4rem;
+  font-weight: 900;
 }
-
-.contact-info a:hover {
-  text-decoration: underline;
+.fancy-text-primary {
+  background: -webkit-linear-gradient(45deg, #ba77fc, #ff7f8c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
-.zvr-number {
-  font-weight: bold;
-  text-align: center;
+p {
+  letter-spacing: 0.03rem;
+  font-size: 1.1rem;
 }
-
-.support-us .btn {
-  font-size: 20px;  
-  padding: 10px 20px;  
-  color: #6b486b;  
+h5 {
+  letter-spacing: 0.05rem;
 }
-
-.support-us {
-  background: #ffb6c1;
-  padding: 15px;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.text-mauve {
-  color: #6b486b!important;
+.navbar-brand {
+  font-weight: 800 !important;
+  font-size: x-large;
 }

@@ -1,87 +1,59 @@
 <!DOCTYPE html>
-<!-- This file was created as part of the Private.coffee project
-     It is licensed under the MIT license
-     For more information, please visit https://private.coffee -->
-
-<html>
+<html data-bs-theme="light" lang="en">
 
 <head>
-  <title>Private.coffee</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" type="image/svg+xml" href="assets/img/logo-inv_grad.svg" />
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css" />
-  <script src="assets/dist/js/jquery.min.js"></script>
-  <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>{% block title %}{% endblock %} - Private.coffee</title>
+    <link rel="stylesheet" href="/assets/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/base.css">
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #ffb6c1;"> 
-    <div class="container">
-      <div class="row align-items-center w-100">
-        <div class="col-sm-8">
-          <a class="navbar-brand text-mauve" href="/">
-            <img class="navbar-brand-img" src="assets/img/logo-inv_grad.svg" alt="Private.coffee logo">
-            <h1 style="display: inline; font-family: 'title-font', sans-serif;">Private.coffee</h1> 
-          </a>
+    <nav class="navbar navbar-expand-md sticky-top navbar-shrink py-3 navbar-light" id="mainNav">
+        <div class="container">
+            <div class="row d-lg-flex align-items-lg-center">
+                <div class="col p-0"><img src="/assets/img/logo-inv_grad.svg?h=6ec231b999bdfb1aeb31c2e7a0099b92" style="height: 60px;"></div>
+                <div class="col d-flex"><a class="navbar-brand d-flex align-items-center" href="/">
+                        <p class="mb-0" style="line-height: 1.2rem;color: var(--bs-tertiary-color);"><span class="ps-2 fancy-text-primary"><span style="color: rgb(35, 35, 35);">Private.coffee</span></span><br><span class="ps-2">Empowering Privacy with Open Source</span></p>
+                    </a></div>
+            </div><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://status.private.coffee/">Status</a></li>
+                </ul><a class="btn btn-primary shadow" role="button" href="/membership.html">JOIN &amp; REBEL</a>
+            </div>
         </div>
-        <div class="col-sm-2 d-flex justify-content-center text-mauve index-buttons"> 
-          <a href="membership.html" class="btn btn-primary">♥ Support Us ♥</a>
-        </div>
-        <div class="col-sm-2 d-flex justify-content-center index-buttons"> 
-          <a href="https://status.private.coffee" class="btn btn-primary big">Status Monitor</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-  
-  
-
-  <section id="content">
+    </nav>
     {% block content %}{% endblock %}
-  </section>
-
-  <footer class="page-footer font-small bg-coffee text-white pt-4">
-    <div class="container text-center text-md-left">
-      <div class="row">
-        <div class="col-md-6 mt-md-0 mt-3">
-          <h5 class="text-uppercase text-mauve">Private.coffee</h5>
-          <p class="text-mauve">
-            Private.coffee is a collection of services that respect your
-            privacy.
-          </p>
+    <footer class="bg-primary-gradient">
+        <div class="container py-4 py-lg-5">
+            <div class="row justify-content-center">
+                <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
+                    <h3 class="fs-6 fw-bold">Legal Stuff</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="/legal.html">Legal Notice</a></li>
+                        <li><a href="/privacy.html">Privacy Notice</a></li>
+                        <li><a href="/terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
+                </div>
+                <div class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last">
+                    <div class="fw-bold d-flex align-items-center mb-2"><span class="bs-icon-sm bs-icon-circle bs-icon-primary d-flex justify-content-center align-items-center bs-icon me-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+                                <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"></path>
+                                <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
+                            </svg></span><span>Private.coffee</span></div>
+                    <p class="text-muted">Private.coffee is a collection of services that respect your privacy.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="text-muted d-flex justify-content-between align-items-center pt-3">
+                <p class="mb-0">Made with ❤️ and ☕ by Private.coffee</p>
+            </div>
         </div>
-        <hr class="clearfix w-100 d-md-none pb-3" />
-        <div class="col-md-3 mb-md-0 mb-3">
-          <h5 class="text-uppercase text-mauve">Legal stuff:</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="legal.html">Legal Notice</a>
-            </li>
-            <li>
-              <a href="privacy.html">Privacy Policy</a>
-            </li>
-            <li>
-              <a href="terms.html">Terms of Service</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-3 mb-md-0 mb-3">
-          <h5 class="text-uppercase text-mauve">Contact</h5>
-          <ul class="list-unstyled">
-            <li><a href="mailto:support@private.coffee">Email</a></li>
-            <li>
-              <a href="https://matrix.private.cf/#/#private.coffee:private.coffee">Matrix</a>
-            </li>
-            <li>
-              <a href="https://git.private.coffee/PrivateCoffee/">Git</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
 </body>
 
 </html>
