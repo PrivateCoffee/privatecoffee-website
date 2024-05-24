@@ -18,6 +18,7 @@
   --bs-tertiary-color-rgb: 35, 35, 35, 0.5;
   --bs-body-font-family: Inconsolata, monospace;
 }
+
 .btn-primary {
   --bs-btn-color: #000000;
   --bs-btn-bg: #f570b9;
@@ -34,6 +35,7 @@
   --bs-btn-disabled-border-color: #f570b9;
   color: #fff;
 }
+
 .btn-outline-primary {
   --bs-btn-color: #f570b9;
   --bs-btn-border-color: #f570b9;
@@ -48,25 +50,41 @@
   --bs-btn-disabled-bg: transparent;
   --bs-btn-disabled-border-color: #f570b9;
 }
+
 h2 .special-header {
   font-size: 10rem !important;
 }
+
 .special-header {
   font-size: 4rem;
   font-weight: 900;
 }
+
+@media (max-width: 768px) {
+  h2 .special-header {
+    font-size: 6rem !important;
+  }
+
+  .special-header {
+    font-size: 2rem;
+  }
+}
+
 .fancy-text-primary {
   background: -webkit-linear-gradient(45deg, #ba77fc, #ff7f8c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 p {
   letter-spacing: 0.03rem;
   font-size: 1.1rem;
 }
+
 h5 {
   letter-spacing: 0.05rem;
 }
+
 .navbar-brand {
   font-weight: 800 !important;
   font-size: x-large;
