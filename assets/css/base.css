@@ -3,6 +3,7 @@
    For more information, please visit https://private.coffee
 */
 
+/* General styles */
 :root,
 [data-bs-theme="light"] {
   --bs-primary: #f570b9;
@@ -60,16 +61,6 @@ h2 .special-header {
   font-weight: 900;
 }
 
-@media (max-width: 768px) {
-  h2 .special-header {
-    font-size: 6rem !important;
-  }
-
-  .special-header {
-    font-size: 2rem;
-  }
-}
-
 .fancy-text-primary {
   background: -webkit-linear-gradient(45deg, #ba77fc, #ff7f8c);
   -webkit-background-clip: text;
@@ -88,4 +79,61 @@ h5 {
 .navbar-brand {
   font-weight: 800 !important;
   font-size: x-large;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar .col {
+    text-align: center;
+  }
+
+  .navbar-brand p {
+    font-size: 0.9rem;
+  }
+
+  .navbar-brand span.fancy-text-primary {
+    font-size: 1.1rem;
+  }
+
+  .navbar-brand span {
+    display: block;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  .navbar-nav .nav-item {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+  }
+
+  .btn.btn-primary {
+    margin: 1rem auto;
+    display: block;
+    width: 80%;
+  }
+
+  h2 .special-header {
+    font-size: 6rem !important;
+  }
+
+  .special-header {
+    font-size: 2rem;
+  }
 }
