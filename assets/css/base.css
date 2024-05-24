@@ -120,7 +120,7 @@ h5 {
 
   .navbar-nav .nav-item {
     display: inline-block;
-    padding: 0.5rem 1rem;
+    padding: 0 1rem;
   }
 
   .btn.btn-primary {
@@ -135,5 +135,13 @@ h5 {
 
   .special-header {
     font-size: 2rem;
+  }
+
+  .navbar-btn {
+    margin: 0 auto !important;
+  }
+
+  .that-br {
+    display: none;
   }
 }
