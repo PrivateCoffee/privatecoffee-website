@@ -148,4 +148,8 @@ h5 {
   .that-br {
     display: none;
   }
+
+  .subtitle {
+    display: none;
+  }
 }
