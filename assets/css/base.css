@@ -85,6 +85,11 @@ h5 {
   margin-top: 10px;
 }
 
+.currency-col {
+  width: 150px;
+  white-space: nowrap;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .navbar .container {
