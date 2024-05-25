@@ -1,56 +1,152 @@
-{% extends "base.html" %}
-{% block title %}Membership / Donations{% endblock %}
+{% extends "base.html" %} {% block title %}Membership / Donations{% endblock %}
 {% block content %}
-<div class="container">
-  <h1>Membership/Donations</h1>
-  <p>
-    private.coffee is a non-profit organization dedicated to supporting privacy
-    and digital sovereignty. We fund our server infrastructure through donations
-    and membership fees.
-  </p>
-  <p>
-    Membership fees help cover the costs of server infrastructure, domain names,
-    and other operating expenses. Likewise, all donations contribute towards
-    these ongoing costs.
-  </p>
-  <p>
-    Supporting the private.coffee project is possible by joining our association
-    or by making a direct donation.
-  </p>
-  <div class="donation-details">
-    <p><b>Donations:</b></p>
-    <p>
-      Bank private.coffee - Verein zur Förderung von Privatsphäre und digitaler
-      Souveränität
-    </p>
-    <p>IBAN: AT35 2081 5000 4554 0812</p>
-    <p>BIC: STSPAT2GXXX</p>
-    <p>
-      For donation listing preferences, please specify in the note to payee.
+<div class="container my-5">
+  <div class="text-center mb-5">
+    <h1 class="special-header fancy-text-primary">Membership/Donations</h1>
+    <p class="lead">
+      Private.coffee is a non-profit organization dedicated to supporting
+      privacy and digital sovereignty. We fund our activities and running
+      infrastructure costs through membership fees. Donations allow us to expand
+      our services and reach more people.
     </p>
   </div>
 
-  <div class="zvr-number">
-    <p>Central Register of Associations (ZVR) Number: 1758485319</p>
-    <p>
-      Our statutes can be found in our Git
-      <a href="https://git.private.coffee/PrivateCoffee/statuten"
-        >in German (legally binding)</a
-      >
-      and
-      <a
-        href="https://git.private.coffee/PrivateCoffee/Statuten/src/branch/english"
-        >in English</a
-      >.
-    </p>
-    <p class="contact-info">
-      Interested in joining the association? Reach out via
-      <a href="mailto:support@private.coffee">email</a> or
-      <a href="https://matrix.private.cf/#/#private.coffee:private.coffee"
-        >Matrix</a
-      >
-      for more information.
-    </p>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Membership</h5>
+          <p class="card-text">
+            Membership fees help cover the costs of our activities, server
+            infrastructure, domain names, and other running operating expenses.
+            Donations allow us to pay for one-time expenses like software
+          </p>
+          <p class="card-text">
+            Supporting the Private.coffee project is possible by joining our
+            association or by making a direct donation.
+          </p>
+          <a href="#" class="btn btn-primary">Join Us</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Bank Donations</h5>
+          <p class="card-text">
+            Private.coffee - Verein zur Förderung von Privatsphäre und digitaler
+            Souveränität
+          </p>
+          <p class="card-text"><b>IBAN:</b> AT35 2081 5000 4554 0812</p>
+          <p class="card-text"><b>BIC:</b> STSPAT2GXXX</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Crypto Donations</h5>
+          <p class="card-text">
+            While our expenses are in fiat currency, we accept donations in
+            cryptocurrencies, too.
+          </p>
+          <p class="card-text">
+            <b>Bitcoin (BTC):</b> ___________________________________________
+          </p>
+          <p class="card-text">
+            <b>Monero (XMR):</b> ___________________________________________
+          </p>
+          <p class="card-text">
+            <b>Ethereum (ETH):</b> ___________________________________________
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card shadow-sm mt-4">
+    <div class="card-body">
+      <h5 class="card-title">Transparency Report</h5>
+      <p class="card-text">
+        We believe in transparency and accountability. Below is a summary of our
+        income and expenses for the last month.
+      </p>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead class="table-light">
+            <tr>
+              <th scope="col">Category</th>
+              <th scope="col">Amount (€)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Membership Fees</td>
+              <td>€390</td>
+            </tr>
+            <tr>
+              <td>Donations</td>
+              <td>€0</td>
+            </tr>
+            <tr>
+              <td>Crypto Donations</td>
+              <td>BTC 0 / XMR 0 / ETH 0</td>
+            </tr>
+            <tr>
+              <td>Server Costs</td>
+              <td>€2,800</td>
+            </tr>
+            <tr>
+              <td>Domain Names</td>
+              <td>€400</td>
+            </tr>
+            <tr>
+              <td>Operating Expenses</td>
+              <td>€1,200</td>
+            </tr>
+            <tr class="table-secondary">
+              <td><b>Total Income</b></td>
+              <td><b>€390</b></td>
+            </tr>
+            <tr class="table-secondary">
+              <td><b>Total Expenses</b></td>
+              <td><b>€4,400</b></td>
+            </tr>
+            <tr class="table-secondary">
+              <td><b>Account Balance (end of month)</b></td>
+              <td><b>€-5,300 / 0 BTC / 0 XMR / 0 BTC</b></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="card shadow-sm mt-4">
+    <div class="card-body">
+      <h5>Central Register of Associations (ZVR) Number: 1758485319</h5>
+      <p>
+        Our statutes can be found in our Git
+        <a href="https://git.private.coffee/PrivateCoffee/statuten"
+          >in German (legally binding)</a
+        >
+        and
+        <a
+          href="https://git.private.coffee/PrivateCoffee/Statuten/src/branch/english"
+          >in English</a
+        >.
+      </p>
+      <p class="contact-info" id="contact-info">
+        Interested in joining the association? Reach out via
+        <a href="mailto:support@private.coffee">email</a> or
+        <a href="https://matrix.pcof.fi/#/#private.coffee:private.coffee"
+          >Matrix</a
+        >
+        for more information.
+      </p>
+    </div>
   </div>
 </div>
 {% endblock %}
