@@ -86,8 +86,12 @@ h5 {
 }
 
 .currency-col {
-  width: 150px;
+  width: 175px;
   white-space: nowrap;
+}
+
+.table-transparency td:not(:first-child) {
+  text-align: right;
 }
 
 /* Responsive Styles */
