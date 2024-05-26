@@ -8,7 +8,15 @@
 <body>
     <div style="font-family: Arial, sans-serif; background-color: #f2f2f2; color: #333; line-height: 1.6; padding: 20px; max-width: 600px; margin: auto;">
         <h2 style="color: #333;">Welcome to Private.coffee</h2>
-        <p>Thanks for using our Element instance. Private.coffee is a collection of services that respect your privacy, here are some others:</p>
+        <p>Thanks for using our Element instance! Now, why don't you join our rooms?</p>
+        <ul style="list-style: none; padding: 0;">
+          <li style="padding: 8px 0;"><a style="color: #1a5dab; text-decoration: none;" href="https://element.private.coffee/#/#private-coffee:private.coffee">#private-coffee:private.coffee</a> - The Private.coffee Space, containing all rooms</li>
+          <li style="padding: 8px 0;"><a style="color: #1a5dab; text-decoration: none;" href="https://element.private.coffee/#/#private.coffee:private.coffee">#private.coffee:private.coffee</a> - General support for our services</li>
+          <li style="padding: 8px 0;"><a style="color: #1a5dab; text-decoration: none;" href="https://element.private.coffee/#/#matrix:private.coffee">#matrix:private.coffee</a> - Support for our Matrix server</li>
+          <li style="padding: 8px 0;"><a style="color: #1a5dab; text-decoration: none;" href="https://element.private.coffee/#/#coffeebreak:private.coffee">#coffeebreak:private.coffee</a> - ☕ Coffee Break ☕ - our off-topic room</li>
+        </ul>
+        <hr>
+        <p>Private.coffee is a collection of services that respect your privacy, here are some others:</p>
         <ul style="list-style: none; padding: 0;">
           {% for service in services.services %}
           {% if not service.exclude_from_simple %}
