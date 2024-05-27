@@ -94,6 +94,11 @@ h5 {
   text-align: right;
 }
 
+.section {
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .navbar .container {
