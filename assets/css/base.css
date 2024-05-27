@@ -99,6 +99,25 @@ h5 {
   border-bottom: 1px solid #e0e0e0;
 }
 
+.alert-warning {
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+  color: #856404;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.alert-warning .alert-link {
+  color: #856404;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.alert-warning .alert-link:hover {
+  color: #604c2e;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .navbar .container {

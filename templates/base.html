@@ -51,6 +51,7 @@
             </ul><a class="btn btn-primary shadow navbar-btn" role="button" href="/membership.html">JOIN &amp; REBEL</a>
         </div>
     </nav>
+    {% if warning %}{{ warning|safe }}{% endif %}
     {% block content %}{% endblock %}
     <footer class="bg-primary-gradient">
       <div class="container py-4 py-lg-5">
