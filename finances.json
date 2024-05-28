@@ -1,0 +1,33 @@
+{
+    "2024": {
+        "4": {
+            "Membership Fees": {
+                "EUR": 365
+            },
+            "Donations": {},
+            "Server Costs": {
+                "EUR": -216.57
+            },
+            "Domain Names": {},
+            "Operating Expenses": {
+                "EUR": -36.10
+            },
+            "Conversions": {}
+        },
+        "5": {
+            "Membership Fees": {
+                "EUR": 390
+            },
+            "Donations": {
+                "BTC": 0.000434,
+                "XMR": 0.447661805527
+            },
+            "Server Costs": {
+                "EUR": -430.04
+            },
+            "Domain Names": {},
+            "Operating Expenses": {},
+            "Conversions": {}
+        }
+    }
+}
