@@ -24,3 +24,8 @@ The website will be available at `http://localhost:9810`.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE)
 file for details.
+
+## Attribution
+
+This website is built using the [Bootstrap](https://getbootstrap.com) framework
+and [Phosphor Icons](https://phosphoricons.com).
