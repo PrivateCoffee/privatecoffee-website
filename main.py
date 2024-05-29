@@ -83,8 +83,12 @@ if os.environ.get("PRIVATECOFFEE_DEV"):
 
 def icon(icon_name):
     file = send_from_directory("assets", f"dist/icons/{icon_name}.svg")
-    file_content = file.response.file.read().decode("utf-8")
+    try:
+        file_content = file.response.file.read().decode("utf-8")
+    except AttributeError:
+        file_content = file.response.read().decode("utf-8")
     return file_content
+
 
 app.add_template_filter(icon)
 
