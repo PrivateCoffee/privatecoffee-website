@@ -231,18 +231,18 @@
         },
         {
             "name": "YOURLS",
-            "url": "https://private.cf",
+            "url": "https://pcof.fi",
             "short_description": "URL shortener for creating handy links.",
-            "long_description": "Use our URL shortener at private.cf to turn long, complicated URLs into something more handy.",
-            "status": "NOK",
+            "long_description": "Use our URL shortener at pcof.fi to turn long, complicated URLs into something more handy.",
+            "status": "OK",
             "links": [
                 {
-                    "name": "Go to private.cf",
-                    "url": "https://private.cf"
+                    "name": "Go to pcof.fi",
+                    "url": "https://pcof.fi"
                 }
             ],
-            "exclude_from_index": true,
-            "exclude_from_simple": true
+            "exclude_from_index": false,
+            "exclude_from_simple": false
         },
         {
             "name": "Rallly",
