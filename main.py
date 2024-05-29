@@ -7,6 +7,8 @@ import os
 
 from argparse import ArgumentParser
 
+from helpers.finances import generate_transparency_table, get_transparency_data
+
 app = Flask(__name__)
 
 
@@ -28,9 +30,27 @@ def catch_all(path):
         if app.development_mode:
             warning = render_template("prod-warning.html")
 
-        return render_template(
-            f"{path}.html", services=services, warning=warning
-        )
+        kwargs = {
+            "services": services,
+            "warning": warning,
+        }
+
+        if path == "membership":
+            finances = json.loads(
+                (pathlib.Path(__file__).parent / "finances.json").read_text()
+            )
+
+            finances_table = generate_transparency_table(
+                get_transparency_data(finances)
+            )
+
+            kwargs.update(
+                {
+                    "finances": finances_table,
+                }
+            )
+
+        return render_template(f"{path}.html", **kwargs)
     except TemplateNotFound:
         return "404 Not Found", 404
 

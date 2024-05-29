@@ -86,8 +86,9 @@ h5 {
 }
 
 .currency-col {
-  width: 175px;
+  width: 200px;
   white-space: nowrap;
+  text-align: right;
 }
 
 .table-transparency td:not(:first-child) {
