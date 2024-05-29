@@ -81,6 +81,13 @@ if os.environ.get("PRIVATECOFFEE_DEV"):
     app.development_mode = True
 
 
+def icon(icon_name):
+    file = send_from_directory("assets", f"dist/icons/{icon_name}.svg")
+    file_content = file.response.file.read().decode("utf-8")
+    return file_content
+
+app.add_template_filter(icon)
+
 if __name__ == "__main__":
     parser = ArgumentParser(description="Run the private.coffee web server.")
     parser.add_argument("--port", type=int, default=9810)

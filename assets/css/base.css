@@ -119,6 +119,10 @@ h5 {
   color: #604c2e;
 }
 
+.bs-icon.bs-icon-primary svg {
+  fill: var(--bs-primary-bg-subtle);
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .navbar .container {
