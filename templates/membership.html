@@ -78,14 +78,13 @@
 
   <div class="card shadow-sm mt-4">
     <div class="card-body">
-      <h5 class="card-title">Transparency Report for May 2024</h5>
+      <h5 class="card-title">Transparency Report for {{ finances_period }}</h5>
       <p class="card-text">
         We believe in transparency and accountability. Below is a summary of our
-        income and expenses for the last month.
+        income and expenses for the last month, so you can see how your
+        donations are being used.
       </p>
-      <div class="table-responsive">
-        {{ finances|safe }}
-      </div>
+      <div class="table-responsive">{{ finances|safe }}</div>
     </div>
   </div>
 

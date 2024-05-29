@@ -1,6 +1,14 @@
 from decimal import Decimal
 
 
+def get_latest_month(data):
+    years = sorted(data.keys())
+    latest_year = years[-1]
+    months = sorted(data[latest_year].keys())
+    latest_month = months[-1]
+
+    return int(latest_month), int(latest_year)
+
 def get_transparency_data(data, year=None, month=None):
     if year is None:
         year = max(data.keys())
