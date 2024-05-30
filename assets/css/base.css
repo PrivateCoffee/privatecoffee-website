@@ -124,7 +124,11 @@ h5 {
 }
 
 .bs-icon.bs-icon-lg svg {
-  fill: var(--bs-primary)
+  fill: var(--bs-primary);
+}
+
+.bs-icon-circle svg {
+  fill: var(--bs-primary-bg-subtle);
 }
 
 /* Responsive Styles */
