@@ -85,6 +85,48 @@ h5 {
   margin-top: 10px;
 }
 
+.currency-col {
+  width: 200px;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.table-transparency td:not(:first-child) {
+  text-align: right;
+}
+
+.section {
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+  color: #856404;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.alert-warning .alert-link {
+  color: #856404;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.alert-warning .alert-link:hover {
+  color: #604c2e;
+}
+
+.bs-icon.bs-icon-primary svg {
+  fill: var(--bs-primary-bg-subtle);
+}
+
+.bs-icon.bs-icon-lg svg {
+  fill: var(--bs-primary)
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .navbar .container {

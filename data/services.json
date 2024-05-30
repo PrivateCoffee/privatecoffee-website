@@ -12,6 +12,7 @@
                     "url": "https://element.private.coffee"
                 }
             ],
+            "icon": "matrix-logo",
             "exclude_from_index": false,
             "exclude_from_simple": true
         },
@@ -27,6 +28,7 @@
                     "url": "https://cryptpad.private.coffee"
                 }
             ],
+            "icon": "article-ny-times",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },
@@ -42,6 +44,7 @@
                     "url": "https://piped.private.coffee"
                 }
             ],
+            "icon": "video",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },
@@ -57,6 +60,7 @@
                     "url": "https://myip.coffee"
                 }
             ],
+            "icon": "network",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },
@@ -72,6 +76,7 @@
                     "url": "https://invidious.private.coffee"
                 }
             ],
+            "icon": "video",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },
@@ -91,6 +96,7 @@
                     "url": "https://skrt.social"
                 }
             ],
+            "icon": "mastodon-logo",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },
@@ -106,6 +112,7 @@
                     "url": "https://git.private.coffee"
                 }
             ],
+            "icon": "git-branch",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },
@@ -121,6 +128,7 @@
                     "url": "https://bbb.private.coffee"
                 }
             ],
+            "icon": "webcam",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },
@@ -136,6 +144,7 @@
                     "url": "https://hedgedoc.private.coffee"
                 }
             ],
+            "icon": "markdown-logo",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },
@@ -151,6 +160,7 @@
                     "url": "https://gothub.private.coffee"
                 }
             ],
+            "icon": "git-branch",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },
@@ -166,6 +176,7 @@
                     "url": "https://redlib.private.coffee"
                 }
             ],
+            "icon": "chats",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },
@@ -181,6 +192,7 @@
                     "url": "https://alltube.private.coffee"
                 }
             ],
+            "icon": "video",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },
@@ -196,6 +208,7 @@
                     "url": "https://structables.private.coffee"
                 }
             ],
+            "icon": "lightbulb",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },
@@ -211,6 +224,7 @@
                     "url": "https://nocodb.private.coffee"
                 }
             ],
+            "icon": "database",
             "exclude_from_index": true,
             "exclude_from_simple": true
         },
@@ -226,6 +240,7 @@
                     "url": "https://penpot.private.coffee"
                 }
             ],
+            "icon": "pencil-ruler",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },
@@ -241,6 +256,7 @@
                     "url": "https://pcof.fi"
                 }
             ],
+            "icon": "link",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },
@@ -256,6 +272,7 @@
                     "url": "https://rallly.private.coffee"
                 }
             ],
+            "icon": "calendar",
             "exclude_from_index": true,
             "exclude_from_simple": true
         },
@@ -271,6 +288,7 @@
                     "url": "https://librey.private.coffee"
                 }
             ],
+            "icon": "magnifying-glass",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },
@@ -286,6 +304,7 @@
                     "url": "https://overleaf.private.coffee"
                 }
             ],
+            "icon": "leaf",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },
@@ -301,44 +320,9 @@
                     "url": "https://binternet.private.coffee"
                 }
             ],
+            "icon": "images",
             "exclude_from_index": false,
             "exclude_from_simple": false
-        },
-        {
-            "name": "Nitter",
-            "url": "https://nitter.private.coffee",
-            "short_description": "Nitter is a privacy-friendly alternative front-end to Twitter.",
-            "long_description": "Nitter is a privacy-friendly alternative front-end to Twitter. It allows you to browse Twitter without being tracked.",
-            "status": "NOK",
-            "links": [
-                {
-                    "name": "Go to Nitter",
-                    "url": "https://nitter.private.coffee",
-                    "alternatives": [
-                        {
-                            "name": "Tor (.onion)",
-                            "url": "http://nitter.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion/"
-                        }
-                    ]
-                }
-            ],
-            "exclude_from_index": true,
-            "exclude_from_simple": true
-        },
-        {
-            "name": "Proxigram",
-            "url": "https://proxigram.private.coffee",
-            "short_description": "Proxigram is a privacy-friendly alternative front-end to Instagram.",
-            "long_description": "Proxigram is a privacy-friendly alternative front-end to Instagram. It allows you to browse Instagram without being tracked.",
-            "status": "NOK",
-            "links": [
-                {
-                    "name": "Go to Proxigram",
-                    "url": "https://proxigram.private.coffee"
-                }
-            ],
-            "exclude_from_index": true,
-            "exclude_from_simple": true
         }
     ]
 }
