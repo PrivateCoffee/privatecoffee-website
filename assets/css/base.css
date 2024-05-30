@@ -123,6 +123,10 @@ h5 {
   fill: var(--bs-primary-bg-subtle);
 }
 
+.bs-icon.bs-icon-lg svg {
+  fill: var(--bs-primary)
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .navbar .container {
