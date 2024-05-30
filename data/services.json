@@ -213,6 +213,22 @@
             "exclude_from_simple": false
         },
         {
+            "name": "LibreTranslate",
+            "url": "https://translate.private.coffee",
+            "short_description": "LibreTranslate is a self-hosted translation service powered by Argos Translate.",
+            "long_description": "LibreTranslate is a self-hosted translation service powered by Argos Translate. It allows you to translate text between many languages.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to LibreTranslate",
+                    "url": "https://translate.private.coffee"
+                }
+            ],
+            "icon": "translate",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "NocoDB",
             "url": "https://nocodb.private.coffee",
             "short_description": "NocoDB is a self-hosted alternative to Airtable.",
