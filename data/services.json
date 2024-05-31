@@ -229,6 +229,22 @@
             "exclude_from_simple": false
         },
         {
+            "name": "wishthis",
+            "url": "https://wishthis.private.coffee",
+            "short_description": "wishthis is a service for creating wishlists.",
+            "long_description": "wishthis is a service for creating wishlists. You can use it to create wishlists for yourself, or to share them with others.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to wishthis",
+                    "url": "https://wishthis.private.coffee"
+                }
+            ],
+            "icon": "gift",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "NocoDB",
             "url": "https://nocodb.private.coffee",
             "short_description": "NocoDB is a self-hosted alternative to Airtable.",
