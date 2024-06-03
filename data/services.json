@@ -305,8 +305,8 @@
                 }
             ],
             "icon": "calendar",
-            "exclude_from_index": true,
-            "exclude_from_simple": true
+            "exclude_from_index": false,
+            "exclude_from_simple": false
         },
         {
             "name": "LibreY",
