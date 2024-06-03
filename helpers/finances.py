@@ -9,6 +9,7 @@ def get_latest_month(data):
 
     return int(latest_month), int(latest_year)
 
+
 def get_transparency_data(data, year=None, month=None):
     if year is None:
         year = max(data.keys())
@@ -23,6 +24,7 @@ def get_transparency_data(data, year=None, month=None):
     balances = {}
     incomes = {}
     expenses = {}
+    notes = {}
 
     start_balance = {}
     end_balance = {}
@@ -37,41 +39,51 @@ def get_transparency_data(data, year=None, month=None):
 
             # If the month is the one we are interested in, capture the start balance
             if int(y) == int(year) and int(m) == int(month):
-                start_balance = {k: Decimal(v) for k, v in balances.items()}
+                start_balance = {
+                    k: Decimal(v) for k, v in balances.items() if k != "Notes"
+                }
 
             for category in data[y][m]:
                 for currency, amount in data[y][m][category].items():
-                    if currency not in balances:
-                        balances[currency] = Decimal(0)
-                    balances[currency] += Decimal(str(amount))
+                    if currency == "Notes":
+                        if int(y) == int(year) and int(m) == int(month):
+                            notes[category] = amount
+                    else:
+                        if currency not in balances:
+                            balances[currency] = Decimal(0)
+                        balances[currency] += Decimal(str(amount))
 
-                    # Track incomes and expenses
-                    if int(y) == int(year) and int(m) == int(month):
-                        if Decimal(str(amount)) > 0:
-                            if category not in incomes:
-                                incomes[category] = {}
-                            if currency not in incomes[category]:
-                                incomes[category][currency] = Decimal(0)
-                            incomes[category][currency] += Decimal(str(amount))
-                        else:
-                            if category not in expenses:
-                                expenses[category] = {}
-                            if currency not in expenses[category]:
-                                expenses[category][currency] = Decimal(0)
-                            expenses[category][currency] += Decimal(str(amount))
+                        # Track incomes and expenses
+                        if int(y) == int(year) and int(m) == int(month):
+                            if Decimal(str(amount)) > 0:
+                                if category not in incomes:
+                                    incomes[category] = {}
+                                if currency not in incomes[category]:
+                                    incomes[category][currency] = Decimal(0)
+                                incomes[category][currency] += Decimal(str(amount))
+                            else:
+                                if category not in expenses:
+                                    expenses[category] = {}
+                                if currency not in expenses[category]:
+                                    expenses[category][currency] = Decimal(0)
+                                expenses[category][currency] += Decimal(str(amount))
 
             # If the month is the one we are interested in, capture the end balance
             if int(y) == int(year) and int(m) == int(month):
-                end_balance = {k: Decimal(v) for k, v in balances.items()}
+                end_balance = {
+                    k: Decimal(v) for k, v in balances.items() if k != "Notes"
+                }
 
     # Calculate accumulated sums of incomes and expenses
     accumulated_incomes = {
         currency: sum(incomes[cat].get(currency, Decimal(0)) for cat in incomes)
         for currency in balances
+        if currency != "Notes"
     }
     accumulated_expenses = {
         currency: sum(expenses[cat].get(currency, Decimal(0)) for cat in expenses)
         for currency in balances
+        if currency != "Notes"
     }
 
     return {
@@ -81,6 +93,7 @@ def get_transparency_data(data, year=None, month=None):
         "expenses": expenses,
         "accumulated_incomes": accumulated_incomes,
         "accumulated_expenses": accumulated_expenses,
+        "notes": notes,
     }
 
 
@@ -94,7 +107,7 @@ def generate_transparency_table(result, currencies=None):
                     + list(data["accumulated_incomes"].keys())
                     + list(data["accumulated_expenses"].keys())
                 )
-                - {"EUR"}
+                - {"EUR", "Notes"}
             )
         )
 
@@ -152,7 +165,8 @@ def generate_transparency_table(result, currencies=None):
 
     # Add income rows
     for category, transactions in result["incomes"].items():
-        html += f"<tr><td>{category}</td>"
+        has_notes = result["notes"].get(category)
+        html += f"<tr><td>{category}{'*' if has_notes else ''}</td>"
         for currency in currencies:
             value = transactions.get(currency, "")
             if value != "":
@@ -163,7 +177,8 @@ def generate_transparency_table(result, currencies=None):
 
     # Add expense rows
     for category, transactions in result["expenses"].items():
-        html += f"<tr><td>{category}</td>"
+        has_notes = result["notes"].get(category)
+        html += f"<tr><td>{category}{'*' if has_notes else ''}</td>"
         for currency in currencies:
             value = transactions.get(currency, "")
             if value != "":
@@ -197,5 +212,12 @@ def generate_transparency_table(result, currencies=None):
         </tbody>
     </table>
     """
+
+    if result["notes"]:
+        html += "<p><b>Notes:</b></p>"
+        html += "<ul>"
+        for category, footnote in result["notes"].items():
+            html += f"<li>{category}: {footnote}</li>"
+        html += "</ul>"
 
     return html

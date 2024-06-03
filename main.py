@@ -69,6 +69,28 @@ def catch_all(path):
                 }
             )
 
+        if path == "transparency":
+            finances = json.loads(
+                (pathlib.Path(__file__).parent / "data" / "finances.json").read_text()
+            )
+
+            finance_data = {}
+
+            for year in sorted(finances.keys(), reverse=True):
+                for month in sorted(finances[year].keys(), reverse=True):
+                    if year not in finance_data:
+                        finance_data[year] = {}
+                    print(get_transparency_data(finances, year, month))
+                    finance_data[year][month] = generate_transparency_table(
+                        get_transparency_data(finances, year, month)
+                    )
+
+            kwargs.update(
+                {
+                    "finances": finance_data,
+                }
+            )
+
         return render_template(f"{path}.html", **kwargs)
 
     except TemplateNotFound:
