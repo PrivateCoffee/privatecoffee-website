@@ -49,6 +49,22 @@
             "exclude_from_simple": false
         },
         {
+            "name": "Transfer.coffee",
+            "url": "https://transfer.coffee",
+            "short_description": "Transfer files securely using peer-to-peer connections.",
+            "long_description": "Transfer.coffee allows you to transfer files securely using peer-to-peer connections. Your files are never stored on our servers.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Transfer.coffee",
+                    "url": "https://transfer.coffee"
+                }
+            ],
+            "icon": "upload",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "MyIP.Coffee",
             "url": "https://myip.coffee",
             "short_description": "Check your IP address.",
@@ -177,22 +193,6 @@
                 }
             ],
             "icon": "video",
-            "exclude_from_index": false,
-            "exclude_from_simple": false
-        },
-        {
-            "name": "Transfer.coffee",
-            "url": "https://transfer.coffee",
-            "short_description": "Transfer files securely using peer-to-peer connections.",
-            "long_description": "Transfer.coffee allows you to transfer files securely using peer-to-peer connections. Your files are never stored on our servers.",
-            "status": "OK",
-            "links": [
-                {
-                    "name": "Go to Transfer.coffee",
-                    "url": "https://transfer.coffee"
-                }
-            ],
-            "icon": "upload",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },
