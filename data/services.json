@@ -39,15 +39,19 @@
             "exclude_from_simple": false
         },
         {
-            "name": "Piped",
+            "name": "Piped / Invidious",
             "url": "https://piped.private.coffee",
             "short_description": "Watch YouTube videos without Google tracking.",
-            "long_description": "Piped is another alternative front-end to YouTube. It allows you to watch YouTube videos without Google tracking you.",
+            "long_description": "Piped and Invidious are alternative front-ends to YouTube. They allow you to watch YouTube videos without Google tracking you.",
             "status": "OK",
             "links": [
                 {
                     "name": "Go to Piped",
                     "url": "https://piped.private.coffee"
+                },
+                {
+                    "name": "Go to Invidious",
+                    "url": "https://invidious.private.coffee"
                 }
             ],
             "icon": "video",
@@ -67,22 +71,6 @@
                 }
             ],
             "icon": "network",
-            "exclude_from_index": false,
-            "exclude_from_simple": false
-        },
-        {
-            "name": "Invidious",
-            "url": "https://invidious.private.coffee",
-            "short_description": "Watch YouTube videos without Google tracking.",
-            "long_description": "Invidious is an alternative front-end to YouTube. It allows you to watch YouTube videos without Google tracking you.",
-            "status": "OK",
-            "links": [
-                {
-                    "name": "Go to Invidious",
-                    "url": "https://invidious.private.coffee"
-                }
-            ],
-            "icon": "video",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },
