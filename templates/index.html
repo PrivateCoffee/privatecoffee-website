@@ -26,7 +26,13 @@
           xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:svg="http://www.w3.org/2000/svg"
-          style="max-width: 400px;filter: brightness(1.5);-webkit-filter: drop-shadow( 4px 4px 3px rgba(0, 0, 0, .7));filter: drop-shadow( 4px 4px 3px rgba(0, 0, 0, .7)) brightness(1.5);max-height: 400px;"
+          style="
+            max-width: 400px;
+            filter: brightness(1.5);
+            -webkit-filter: drop-shadow(4px 4px 3px rgba(0, 0, 0, 0.7));
+            filter: drop-shadow(4px 4px 3px rgba(0, 0, 0, 0.7)) brightness(1.5);
+            max-height: 400px;
+          "
         >
           <defs id="defs6" />
           <sodipodi:namedview
@@ -95,31 +101,47 @@
     </div>
     <div class="py-5 p-lg-5">
       <div
-        class="row row-cols-1 row-cols-md-2 mx-auto"
-        style="max-width: 900px"
+        class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mx-auto"
+        style="max-width: 1200px"
       >
         {% for service in services.services %} {% if not
         service.exclude_from_index %}
         <div class="col mb-5">
           <div class="card shadow-sm">
             <div class="card-body px-4 py-5 px-md-5">
+              {% if service.icon %}
               <div
                 class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon"
                 style="top: 1rem; right: 1rem; position: absolute"
               >
-                {% if service.icon %}{{ service.icon | icon | safe }}{% endif %}
+                {{ service.icon | icon | safe }}
               </div>
+              {% endif %}
               <h5 class="fw-bold card-title">{{ service.name }}</h5>
               <p class="text-muted card-text mb-4">
                 {{ service.long_description }}
               </p>
-              {% for link in service.links %}
+              {% for link in service.links %} {% if link.alternatives %}
+              <div class="dropdown">
+                <div class="btn btn-primary shadow">
+                  <a class="main-link" href="{{ link.url }}">
+                    {{ link.name }}
+                  </a>
+                  <div class="dropdown-toggle-area">&#9660;</div>
+                </div>
+                <div class="dropdown-content">
+                  {% for alternative in link.alternatives %}
+                  <a href="{{ alternative.url }}">{{ alternative.name }}</a>
+                  {% endfor %}
+                </div>
+              </div>
+              {% else %}
               <a
                 class="btn btn-primary shadow w-100 text-center"
                 href="{{ link.url }}"
                 >{{ link.name }}</a
               >
-              {% endfor %}
+              {% endif %} {% endfor %}
             </div>
           </div>
         </div>
