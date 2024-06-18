@@ -59,6 +59,22 @@
             "exclude_from_simple": false
         },
         {
+            "name": "Transfer.coffee",
+            "url": "https://transfer.coffee",
+            "short_description": "Transfer files securely using peer-to-peer connections.",
+            "long_description": "Transfer.coffee allows you to transfer files securely using peer-to-peer connections. Your files are never stored on our servers.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Transfer.coffee",
+                    "url": "https://transfer.coffee"
+                }
+            ],
+            "icon": "upload",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "MyIP.Coffee",
             "url": "https://myip.coffee",
             "short_description": "Check your IP address.",
@@ -139,22 +155,6 @@
                 }
             ],
             "icon": "markdown-logo",
-            "exclude_from_index": false,
-            "exclude_from_simple": false
-        },
-        {
-            "name": "GotHub",
-            "url": "https://gothub.private.coffee",
-            "short_description": "Alternative GitHub interface that respects privacy.",
-            "long_description": "Gothub is an alternative GitHub interface that respects your privacy. It is currently in alpha, but you can browse and download repositories, and you can also clone them using git+https (although the text on the main page would disagree).",
-            "status": "OK",
-            "links": [
-                {
-                    "name": "Go to GotHub",
-                    "url": "https://gothub.private.coffee"
-                }
-            ],
-            "icon": "git-branch",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },
@@ -331,6 +331,22 @@
                 }
             ],
             "icon": "leaf",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "GotHub",
+            "url": "https://gothub.private.coffee",
+            "short_description": "Alternative GitHub interface that respects privacy.",
+            "long_description": "Gothub is an alternative GitHub interface that respects your privacy. It is currently in alpha, but you can browse and download repositories, and you can also clone them using git+https (although the text on the main page would disagree).",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to GotHub",
+                    "url": "https://gothub.private.coffee"
+                }
+            ],
+            "icon": "git-branch",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },
