@@ -51,7 +51,13 @@
                 },
                 {
                     "name": "Go to Invidious",
-                    "url": "https://invidious.private.coffee"
+                    "url": "https://invidious.private.coffee",
+                    "alternatives": [
+                        {
+                            "name": "Tor",
+                            "url": "http://invidious.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion"
+                        }
+                    ]
                 }
             ],
             "icon": "video",
