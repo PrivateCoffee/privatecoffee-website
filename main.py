@@ -54,7 +54,9 @@ def catch_all(path):
                 (pathlib.Path(__file__).parent / "data" / "finances.json").read_text()
             )
 
-            finances_month, finances_year = get_latest_month(finances)
+            allow_current = app.development_mode
+
+            finances_month, finances_year = get_latest_month(finances, allow_current)
             finances_period = datetime.date(finances_year, finances_month, 1)
             finances_period_str = finances_period.strftime("%B %Y")
 
@@ -69,10 +71,51 @@ def catch_all(path):
                 }
             )
 
+        if path == "transparency":
+            finances = json.loads(
+                (pathlib.Path(__file__).parent / "data" / "finances.json").read_text()
+            )
+
+            finance_data = {}
+
+            for year in sorted(finances.keys(), reverse=True):
+                for month in sorted(finances[year].keys(), reverse=True):
+                    if year not in finance_data:
+                        finance_data[year] = {}
+                    print(get_transparency_data(finances, year, month))
+                    finance_data[year][month] = generate_transparency_table(
+                        get_transparency_data(finances, year, month)
+                    )
+
+            kwargs.update(
+                {
+                    "finances": finance_data,
+                }
+            )
+
         return render_template(f"{path}.html", **kwargs)
 
     except TemplateNotFound:
         return "404 Not Found", 404
+
+
+@app.route("/_metrics/")
+def metrics():
+    finances = json.loads(
+        (pathlib.Path(__file__).parent / "data" / "finances.json").read_text()
+    )
+
+    balances = get_transparency_data(finances)["end_balance"]
+
+    response = (
+        "# HELP privatecoffee_balance The balance of the private.coffee account\n"
+    )
+    response += "# TYPE privatecoffee_balance gauge\n"
+
+    for currency, balance in balances.items():
+        response += f'privatecoffee_balance{{currency="{currency}"}} {balance}\n'
+
+    return response
 
 
 app.development_mode = False

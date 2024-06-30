@@ -4,12 +4,18 @@
             "name": "Matrix",
             "url": "https://element.private.coffee",
             "short_description": "Matrix is an open network for secure, decentralized communication.",
-            "long_description": "Private.coffee runs a Matrix server. You can use it to chat with other people at Private.coffee or around the world. Use it with a client of your choice, with https://matrix.private.coffee as the homeserver, or use our web client.",
+            "long_description": "Private.coffee runs a Matrix server. You can use it to chat with other people at Private.coffee or around the world. Use it with a client of your choice, or use our Element web client.",
             "status": "OK",
             "links": [
                 {
-                    "name": "Go to Element (Web client)",
-                    "url": "https://element.private.coffee"
+                    "name": "Go to Element",
+                    "url": "https://element.private.coffee",
+                    "alternatives": [
+                        {
+                            "name": "Tor",
+                            "url": "http://element.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion"
+                        }
+                    ]
                 }
             ],
             "icon": "matrix-logo",
@@ -33,15 +39,25 @@
             "exclude_from_simple": false
         },
         {
-            "name": "Piped",
+            "name": "Piped / Invidious",
             "url": "https://piped.private.coffee",
             "short_description": "Watch YouTube videos without Google tracking.",
-            "long_description": "Piped is another alternative front-end to YouTube. It allows you to watch YouTube videos without Google tracking you.",
+            "long_description": "Piped and Invidious are alternative front-ends to YouTube. They allow you to watch YouTube videos without Google tracking you.",
             "status": "OK",
             "links": [
                 {
                     "name": "Go to Piped",
                     "url": "https://piped.private.coffee"
+                },
+                {
+                    "name": "Go to Invidious",
+                    "url": "https://invidious.private.coffee",
+                    "alternatives": [
+                        {
+                            "name": "Tor",
+                            "url": "http://invidious.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion"
+                        }
+                    ]
                 }
             ],
             "icon": "video",
@@ -77,22 +93,6 @@
                 }
             ],
             "icon": "network",
-            "exclude_from_index": false,
-            "exclude_from_simple": false
-        },
-        {
-            "name": "Invidious",
-            "url": "https://invidious.private.coffee",
-            "short_description": "Watch YouTube videos without Google tracking.",
-            "long_description": "Invidious is an alternative front-end to YouTube. It allows you to watch YouTube videos without Google tracking you.",
-            "status": "OK",
-            "links": [
-                {
-                    "name": "Go to Invidious",
-                    "url": "https://invidious.private.coffee"
-                }
-            ],
-            "icon": "video",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },

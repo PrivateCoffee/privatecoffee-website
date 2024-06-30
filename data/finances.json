@@ -4,15 +4,14 @@
             "Membership Fees": {
                 "EUR": 365
             },
-            "Donations": {},
             "Server Costs": {
                 "EUR": -216.57
             },
             "Domain Names": {},
-            "Operating Expenses": {
-                "EUR": -36.10
-            },
-            "Conversions": {}
+            "Administrative Expenses": {
+                "EUR": -36.10,
+                "Notes": "Administrative fee for the formation of the association"
+            }
         },
         "5": {
             "Membership Fees": {
@@ -23,11 +22,20 @@
                 "XMR": 0.447661805527
             },
             "Server Costs": {
-                "EUR": -430.04
+                "EUR": -430.04,
+                "Notes": "Includes setup costs and two monthly payments for new server"
+            }
+        },
+        "6": {
+            "Membership Fees": {
+                "EUR": 382.42
             },
-            "Domain Names": {},
-            "Operating Expenses": {},
-            "Conversions": {}
+            "Server Costs": {
+                "EUR": -317.62
+            },
+            "Bank Fees": {
+                "EUR": -49.05
+            }
         }
     }
 }
