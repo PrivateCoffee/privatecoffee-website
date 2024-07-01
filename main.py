@@ -97,7 +97,7 @@ def generate_static_site(development_mode=False):
                     if year not in finance_data:
                         finance_data[year] = {}
                     finance_data[year][month] = generate_transparency_table(
-                        get_transparency_data(finances, year, month)
+                        get_transparency_data(finances, year, month, True)
                     )
             context.update({"finances": finance_data})
 
