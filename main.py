@@ -129,11 +129,12 @@ def generate_static_site(development_mode=False):
         f.write(response)
 
     # Copy static assets
-    assets_src = pathlib.Path("assets")
-    assets_dst = output_dir / "assets"
-    if assets_dst.exists():
-        shutil.rmtree(assets_dst)
-    shutil.copytree(assets_src, assets_dst)
+    for folder in ["assets", "data"]:
+        src = pathlib.Path(folder)
+        dst = output_dir / folder
+        if dst.exists():
+            shutil.rmtree(dst)
+        shutil.copytree(src, dst)
 
     print("Static site generated successfully.")
 
