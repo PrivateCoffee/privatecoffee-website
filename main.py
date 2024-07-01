@@ -1,7 +1,6 @@
 from jinja2 import Environment, FileSystemLoader, TemplateNotFound
 import json
 import pathlib
-import os
 import datetime
 import shutil
 
@@ -14,32 +13,36 @@ from helpers.finances import (
 )
 
 # Configure Jinja2 environment
-env = Environment(loader=FileSystemLoader('templates'))
+env = Environment(loader=FileSystemLoader("templates"))
 
 # Set up the output directory for static files
-output_dir = pathlib.Path('build')
+output_dir = pathlib.Path("build")
 output_dir.mkdir(exist_ok=True, parents=True)
+
 
 # Define the icon filter
 def icon(icon_name):
-    icon_path = pathlib.Path('assets') / f"dist/icons/{icon_name}.svg"
+    icon_path = pathlib.Path("assets") / f"dist/icons/{icon_name}.svg"
     try:
-        with open(icon_path, 'r', encoding='utf-8') as file:
+        with open(icon_path, "r", encoding="utf-8") as file:
             file_content = file.read()
     except FileNotFoundError:
-        file_content = ''
+        file_content = ""
     return file_content
 
-env.filters['icon'] = icon
+
+env.filters["icon"] = icon
+
 
 def render_template_to_file(template_name, output_name, **kwargs):
     try:
         template = env.get_template(template_name)
         output_path = output_dir / output_name
-        with open(output_path, 'w', encoding='utf-8') as f:
+        with open(output_path, "w", encoding="utf-8") as f:
             f.write(template.render(**kwargs))
     except TemplateNotFound:
         print(f"Template {template_name} not found.")
+
 
 def generate_static_site(development_mode=False):
     # Common context
@@ -62,8 +65,8 @@ def generate_static_site(development_mode=False):
     )
 
     # Iterate over all templates in the templates directory
-    templates_path = pathlib.Path('templates')
-    for template_file in templates_path.glob('*.html'):
+    templates_path = pathlib.Path("templates")
+    for template_file in templates_path.glob("*.html"):
         template_name = template_file.stem
         context = kwargs.copy()
 
@@ -76,12 +79,16 @@ def generate_static_site(development_mode=False):
             finances_period = datetime.date(finances_year, finances_month, 1)
             finances_period_str = finances_period.strftime("%B %Y")
             finances_table = generate_transparency_table(
-                get_transparency_data(finances, finances_year, finances_month, allow_current)
+                get_transparency_data(
+                    finances, finances_year, finances_month, allow_current
+                )
             )
-            context.update({
-                "finances": finances_table,
-                "finances_period": finances_period_str,
-            })
+            context.update(
+                {
+                    "finances": finances_table,
+                    "finances_period": finances_period_str,
+                }
+            )
 
         if template_name == "transparency":
             finance_data = {}
@@ -94,7 +101,9 @@ def generate_static_site(development_mode=False):
                     )
             context.update({"finances": finance_data})
 
-        render_template_to_file(f"{template_name}.html", f"{template_name}.html", **context)
+        render_template_to_file(
+            f"{template_name}.html", f"{template_name}.html", **context
+        )
 
     # Generate metrics
     balances = get_transparency_data(finances, allow_current=True)["end_balance"]
@@ -108,17 +117,18 @@ def generate_static_site(development_mode=False):
         response += f'privatecoffee_balance{{currency="{currency}"}} {balance}\n'
 
     metrics_path = output_dir / "metrics.txt"
-    with open(metrics_path, 'w', encoding='utf-8') as f:
+    with open(metrics_path, "w", encoding="utf-8") as f:
         f.write(response)
 
     # Copy static assets
-    assets_src = pathlib.Path('assets')
-    assets_dst = output_dir / 'assets'
+    assets_src = pathlib.Path("assets")
+    assets_dst = output_dir / "assets"
     if assets_dst.exists():
         shutil.rmtree(assets_dst)
     shutil.copytree(assets_src, assets_dst)
 
     print("Static site generated successfully.")
+
 
 if __name__ == "__main__":
     parser = ArgumentParser(description="Generate the private.coffee static site.")
