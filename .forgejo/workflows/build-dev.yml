@@ -45,5 +45,5 @@ jobs:
           git add .
           git commit -m "Deploy static site"
 
-          # Force push to the 'pages' branch
-          git push origin pages --force
+          # Force push to the 'pages-dev' branch
+          git push origin pages-dev --force
