@@ -5,8 +5,9 @@
 This is the source code for the [Private.coffee](https://private.coffee) 
 website.
 
-It is a simple Flask application that generates the HTML for the website based
-on the services defined in the `services.json` file.
+It is a simple Jinja2 static website generator that compiles the templates in
+the `templates` directory in conjunction with the JSON files in the `data`
+directory to generate the static HTML files in the `build` directory.
 
 ## Development
 
@@ -18,7 +19,8 @@ pip install -r requirements.txt
 python main.py
 ```
 
-The website will be available at `http://localhost:9810`.
+The website will be built into the `build` directory, and you can view it by
+opening the `index.html` file in your browser.
 
 ## License
 
