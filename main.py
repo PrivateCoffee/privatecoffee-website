@@ -101,7 +101,7 @@ def catch_all(path):
         return "404 Not Found", 404
 
 
-@app.route("/_metrics/")
+@app.route("/metrics/")
 def metrics():
     finances = json.loads(
         (pathlib.Path(__file__).parent / "data" / "finances.json").read_text()
