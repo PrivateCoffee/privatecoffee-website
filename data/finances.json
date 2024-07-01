@@ -36,6 +36,11 @@
             "Bank Fees": {
                 "EUR": -49.05
             }
+        },
+        "7": {
+            "Membership Fees": {
+                "EUR": 20
+            }
         }
     }
 }
