@@ -1,0 +1,50 @@
+name: Build and Deploy Static Site
+
+on:
+  push:
+    branches:
+      - static
+
+jobs:
+  build:
+    runs-on: node:20-bookworm
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          apt update
+          apt install -y python3 python3-pip
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Generate static site
+        run: python main.py
+
+      - name: Deploy to pages branch
+        run: |
+          # Configure Git
+          git config --global user.name "Forgejo"
+          git config --global user.email "noreply@private.coffee"
+
+          # Move generated static site files to a temporary location
+          mv build ../static_site_temp
+
+          # Create a new orphan branch named 'pages'
+          git checkout --orphan pages
+
+          # Remove all files from the working directory
+          git rm -rf .
+
+          # Move the static site files back to the working directory
+          mv ../static_site_temp/* ./
+          mv ../static_site_temp/.* ./ 2>/dev/null || true
+
+          # Add and commit the static site files
+          git add .
+          git commit -m "Deploy static site"
+
+          # Force push to the 'pages' branch
+          git push origin pages --force
