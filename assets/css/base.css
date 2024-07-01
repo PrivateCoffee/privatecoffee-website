@@ -81,7 +81,7 @@ h5 {
   font-size: x-large;
 }
 
-.card-body .btn-primary:not(:first-child) {
+.card-body :not(p):not(:first-child):not(.dropdown-content):not(.dropdown-toggle-area) {
   margin-top: 10px;
 }
 
@@ -223,7 +223,7 @@ h5 {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 100%;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
