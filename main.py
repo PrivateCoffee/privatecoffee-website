@@ -84,9 +84,8 @@ def catch_all(path):
                 for month in sorted(finances[year].keys(), reverse=True):
                     if year not in finance_data:
                         finance_data[year] = {}
-                    print(get_transparency_data(finances, year, month))
                     finance_data[year][month] = generate_transparency_table(
-                        get_transparency_data(finances, year, month)
+                        get_transparency_data(finances, year, month, True)
                     )
 
             kwargs.update(
