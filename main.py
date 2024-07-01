@@ -34,6 +34,14 @@ def icon(icon_name):
 env.filters["icon"] = icon
 
 
+# Filter for rendering a month name from a number
+def month_name(month_number):
+    return datetime.date(1900, int(month_number), 1).strftime("%B")
+
+
+env.filters["month_name"] = month_name
+
+
 def render_template_to_file(template_name, output_name, **kwargs):
     try:
         template = env.get_template(template_name)
