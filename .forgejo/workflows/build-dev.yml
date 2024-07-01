@@ -30,6 +30,7 @@ jobs:
 
           # Move generated static site files to a temporary location
           mv build ../static_site_temp
+          cp .gitignore ../static_site_temp
 
           # Create a new orphan branch named 'pages-dev'
           git checkout --orphan pages-dev
