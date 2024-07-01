@@ -1,10 +1,9 @@
-from flask import Flask, render_template, send_from_directory
-from jinja2 import TemplateNotFound
-
+from jinja2 import Environment, FileSystemLoader, TemplateNotFound
 import json
 import pathlib
 import os
 import datetime
+import shutil
 
 from argparse import ArgumentParser
 
@@ -14,99 +13,90 @@ from helpers.finances import (
     get_latest_month,
 )
 
-app = Flask(__name__)
+# Configure Jinja2 environment
+env = Environment(loader=FileSystemLoader('templates'))
 
+# Set up the output directory for static files
+output_dir = pathlib.Path('build')
+output_dir.mkdir(exist_ok=True, parents=True)
 
-@app.route("/assets/<path:path>")
-def send_assets(path):
-    return send_from_directory("assets", path)
-
-
-@app.route("/", defaults={"path": "index"})
-@app.route("/<path:path>.html")
-def catch_all(path):
+# Define the icon filter
+def icon(icon_name):
+    icon_path = pathlib.Path('assets') / f"dist/icons/{icon_name}.svg"
     try:
-        kwargs = {}
+        with open(icon_path, 'r', encoding='utf-8') as file:
+            file_content = file.read()
+    except FileNotFoundError:
+        file_content = ''
+    return file_content
 
-        if app.development_mode:
-            kwargs.update(
-                {
-                    "warning": render_template("prod-warning.html"),
-                }
-            )
+env.filters['icon'] = icon
 
-        if path in (
-            "index",
-            "simple",
-        ):
-            services = json.loads(
-                (pathlib.Path(__file__).parent / "data" / "services.json").read_text()
-            )
-
-            kwargs.update(
-                {
-                    "services": services,
-                }
-            )
-
-        if path == "membership":
-            finances = json.loads(
-                (pathlib.Path(__file__).parent / "data" / "finances.json").read_text()
-            )
-
-            allow_current = app.development_mode
-
-            finances_month, finances_year = get_latest_month(finances, allow_current)
-            finances_period = datetime.date(finances_year, finances_month, 1)
-            finances_period_str = finances_period.strftime("%B %Y")
-
-            finances_table = generate_transparency_table(
-                get_transparency_data(
-                    finances, finances_year, finances_month, allow_current
-                )
-            )
-
-            kwargs.update(
-                {
-                    "finances": finances_table,
-                    "finances_period": finances_period_str,
-                }
-            )
-
-        if path == "transparency":
-            finances = json.loads(
-                (pathlib.Path(__file__).parent / "data" / "finances.json").read_text()
-            )
-
-            finance_data = {}
-
-            for year in sorted(finances.keys(), reverse=True):
-                for month in sorted(finances[year].keys(), reverse=True):
-                    if year not in finance_data:
-                        finance_data[year] = {}
-                    print(get_transparency_data(finances, year, month))
-                    finance_data[year][month] = generate_transparency_table(
-                        get_transparency_data(finances, year, month)
-                    )
-
-            kwargs.update(
-                {
-                    "finances": finance_data,
-                }
-            )
-
-        return render_template(f"{path}.html", **kwargs)
-
+def render_template_to_file(template_name, output_name, **kwargs):
+    try:
+        template = env.get_template(template_name)
+        output_path = output_dir / output_name
+        with open(output_path, 'w', encoding='utf-8') as f:
+            f.write(template.render(**kwargs))
     except TemplateNotFound:
-        return "404 Not Found", 404
+        print(f"Template {template_name} not found.")
 
+def generate_static_site(development_mode=False):
+    # Common context
+    kwargs = {}
+    if development_mode:
+        kwargs.update(
+            {
+                "warning": env.get_template("prod-warning.html").render(),
+            }
+        )
 
-@app.route("/metrics/")
-def metrics():
+    # Load services data
+    services = json.loads(
+        (pathlib.Path(__file__).parent / "data" / "services.json").read_text()
+    )
+
+    # Load finances data
     finances = json.loads(
         (pathlib.Path(__file__).parent / "data" / "finances.json").read_text()
     )
 
+    # Iterate over all templates in the templates directory
+    templates_path = pathlib.Path('templates')
+    for template_file in templates_path.glob('*.html'):
+        template_name = template_file.stem
+        context = kwargs.copy()
+
+        if template_name in ["index", "simple"]:
+            context.update({"services": services})
+
+        if template_name == "membership":
+            allow_current = development_mode
+            finances_month, finances_year = get_latest_month(finances, allow_current)
+            finances_period = datetime.date(finances_year, finances_month, 1)
+            finances_period_str = finances_period.strftime("%B %Y")
+            finances_table = generate_transparency_table(
+                get_transparency_data(finances, finances_year, finances_month, allow_current)
+            )
+            context.update({
+                "finances": finances_table,
+                "finances_period": finances_period_str,
+            })
+
+        if template_name == "transparency":
+            finance_data = {}
+            for year in sorted(finances.keys(), reverse=True):
+                for month in sorted(finances[year].keys(), reverse=True):
+                    if year not in finance_data:
+                        finance_data[year] = {}
+                    finance_data[year][month] = generate_transparency_table(
+                        get_transparency_data(finances, year, month)
+                    )
+            context.update({"finances": finance_data})
+
+        render_template_to_file(f"{template_name}.html", f"{template_name}.html", **context)
+
+    # Generate metrics
     balances = get_transparency_data(finances, allow_current=True)["end_balance"]
 
     response = (
@@ -117,33 +107,22 @@ def metrics():
     for currency, balance in balances.items():
         response += f'privatecoffee_balance{{currency="{currency}"}} {balance}\n'
 
-    return response
+    metrics_path = output_dir / "metrics.txt"
+    with open(metrics_path, 'w', encoding='utf-8') as f:
+        f.write(response)
 
+    # Copy static assets
+    assets_src = pathlib.Path('assets')
+    assets_dst = output_dir / 'assets'
+    if assets_dst.exists():
+        shutil.rmtree(assets_dst)
+    shutil.copytree(assets_src, assets_dst)
 
-app.development_mode = False
-
-if os.environ.get("PRIVATECOFFEE_DEV"):
-    app.development_mode = True
-
-
-def icon(icon_name):
-    file = send_from_directory("assets", f"dist/icons/{icon_name}.svg")
-    try:
-        file_content = file.response.file.read().decode("utf-8")
-    except AttributeError:
-        file_content = file.response.read().decode("utf-8")
-    return file_content
-
-
-app.add_template_filter(icon)
+    print("Static site generated successfully.")
 
 if __name__ == "__main__":
-    parser = ArgumentParser(description="Run the private.coffee web server.")
-    parser.add_argument("--port", type=int, default=9810)
-    parser.add_argument("--debug", action="store_true")
-    parser.add_argument("--dev", action="store_true")
+    parser = ArgumentParser(description="Generate the private.coffee static site.")
+    parser.add_argument("--dev", action="store_true", help="Enable development mode")
     args = parser.parse_args()
 
-    app.development_mode = args.dev or app.development_mode
-
-    app.run(port=args.port, debug=args.debug)
+    generate_static_site(development_mode=args.dev)
