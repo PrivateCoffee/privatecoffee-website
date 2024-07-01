@@ -107,7 +107,7 @@ def metrics():
         (pathlib.Path(__file__).parent / "data" / "finances.json").read_text()
     )
 
-    balances = get_transparency_data(finances)["end_balance"]
+    balances = get_transparency_data(finances, allow_current=True)["end_balance"]
 
     response = (
         "# HELP privatecoffee_balance The balance of the private.coffee account\n"
