@@ -22,12 +22,23 @@ def get_latest_month(data, allow_current=False):
     return int(latest_month), int(latest_year)
 
 
-def get_transparency_data(data, year=None, month=None):
+def get_transparency_data(data, year=None, month=None, allow_current=False):
     if year is None:
         year = max(data.keys())
 
     if month is None:
         month = max(data[year].keys())
+
+    if (
+        not allow_current
+        and year == str(datetime.now().year)
+        and month == str(datetime.now().month)
+    ):
+        try:
+            month = max([m for m in data[year].keys() if m != str(datetime.now().month)])
+        except ValueError:
+            year = str(int(year) - 1)
+            month = max(data[year].keys())
 
     assert year in data, f"Year {year} not found in data"
     assert month in data[year], f"Month {month}-{year} not found in data"

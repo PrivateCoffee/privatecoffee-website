@@ -61,7 +61,9 @@ def catch_all(path):
             finances_period_str = finances_period.strftime("%B %Y")
 
             finances_table = generate_transparency_table(
-                get_transparency_data(finances)
+                get_transparency_data(
+                    finances, finances_year, finances_month
+                )
             )
 
             kwargs.update(
