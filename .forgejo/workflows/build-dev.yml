@@ -3,7 +3,7 @@ name: Build and Deploy Static Site
 on:
   push:
     branches:
-      - static
+      - dev
 
 jobs:
   build:
@@ -31,8 +31,8 @@ jobs:
           # Move generated static site files to a temporary location
           mv build ../static_site_temp
 
-          # Create a new orphan branch named 'pages'
-          git checkout --orphan pages
+          # Create a new orphan branch named 'pages-dev'
+          git checkout --orphan pages-dev
 
           # Remove all files from the working directory
           git rm -rf .
