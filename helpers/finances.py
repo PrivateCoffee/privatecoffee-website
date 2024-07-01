@@ -29,6 +29,9 @@ def get_transparency_data(data, year=None, month=None, allow_current=False):
     if month is None:
         month = max(data[year].keys())
 
+    year = str(year)
+    month = str(month)
+
     if (
         not allow_current
         and year == str(datetime.now().year)

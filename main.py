@@ -62,7 +62,7 @@ def catch_all(path):
 
             finances_table = generate_transparency_table(
                 get_transparency_data(
-                    finances, finances_year, finances_month
+                    finances, finances_year, finances_month, allow_current
                 )
             )
 
