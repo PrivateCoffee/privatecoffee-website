@@ -1,0 +1,376 @@
+{
+    "services": [
+        {
+            "name": "Matrix",
+            "url": "https://element.private.coffee",
+            "short_description": "Matrix is an open network for secure, decentralized communication.",
+            "long_description": "Private.coffee runs a Matrix server. You can use it to chat with other people at Private.coffee or around the world. Use it with a client of your choice, or use our Element web client.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Element",
+                    "url": "https://element.private.coffee",
+                    "alternatives": [
+                        {
+                            "name": "Tor",
+                            "url": "http://element.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion"
+                        }
+                    ]
+                }
+            ],
+            "icon": "matrix-logo",
+            "exclude_from_index": false,
+            "exclude_from_simple": true
+        },
+        {
+            "name": "CryptPad",
+            "url": "https://cryptpad.private.coffee",
+            "short_description": "Private, encrypted, real-time collaborative editor.",
+            "long_description": "CryptPad is a private, encrypted, zero-knowledge, realtime collaborative editor, similar to Google Docs and Office 365.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to CryptPad",
+                    "url": "https://cryptpad.private.coffee"
+                }
+            ],
+            "icon": "article-ny-times",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Piped / Invidious",
+            "url": "https://piped.private.coffee",
+            "short_description": "Watch YouTube videos without Google tracking.",
+            "long_description": "Piped and Invidious are alternative front-ends to YouTube. They allow you to watch YouTube videos without Google tracking you.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Piped",
+                    "url": "https://piped.private.coffee"
+                },
+                {
+                    "name": "Go to Invidious",
+                    "url": "https://invidious.private.coffee",
+                    "alternatives": [
+                        {
+                            "name": "Tor",
+                            "url": "http://invidious.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion"
+                        }
+                    ]
+                }
+            ],
+            "icon": "video",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Transfer.coffee",
+            "url": "https://transfer.coffee",
+            "short_description": "Transfer files securely using peer-to-peer connections.",
+            "long_description": "Transfer.coffee allows you to transfer files securely using peer-to-peer connections. Your files are never stored on our servers.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Transfer.coffee",
+                    "url": "https://transfer.coffee"
+                }
+            ],
+            "icon": "upload",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "MyIP.Coffee",
+            "url": "https://myip.coffee",
+            "short_description": "Check your IP address.",
+            "long_description": "MyIP.Coffee allows you to check your current IPv4 and IPv6 addresses.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to MyIP.Coffee",
+                    "url": "https://myip.coffee"
+                }
+            ],
+            "icon": "network",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Mastodon",
+            "url": "https://cuddly.space",
+            "short_description": "Mastodon is a decentralized social network.",
+            "long_description": "Mastodon is a decentralized social network. You can use it to post short messages, follow other people, and more.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Cuddly Space",
+                    "url": "https://cuddly.space"
+                },
+                {
+                    "name": "Go to Skrt Social",
+                    "url": "https://skrt.social"
+                }
+            ],
+            "icon": "mastodon-logo",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Forgejo",
+            "url": "https://git.private.coffee",
+            "short_description": "Forgejo is our in-house Git forge.",
+            "long_description": "Forgejo is our in-house Git forge. You can use it to host your Git repositories, and to collaborate with others.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Forgejo",
+                    "url": "https://git.private.coffee"
+                }
+            ],
+            "icon": "git-branch",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "BigBlueButton",
+            "url": "https://bbb.private.coffee",
+            "short_description": "BigBlueButton is an open-source video conferencing system.",
+            "long_description": "BigBlueButton is an open-source video conferencing system. You can use it to hold video conferences, webinars, and more.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to BigBlueButton",
+                    "url": "https://bbb.private.coffee"
+                }
+            ],
+            "icon": "webcam",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "HedgeDoc",
+            "url": "https://hedgedoc.private.coffee",
+            "short_description": "HedgeDoc is an open-source collaborative markdown editor.",
+            "long_description": "HedgeDoc is an open-source collaborative markdown editor. You can use it to write and edit documents in markdown, and to collaborate with others.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to HedgeDoc",
+                    "url": "https://hedgedoc.private.coffee"
+                }
+            ],
+            "icon": "markdown-logo",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "redlib",
+            "url": "https://redlib.private.coffee",
+            "short_description": "redlib is a privacy-friendly alternative front-end to Reddit.",
+            "long_description": "redlib is a privacy-friendly alternative front-end to Reddit. It allows you to browse Reddit without being tracked.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to redlib",
+                    "url": "https://redlib.private.coffee"
+                }
+            ],
+            "icon": "chats",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "AllTube",
+            "url": "https://alltube.private.coffee",
+            "short_description": "Download videos from YouTube, Vimeo, and more.",
+            "long_description": "AllTube is a video downloader powered by yt-dlp. It allows you to download videos from YouTube, Vimeo, and many other sites. You can also stream the download through our server for extra privacy.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to AllTube",
+                    "url": "https://alltube.private.coffee"
+                }
+            ],
+            "icon": "video",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Structables",
+            "url": "https://structables.private.coffee",
+            "short_description": "Browse Instructables without being tracked.",
+            "long_description": "Structables allows you to browse Instructables without being tracked.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Structables",
+                    "url": "https://structables.private.coffee"
+                }
+            ],
+            "icon": "lightbulb",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "LibreTranslate",
+            "url": "https://translate.private.coffee",
+            "short_description": "LibreTranslate is a self-hosted translation service powered by Argos Translate.",
+            "long_description": "LibreTranslate is a self-hosted translation service powered by Argos Translate. It allows you to translate text between many languages.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to LibreTranslate",
+                    "url": "https://translate.private.coffee"
+                }
+            ],
+            "icon": "translate",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "wishthis",
+            "url": "https://wishthis.private.coffee",
+            "short_description": "wishthis is a service for creating wishlists.",
+            "long_description": "wishthis is a service for creating wishlists. You can use it to create wishlists for yourself, or to share them with others.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to wishthis",
+                    "url": "https://wishthis.private.coffee"
+                }
+            ],
+            "icon": "gift",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "NocoDB",
+            "url": "https://nocodb.private.coffee",
+            "short_description": "NocoDB is a self-hosted alternative to Airtable.",
+            "long_description": "NocoDB is a self-hosted alternative to Airtable. It allows you to create databases and tables, and to view and edit them in a spreadsheet-like interface. (Note: If you are unable to create tables upon registration, simply wait a minute or two, log out and then log in again. Note that your email address will be visible to all registered users!)",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to NocoDB",
+                    "url": "https://nocodb.private.coffee"
+                }
+            ],
+            "icon": "database",
+            "exclude_from_index": true,
+            "exclude_from_simple": true
+        },
+        {
+            "name": "Penpot",
+            "url": "https://penpot.private.coffee",
+            "short_description": "Penpot is an open-source design and prototyping platform.",
+            "long_description": "Penpot is an open-source design and prototyping platform. It allows you to create designs and prototypes, and to collaborate with others.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Penpot",
+                    "url": "https://penpot.private.coffee"
+                }
+            ],
+            "icon": "pencil-ruler",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "YOURLS",
+            "url": "https://pcof.fi",
+            "short_description": "URL shortener for creating handy links.",
+            "long_description": "Use our URL shortener at pcof.fi to turn long, complicated URLs into something more handy.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to pcof.fi",
+                    "url": "https://pcof.fi"
+                }
+            ],
+            "icon": "link",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Rallly",
+            "url": "https://rallly.private.coffee",
+            "short_description": "Rallly is a free collaborative scheduling service for voting and polls.",
+            "long_description": "Rallly is a free collaborative scheduling service. It allows you to create polls and vote on them, similar to Doodle. Pro features are enabled for free after signing in.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Rallly",
+                    "url": "https://rallly.private.coffee"
+                }
+            ],
+            "icon": "calendar",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "LibreY",
+            "url": "https://librey.private.coffee",
+            "short_description": "Privacy-friendly metasearch engine.",
+            "long_description": "LibreY is an open-source, privacy-friendly metasearch engine. It allows you to search for web, image, video, torrents, and more, and it can also search onion sites.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to LibreY",
+                    "url": "https://librey.private.coffee"
+                }
+            ],
+            "icon": "magnifying-glass",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Overleaf",
+            "url": "https://overleaf.private.coffee",
+            "short_description": "Overleaf is an online LaTeX editor for writing and sharing documents.",
+            "long_description": "Overleaf is an online LaTeX editor for writing and sharing documents. It allows you to write documents in LaTeX, and to collaborate with others.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Overleaf",
+                    "url": "https://overleaf.private.coffee"
+                }
+            ],
+            "icon": "leaf",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "GotHub",
+            "url": "https://gothub.private.coffee",
+            "short_description": "Alternative GitHub interface that respects privacy.",
+            "long_description": "Gothub is an alternative GitHub interface that respects your privacy. It is currently in alpha, but you can browse and download repositories, and you can also clone them using git+https (although the text on the main page would disagree).",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to GotHub",
+                    "url": "https://gothub.private.coffee"
+                }
+            ],
+            "icon": "git-branch",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Binternet",
+            "url": "https://binternet.private.coffee",
+            "short_description": "Binternet is a privacy-friendly alternative front-end to Pinterest.",
+            "long_description": "Binternet is a privacy-friendly alternative front-end to Pinterest. It allows you to browse Pinterest without being tracked.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Binternet",
+                    "url": "https://binternet.private.coffee"
+                }
+            ],
+            "icon": "images",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        }
+    ]
+}
