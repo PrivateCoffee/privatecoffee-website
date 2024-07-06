@@ -235,6 +235,28 @@
             "exclude_from_simple": false
         },
         {
+            "name": "Priviblur",
+            "url": "https://priviblur.private.coffee",
+            "short_description": "Priviblur is a privacy-friendly alternative front-end to Tumblr.",
+            "long_description": "Priviblur is a privacy-friendly alternative front-end to Tumblr. It allows you to browse Tumblr without being tracked.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Priviblur",
+                    "url": "https://priviblur.private.coffee",
+                    "alternatives": [
+                        {
+                            "name": "Tor",
+                            "url": "http://priviblur.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion"
+                        }
+                    ]
+                }
+            ],
+            "icon": "camera",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "LibreTranslate",
             "url": "https://translate.private.coffee",
             "short_description": "LibreTranslate is a self-hosted translation service powered by Argos Translate.",
