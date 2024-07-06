@@ -165,6 +165,22 @@
             "exclude_from_simple": false
         },
         {
+            "name": "FreshRSS",
+            "url": "https://freshrss.private.coffee",
+            "short_description": "FreshRSS is a RSS feed reader.",
+            "long_description": "FreshRSS is a RSS feed reader. You can use it to subscribe to RSS feeds and read the latest articles from your favorite websites.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to FreshRSS",
+                    "url": "https://freshrss.private.coffee"
+                }
+            ],
+            "icon": "rss",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "redlib",
             "url": "https://redlib.private.coffee",
             "short_description": "redlib is a privacy-friendly alternative front-end to Reddit.",
