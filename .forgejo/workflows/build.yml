@@ -3,7 +3,7 @@ name: Build and Deploy Static Site
 on:
   push:
     branches:
-      - dev
+      - main
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
           python3 -m pip install -r requirements.txt --break-system-packages
 
       - name: Generate static site
-        run: python3 main.py --dev
+        run: python3 main.py
 
       - name: Deploy to pages branch
         run: |
@@ -32,8 +32,8 @@ jobs:
           mv build ../static_site_temp
           cp .gitignore ../static_site_temp
 
-          # Create a new orphan branch named 'pages-dev'
-          git checkout --orphan pages-dev
+          # Create a new orphan branch named 'pages'
+          git checkout --orphan pages
 
           # Remove all files from the working directory
           git rm -rf .
@@ -46,5 +46,5 @@ jobs:
           git add .
           git commit -m "Deploy static site"
 
-          # Force push to the 'pages-dev' branch
-          git push origin pages-dev --force
+          # Force push to the 'pages' branch
+          git push origin pages --force

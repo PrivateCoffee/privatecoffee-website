@@ -14,7 +14,7 @@
   {% for month, month_data in year_data.items() %}
   <div class="card shadow-sm mt-4">
     <div class="card-body">
-      <h5 class="card-title">Transparency Report for {{ month }}/{{ year }}</h5>
+      <h5 class="card-title">Transparency Report for {{ month|month_name }} {{ year }}</h5>
       <div class="table-responsive">{{ month_data|safe }}</div>
     </div>
   </div>
