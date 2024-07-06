@@ -213,6 +213,28 @@
             "exclude_from_simple": false
         },
         {
+            "name": "Quetre",
+            "url": "https://quetre.private.coffee",
+            "short_description": "Quetre is a privacy-friendly alternative front-end to Quora.",
+            "long_description": "Quetre is a privacy-friendly alternative front-end to Quora. It allows you to browse Quora without being tracked or having to log in.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Quetre",
+                    "url": "https://quetre.private.coffee",
+                    "alternatives": [
+                        {
+                            "name": "Tor",
+                            "url": "http://quetre.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion"
+                        }
+                    ]
+                }
+            ],
+            "icon": "question",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "LibreTranslate",
             "url": "https://translate.private.coffee",
             "short_description": "LibreTranslate is a self-hosted translation service powered by Argos Translate.",
