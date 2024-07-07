@@ -273,6 +273,22 @@
             "exclude_from_simple": false
         },
         {
+            "name": "BiblioReads",
+            "url": "https://biblioreads.private.coffee",
+            "short_description": "BiblioReads is a privacy-friendly alternative front-end to Goodreads.",
+            "long_description": "BiblioReads is a privacy-friendly alternative front-end to Goodreads. It allows you to browse Goodreads without being tracked.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to BiblioReads",
+                    "url": "https://biblioreads.private.coffee"
+                }
+            ],
+            "icon": "book",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "LibreTranslate",
             "url": "https://translate.private.coffee",
             "short_description": "LibreTranslate is a self-hosted translation service powered by Argos Translate.",
