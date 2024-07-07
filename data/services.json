@@ -284,7 +284,7 @@
                     "url": "https://biblioreads.private.coffee"
                 }
             ],
-            "icon": "book",
+            "icon": "books",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },
