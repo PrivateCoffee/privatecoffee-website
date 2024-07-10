@@ -4,6 +4,10 @@ import pathlib
 import datetime
 import shutil
 
+from http.server import SimpleHTTPRequestHandler
+from socketserver import TCPServer
+from threading import Thread
+
 from argparse import ArgumentParser
 
 from helpers.finances import (
@@ -11,6 +15,10 @@ from helpers.finances import (
     get_transparency_data,
     get_latest_month,
 )
+
+class StaticPageHandler(SimpleHTTPRequestHandler):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, directory="build", **kwargs)
 
 # Configure Jinja2 environment
 env = Environment(loader=FileSystemLoader("templates"))
@@ -142,6 +150,16 @@ def generate_static_site(development_mode=False):
 if __name__ == "__main__":
     parser = ArgumentParser(description="Generate the private.coffee static site.")
     parser.add_argument("--dev", action="store_true", help="Enable development mode")
+    parser.add_argument("--serve", action="store_true", help="Serve the site after building")
+    parser.add_argument("--port", type=int, default=8000, help="Port to serve the site on")
+
     args = parser.parse_args()
 
     generate_static_site(development_mode=args.dev)
+
+    if args.serve:
+        server = TCPServer(("", args.port), StaticPageHandler)
+        print(f"Serving on http://localhost:{args.port}")
+        thread = Thread(target=server.serve_forever)
+        thread.start()
+        thread.join()

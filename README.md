@@ -20,7 +20,8 @@ python main.py
 ```
 
 The website will be built into the `build` directory, and you can view it by
-opening the `index.html` file in your browser.
+opening the `index.html` file in your browser or using the included HTTP server
+(`python main.py --serve`).
 
 ## License
 
