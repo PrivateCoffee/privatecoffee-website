@@ -4,7 +4,7 @@
             "name": "Matrix",
             "url": "https://element.private.coffee",
             "short_description": "Matrix is an open network for secure, decentralized communication.",
-            "long_description": "Private.coffee runs a Matrix server. You can use it to chat with other people at Private.coffee or around the world. Use it with a client of your choice, or use our Element web client.",
+            "long_description": "Private.coffee runs a Matrix server. You can use it to chat with other people at Private.coffee or around the world. Use it with a client of your choice, or use our web clients.",
             "status": "OK",
             "links": [
                 {
@@ -16,6 +16,10 @@
                             "url": "http://element.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion"
                         }
                     ]
+                },
+                {
+                    "name": "Go to Hydrogen",
+                    "url": "https://hydrogen.private.coffee"
                 }
             ],
             "icon": "matrix-logo",
