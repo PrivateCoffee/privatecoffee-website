@@ -451,6 +451,22 @@
             "icon": "images",
             "exclude_from_index": false,
             "exclude_from_simple": false
+        },
+        {
+            "name": "Overpass",
+            "url": "https://overpass.private.coffee",
+            "short_description": "Overpass is an API for OpenStreetMap.",
+            "long_description": "Overpass is an API for OpenStreetMap. You can use it to query OpenStreetMap data, and to get the results in various formats.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Overpass",
+                    "url": "https://overpass.private.coffee"
+                }
+            ],
+            "icon": "map-trifold",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
         }
     ]
 }
