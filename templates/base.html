@@ -10,16 +10,48 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
+    <meta
+      name="description"
+      content="Private.coffee is a privacy-focused non-profit association, dedicated to supporting privacy and digital sovereignty."
+    />
+    <meta
+      name="keywords"
+      content="privacy, digital sovereignty, non-profit, association, privacy-focused"
+    />
+    <meta name="author" content="Private.coffee" />
+    <meta
+      property="og:title"
+      content="Private.coffee - Empowering Privacy with Open Source"
+    />
+    <meta
+      property="og:description"
+      content="Private.coffee is a privacy-focused non-profit association, dedicated to supporting privacy and digital sovereignty."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://private.coffee/" />
+    <meta
+      property="og:image"
+      content="https://private.coffee/assets/img/logo-inv_grad.png"
+    />
+    <meta property="og:site_name" content="Private.coffee" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Private.coffee" />
+    <meta
+      name="twitter:description"
+      content="Private.coffee is a privacy-focused non-profit association, dedicated to supporting privacy and digital sovereignty."
+    />
+    <meta
+      name="twitter:image"
+      content="https://private.coffee/assets/img/logo-inv_grad.png"
+    />
+    <link rel="icon" type="image/png" href="assets/img/logo_inv_grad.png" />
     <title>{% block title %}{% endblock %} - Private.coffee</title>
     <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/base.css" />
   </head>
 
   <body>
-    <nav
-      class="navbar navbar-expand-md py-3 navbar-light"
-      id="mainNav"
-    >
+    <nav class="navbar navbar-expand-md py-3 navbar-light" id="mainNav">
       <div class="container">
         <div class="row d-lg-flex align-items-lg-center">
           <div class="col p-0">
@@ -45,10 +77,22 @@
           </div>
         </div>
         <div class="navbar" id="navcol-1">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item"><a class="nav-link active" href="/index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="https://status.private.coffee/">Status</a></li>
-            </ul><a class="btn btn-primary shadow navbar-btn" role="button" href="/membership.html">JOIN &amp; SUPPORT</a>
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://status.private.coffee/"
+                >Status</a
+              >
+            </li>
+          </ul>
+          <a
+            class="btn btn-primary shadow navbar-btn"
+            role="button"
+            href="/membership.html"
+            >JOIN &amp; SUPPORT</a
+          >
         </div>
       </div>
     </nav>
@@ -80,8 +124,8 @@
               ><span>Private.coffee</span>
             </div>
             <p class="text-muted">
-              Private.coffee is a privacy-focused non-profit association, dedicated
-              to supporting privacy and digital sovereignty.
+              Private.coffee is a privacy-focused non-profit association,
+              dedicated to supporting privacy and digital sovereignty.
             </p>
           </div>
         </div>
@@ -90,8 +134,16 @@
           class="text-muted d-flex justify-content-between align-items-center pt-3"
         >
           <p class="mb-0">Made with ❤️ and ☕ by Private.coffee</p>
-          <p class="mb-0"><a href="https://git.private.coffee/privatecoffee/privatecoffee-website"><img src="https://shields.private.coffee/gitea/last-commit/privatecoffee/privatecoffee-website?gitea_url=https://git.private.coffee&logo=forgejo"></img></a> <a href="https://pride.coffee">{{ "rainbow" | icon | safe }}</a></p>
+          <p class="mb-0">
+            <a
+              href="https://git.private.coffee/privatecoffee/privatecoffee-website"
+              ><img
+                src="https://shields.private.coffee/gitea/last-commit/privatecoffee/privatecoffee-website?gitea_url=https://git.private.coffee&logo=forgejo"
+            /></a>
+            <a href="https://pride.coffee">{{ "rainbow" | icon | safe }}</a>
+          </p>
         </div>
+      </div>
     </footer>
   </body>
 </html>
