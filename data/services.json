@@ -325,14 +325,14 @@
             "exclude_from_simple": false
         },
         {
-            "name": "Breezewiki",
+            "name": "BreezeWiki",
             "url": "https://breezewiki.private.coffee",
-            "short_description": "Breezewiki is a privacy-friendly alternative front-end to Fandom.",
-            "long_description": "Breezewiki is a privacy-friendly alternative front-end to Fandom. It allows you to browse Fandom wikis without ads or tracking.",
+            "short_description": "BreezeWiki is a privacy-friendly alternative front-end to Fandom.",
+            "long_description": "BreezeWiki is a privacy-friendly alternative front-end to Fandom. It allows you to browse Fandom wikis without ads or tracking.",
             "status": "OK",
             "links": [
                 {
-                    "name": "Go to Breezewiki",
+                    "name": "Go to BreezeWiki",
                     "url": "https://breezewiki.private.coffee",
                     "alternatives": [
                         {
