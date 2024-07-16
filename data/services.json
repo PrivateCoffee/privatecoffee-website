@@ -255,6 +255,28 @@
             "exclude_from_simple": false
         },
         {
+            "name": "Wikimore",
+            "url": "https://wikimore.private.coffee",
+            "short_description": "Wikimore is a privacy-friendly alternative front-end to Wikimedia wikis.",
+            "long_description": "Wikimore is a privacy-friendly alternative front-end to Wikipedia and other Wikimedia wikis.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Wikimore",
+                    "url": "https://wikimore.private.coffee",
+                    "alternatives": [
+                        {
+                            "name": "Tor",
+                            "url": "http://wikimore.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion"
+                        }
+                    ]
+                }
+            ],
+            "icon": "books",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "Priviblur",
             "url": "https://priviblur.private.coffee",
             "short_description": "Priviblur is a privacy-friendly alternative front-end to Tumblr.",
