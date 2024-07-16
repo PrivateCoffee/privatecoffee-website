@@ -119,6 +119,16 @@ h5 {
   color: #604c2e;
 }
 
+.homemade {
+  top: -0.5rem;
+  right: -0.5rem;
+  position: absolute;
+}
+
+.homemade svg {
+  fill: var(--bs-primary-bg-subtle) !important;
+}
+
 .bs-icon.bs-icon-primary svg {
   fill: var(--bs-primary-bg-subtle);
 }
