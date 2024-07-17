@@ -423,6 +423,23 @@
             "exclude_from_simple": false
         },
         {
+            "name": "tldraw",
+            "url": "https://tldraw.private.coffee",
+            "homemade": false,
+            "short_description": "tldraw is a collaborative whiteboard.",
+            "long_description": "tldraw is a collaborative whiteboard. You can use it to draw and write with others in real-time.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to tldraw",
+                    "url": "https://tldraw.private.coffee"
+                }
+            ],
+            "icon": "pencil-ruler",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "YOURLS",
             "url": "https://pcof.fi",
             "homemade": false,
