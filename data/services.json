@@ -49,8 +49,8 @@
             "url": "https://piped.private.coffee",
             "homemade": false,
             "short_description": "Watch YouTube videos without Google tracking.",
-            "long_description": "Piped and Invidious are alternative front-ends to YouTube. They allow you to watch YouTube videos without Google tracking you.",
-            "status": "OK",
+            "long_description": "Piped and Invidious are alternative front-ends to YouTube. Unfortunately, they are under attack from Google, and may be slow or unavailable at times.",
+            "status": "NOK",
             "links": [
                 {
                     "name": "Go to Piped",
