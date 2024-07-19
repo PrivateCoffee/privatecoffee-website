@@ -1,0 +1,40 @@
+{
+    "bridges": [
+        {
+            "name": "Telegram",
+            "mxid": "@telegrambot:private.coffee"
+        },
+        {
+            "name": "WhatsApp",
+            "mxid": "@whatsappbot:private.coffee"
+        },
+        {
+            "name": "Discord",
+            "mxid": "@discordbot:private.coffee"
+        },
+        {
+            "name": "Slack",
+            "mxid": "@slackbot:private.coffee"
+        },
+        {
+            "name": "LinkedIn",
+            "mxid": "@linkedinbot:private.coffee"
+        },
+        {
+            "name": "GPT-4o",
+            "mxid": "@gptbot:private.coffee"
+        },
+        {
+            "name": "RSS/Atom feeds",
+            "mxid": "@rssbot:private.coffee"
+        },
+        {
+            "name": "Instagram",
+            "mxid": "@instagrambot:private.coffee"
+        },
+        {
+            "name": "Facebook",
+            "mxid": "@facebookbot:private.coffee"
+        }
+    ]
+}

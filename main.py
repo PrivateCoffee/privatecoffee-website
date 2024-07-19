@@ -80,6 +80,11 @@ def generate_static_site(development_mode=False):
         (pathlib.Path(__file__).parent / "data" / "finances.json").read_text()
     )
 
+    # Load bridges data
+    bridges = json.loads(
+        (pathlib.Path(__file__).parent / "data" / "bridges.json").read_text()
+    )
+
     # Iterate over all templates in the templates directory
     templates_path = pathlib.Path("templates")
     for template_file in templates_path.glob("*.html"):
@@ -88,6 +93,9 @@ def generate_static_site(development_mode=False):
 
         if template_name in ["index", "simple"]:
             context.update({"services": services})
+
+        if template_name == "bridges":
+            context.update({"bridges": bridges})
 
         if template_name == "membership":
             allow_current = development_mode
