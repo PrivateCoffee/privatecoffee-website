@@ -41,6 +41,9 @@
             "Membership Fees": {
                 "EUR": 402.42
             },
+            "Donations": {
+                "XMR": 1.0
+            },
             "Server Costs": {
                 "EUR": -225.7
             }
