@@ -16,9 +16,11 @@ from helpers.finances import (
     get_latest_month,
 )
 
+
 class StaticPageHandler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory="build", **kwargs)
+
 
 # Configure Jinja2 environment
 env = Environment(loader=FileSystemLoader("templates"))
@@ -91,6 +93,8 @@ def generate_static_site(development_mode=False):
         template_name = template_file.stem
         context = kwargs.copy()
 
+        context["path"] = f"{template_name}.html" if template_name != "index" else ""
+
         if template_name in ["index", "simple"]:
             context.update({"services": services})
 
@@ -158,8 +162,12 @@ def generate_static_site(development_mode=False):
 if __name__ == "__main__":
     parser = ArgumentParser(description="Generate the private.coffee static site.")
     parser.add_argument("--dev", action="store_true", help="Enable development mode")
-    parser.add_argument("--serve", action="store_true", help="Serve the site after building")
-    parser.add_argument("--port", type=int, default=8000, help="Port to serve the site on")
+    parser.add_argument(
+        "--serve", action="store_true", help="Serve the site after building"
+    )
+    parser.add_argument(
+        "--port", type=int, default=8000, help="Port to serve the site on"
+    )
 
     args = parser.parse_args()
 
