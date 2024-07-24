@@ -483,7 +483,17 @@
             "links": [
                 {
                     "name": "Go to LibreY",
-                    "url": "https://librey.private.coffee"
+                    "url": "https://librey.private.coffee",
+                    "alternatives": [
+                        {
+                            "name": "Tor",
+                            "url": "http://librey.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion"
+                        },
+                        {
+                            "name": "I2P",
+                            "url": "http://xna5ydrj54ncvujz3f4c6y5i547hjwywygnr4uz6shz3f62suxwq.b32.i2p"
+                        }
+                    ]
                 }
             ],
             "icon": "magnifying-glass",
