@@ -178,6 +178,23 @@
             "exclude_from_simple": false
         },
         {
+            "name": "OTS - One Time Secrets",
+            "url": "https://ots.private.coffee",
+            "homemade": false,
+            "short_description": "OTS is a service for sharing secrets securely.",
+            "long_description": "OTS is a service for sharing secrets securely. You can use it to share passwords, API keys, and other sensitive information.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to OTS",
+                    "url": "https://ots.private.coffee"
+                }
+            ],
+            "icon": "lock",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "FreshRSS",
             "url": "https://freshrss.private.coffee",
             "homemade": false,
