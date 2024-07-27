@@ -9,6 +9,10 @@
             "mxid": "@whatsappbot:private.coffee"
         },
         {
+            "name": "Signal",
+            "mxid": "@signalbot:private.coffee"
+        },
+        {
             "name": "Discord",
             "mxid": "@discordbot:private.coffee"
         },
