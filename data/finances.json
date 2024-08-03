@@ -50,6 +50,9 @@
         "8": {
             "Membership Fees": {
                 "EUR": 325
+            },
+            "Server Costs": {
+                "EUR": -77.28
             }
         }
     }
