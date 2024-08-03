@@ -584,6 +584,40 @@
             "icon": "map-trifold",
             "exclude_from_index": false,
             "exclude_from_simple": false
+        },
+        {
+            "name": "nocdnbs",
+            "url": "https://nocdnbs.private.coffee",
+            "homemade": true,
+            "short_description": "nocdnbs is a privacy-friendly proxy to cdnjs.cloudflare.com",
+            "long_description": "nocdnbs is a privacy-friendly proxy to cdnjs.cloudflare.com. It allows you to use the cdnjs.cloudflare.com library without being tracked by Cloudflare.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to nocdnbs",
+                    "url": "https://nocdnbs.private.coffee"
+                }
+            ],
+            "icon": "hard-hat",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "nobsdelivr",
+            "url": "https://nobsdelivr.private.coffee",
+            "homemade": true,
+            "short_description": "nobsdelivr is a privacy-friendly proxy to cdn.jsdelivr.net",
+            "long_description": "nobsdelivr is a privacy-friendly proxy to cdn.jsdelivr.net. It allows you to use the cdn.jsdelivr.net library without being tracked by jsDelivr.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to nobsdelivr",
+                    "url": "https://nobsdelivr.private.coffee"
+                }
+            ],
+            "icon": "hard-hat",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
         }
     ]
 }
