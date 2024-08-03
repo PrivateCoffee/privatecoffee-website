@@ -106,6 +106,23 @@
             "exclude_from_simple": false
         },
         {
+            "name": "Overleaf",
+            "url": "https://overleaf.private.coffee",
+            "homemade": false,
+            "short_description": "Overleaf is an online LaTeX editor for writing and sharing documents.",
+            "long_description": "Overleaf is an online LaTeX editor for writing and sharing documents. It allows you to write documents in LaTeX, and to collaborate with others.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Overleaf",
+                    "url": "https://overleaf.private.coffee"
+                }
+            ],
+            "icon": "leaf",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "Mastodon",
             "url": "https://cuddly.space",
             "homemade": false,
@@ -514,23 +531,6 @@
                 }
             ],
             "icon": "magnifying-glass",
-            "exclude_from_index": false,
-            "exclude_from_simple": false
-        },
-        {
-            "name": "Overleaf",
-            "url": "https://overleaf.private.coffee",
-            "homemade": false,
-            "short_description": "Overleaf is an online LaTeX editor for writing and sharing documents.",
-            "long_description": "Overleaf is an online LaTeX editor for writing and sharing documents. It allows you to write documents in LaTeX, and to collaborate with others.",
-            "status": "OK",
-            "links": [
-                {
-                    "name": "Go to Overleaf",
-                    "url": "https://overleaf.private.coffee"
-                }
-            ],
-            "icon": "leaf",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },
