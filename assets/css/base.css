@@ -37,6 +37,10 @@
   color: #fff;
 }
 
+.button-wrapper:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
 .btn-outline-primary {
   --bs-btn-color: #f570b9;
   --bs-btn-border-color: #f570b9;
@@ -120,8 +124,9 @@ h5 {
 }
 
 .homemade {
-  top: -0.5rem;
   right: -0.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
   position: absolute;
 }
 
@@ -272,4 +277,49 @@ h5 {
 .btn-primary .main-link:hover {
   text-decoration: none;
   color: black;
+}
+
+/* Accordion Styles */
+
+.accordion {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-header:hover {
+  background-color: #e9e9e9;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.bs-icon {
+  position: relative;
+}
+
+.accordion-body {
+  padding: 1rem;
+  display: none;
+}
+
+.accordion-item[open] .accordion-body {
+  display: block;
 }
