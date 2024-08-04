@@ -64,7 +64,10 @@ def render_template_to_file(template_name, output_name, **kwargs):
 
 def generate_static_site(development_mode=False):
     # Common context
-    kwargs = {}
+    kwargs = {
+        "timestamp": int(datetime.datetime.now().timestamp()),
+    }
+
     if development_mode:
         kwargs.update(
             {
