@@ -41,25 +41,24 @@
         service.exclude_from_index %}
         <details class="accordion-item">
           <summary class="accordion-header">
-            {{ service.name }}{% if service.tiny_description %} - {{
-            service.tiny_description }}{% endif %}
-          </summary>
-          <div class="accordion-body">
             {% if service.icon %}
             <div
-              class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon"
+              class="bs-icon-lg d-flex justify-content-center align-items-center bs-icon"
               title="{{ service.name }}"
             >
-              {{ service.icon | icon | safe }} {% if service.homemade %}
-              <div
-                class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-sm homemade"
-                title="Made by Private.coffee"
-              >
-                {{ "coffee" | icon | safe }}
-              </div>
-              {% endif %}
+              {{ service.icon | icon | safe }}
+            </div>
+            {% endif %} {{ service.name }}{% if service.tiny_description %} - {{
+            service.tiny_description }}{% endif %} {% if service.homemade %}
+            <div
+              class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-sm homemade"
+              title="Made by Private.coffee"
+            >
+              {{ "coffee" | icon | safe }}
             </div>
             {% endif %}
+          </summary>
+          <div class="accordion-body">
             <p class="text-muted card-text mb-4">
               {{ service.long_description }}
             </p>
