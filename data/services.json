@@ -224,7 +224,7 @@
                     "url": "https://ots.private.coffee"
                 }
             ],
-            "icon": "lock",
+            "icon": "lock-key",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },
