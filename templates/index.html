@@ -40,7 +40,10 @@
         {% for service in services.services %} {% if not
         service.exclude_from_index %}
         <details class="accordion-item">
-          <summary class="accordion-header">{{ service.name }}</summary>
+          <summary class="accordion-header">
+            {{ service.name }}{% if service.tiny_description %} - {{
+            service.tiny_description }}{% endif %}
+          </summary>
           <div class="accordion-body">
             {% if service.icon %}
             <div
