@@ -36,69 +36,51 @@
       </div>
     </div>
     <div class="py-5 p-lg-5">
-      <div class="accordion" id="servicesAccordion">
+      <div class="accordion">
         {% for service in services.services %} {% if not
         service.exclude_from_index %}
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="heading{{ loop.index }}">
-            <button
-              class="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapse{{ loop.index }}"
-              aria-expanded="true"
-              aria-controls="collapse{{ loop.index }}"
+        <details class="accordion-item">
+          <summary class="accordion-header">{{ service.name }}</summary>
+          <div class="accordion-body">
+            {% if service.icon %}
+            <div
+              class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon"
+              title="{{ service.name }}"
             >
-              {{ service.name }}
-            </button>
-          </h2>
-          <div
-            id="collapse{{ loop.index }}"
-            class="accordion-collapse collapse"
-            aria-labelledby="heading{{ loop.index }}"
-            data-bs-parent="#servicesAccordion"
-          >
-            <div class="accordion-body">
-              {% if service.icon %}
+              {{ service.icon | icon | safe }} {% if service.homemade %}
               <div
-                class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon"
-                title="{{ service.name }}"
+                class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-sm homemade"
+                title="Made by Private.coffee"
               >
-                {{ service.icon | icon | safe }} {% if service.homemade %}
-                <div
-                  class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-sm homemade"
-                  title="Made by Private.coffee"
-                >
-                  {{ "coffee" | icon | safe }}
-                </div>
-                {% endif %}
+                {{ "coffee" | icon | safe }}
               </div>
               {% endif %}
-              <p class="text-muted card-text mb-4">
-                {{ service.long_description }}
-              </p>
-              {% for link in service.links %} {% if link.alternatives %}
-              <div class="dropdown">
-                <div class="btn btn-primary shadow">
-                  <a class="main-link" href="{{ link.url }}">{{ link.name }}</a>
-                  <div class="dropdown-toggle-area">&#9660;</div>
-                </div>
-                <div class="dropdown-content">
-                  {% for alternative in link.alternatives %}
-                  <a href="{{ alternative.url }}">{{ alternative.name }}</a>
-                  {% endfor %}
-                </div>
-              </div>
-              {% else %}
-              <a
-                class="btn btn-primary shadow w-100 text-center"
-                href="{{ link.url }}"
-                >{{ link.name }}</a
-              >
-              {% endif %} {% endfor %}
             </div>
+            {% endif %}
+            <p class="text-muted card-text mb-4">
+              {{ service.long_description }}
+            </p>
+            {% for link in service.links %} {% if link.alternatives %}
+            <div class="dropdown">
+              <div class="btn btn-primary shadow">
+                <a class="main-link" href="{{ link.url }}">{{ link.name }}</a>
+                <div class="dropdown-toggle-area">&#9660;</div>
+              </div>
+              <div class="dropdown-content">
+                {% for alternative in link.alternatives %}
+                <a href="{{ alternative.url }}">{{ alternative.name }}</a>
+                {% endfor %}
+              </div>
+            </div>
+            {% else %}
+            <a
+              class="btn btn-primary shadow w-100 text-center"
+              href="{{ link.url }}"
+              >{{ link.name }}</a
+            >
+            {% endif %} {% endfor %}
           </div>
-        </div>
+        </details>
         {% endif %} {% endfor %}
       </div>
     </div>
