@@ -273,3 +273,26 @@ h5 {
   text-decoration: none;
   color: black;
 }
+
+/* Accordion Styles */
+
+.accordion {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+.accordion-header {
+  padding: 1rem;
+  cursor: pointer;
+}
+.accordion-button {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.25rem;
+}
+.accordion-collapse {
+  padding: 1rem;
+}

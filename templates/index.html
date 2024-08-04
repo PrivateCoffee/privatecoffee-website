@@ -36,19 +36,32 @@
       </div>
     </div>
     <div class="py-5 p-lg-5">
-      <div
-        class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mx-auto"
-        style="max-width: 1200px"
-      >
+      <div class="accordion" id="servicesAccordion">
         {% for service in services.services %} {% if not
         service.exclude_from_index %}
-        <div class="col mb-5">
-          <div class="card shadow-sm">
-            <div class="card-body px-4 py-5 px-md-5">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading{{ loop.index }}">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse{{ loop.index }}"
+              aria-expanded="true"
+              aria-controls="collapse{{ loop.index }}"
+            >
+              {{ service.name }}
+            </button>
+          </h2>
+          <div
+            id="collapse{{ loop.index }}"
+            class="accordion-collapse collapse"
+            aria-labelledby="heading{{ loop.index }}"
+            data-bs-parent="#servicesAccordion"
+          >
+            <div class="accordion-body">
               {% if service.icon %}
               <div
                 class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon"
-                style="top: 1rem; right: 1rem; position: absolute"
                 title="{{ service.name }}"
               >
                 {{ service.icon | icon | safe }} {% if service.homemade %}
@@ -61,16 +74,13 @@
                 {% endif %}
               </div>
               {% endif %}
-              <h5 class="fw-bold card-title">{{ service.name }}</h5>
               <p class="text-muted card-text mb-4">
                 {{ service.long_description }}
               </p>
               {% for link in service.links %} {% if link.alternatives %}
               <div class="dropdown">
                 <div class="btn btn-primary shadow">
-                  <a class="main-link" href="{{ link.url }}">
-                    {{ link.name }}
-                  </a>
+                  <a class="main-link" href="{{ link.url }}">{{ link.name }}</a>
                   <div class="dropdown-toggle-area">&#9660;</div>
                 </div>
                 <div class="dropdown-content">
