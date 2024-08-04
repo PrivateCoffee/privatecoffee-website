@@ -37,6 +37,10 @@
   color: #fff;
 }
 
+.button-wrapper:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
 .btn-outline-primary {
   --bs-btn-color: #f570b9;
   --bs-btn-border-color: #f570b9;

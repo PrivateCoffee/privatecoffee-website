@@ -63,7 +63,7 @@
               {{ service.long_description }}
             </p>
             {% for link in service.links %} {% if link.alternatives %}
-            <div class="dropdown">
+            <div class="button-wrapper dropdown">
               <div class="btn btn-primary shadow">
                 <a class="main-link" href="{{ link.url }}">{{ link.name }}</a>
                 <div class="dropdown-toggle-area">&#9660;</div>
@@ -76,7 +76,7 @@
             </div>
             {% else %}
             <a
-              class="btn btn-primary shadow w-100 text-center"
+              class="button-wrapper btn btn-primary shadow w-100 text-center"
               href="{{ link.url }}"
               >{{ link.name }}</a
             >
