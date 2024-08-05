@@ -635,6 +635,24 @@
             "exclude_from_simple": false
         },
         {
+            "name": "GoogleDonts",
+            "url": "https://googledonts.private.coffee",
+            "homemade": true,
+            "tiny_description": "privacy-friendly Google Fonts proxy",
+            "short_description": "GoogleDonts is a privacy-friendly proxy to Google Fonts.",
+            "long_description": "GoogleDonts is a privacy-friendly proxy to Google Fonts. It allows you to use Google Fonts without being tracked by Google.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to GoogleDonts",
+                    "url": "https://googledonts.private.coffee"
+                }
+            ],
+            "icon": "hard-hat",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        }
+        {
             "name": "nocdnbs",
             "url": "https://nocdnbs.private.coffee",
             "homemade": true,
