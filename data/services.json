@@ -651,7 +651,7 @@
             "icon": "hard-hat",
             "exclude_from_index": false,
             "exclude_from_simple": false
-        }
+        },
         {
             "name": "nocdnbs",
             "url": "https://nocdnbs.private.coffee",
