@@ -277,6 +277,24 @@
             "exclude_from_simple": false
         },
         {
+            "name": "Travelynx",
+            "url": "https://traveling.coffee",
+            "homemade": false,
+            "tiny_description": "rail journey logger (German)",
+            "short_description": "Travelynx is a service for logging your rail journeys. (German)",
+            "long_description": "Travelynx is a service for logging your rail journeys, primarily for Germany and surrounding Europe. You can use it to keep track of the trains you've taken, and to view statistics about your trips.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Travelynx",
+                    "url": "https://traveling.coffee"
+                }
+            ],
+            "icon": "train",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "AllTube",
             "url": "https://alltube.private.coffee",
             "homemade": false,
