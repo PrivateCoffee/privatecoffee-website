@@ -481,6 +481,24 @@
             "exclude_from_simple": false
         },
         {
+            "name": "Ducks for Ducks",
+            "url": "https://ducksforducks.private.coffee",
+            "homemade": true,
+            "tiny_description": "a private front-end to Geeks for Geeks",
+            "short_description": "Ducks for Ducks is a privacy-friendly alternative front-end to Geeks for Geeks.",
+            "long_description": "Ducks for Ducks is a privacy-friendly alternative front-end to Geeks for Geeks. It allows you to browse Geeks for Geeks without ads or tracking.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Ducks for Ducks",
+                    "url": "https://ducksforducks.private.coffee"
+                }
+            ],
+            "icon": "books",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "NocoDB",
             "url": "https://nocodb.private.coffee",
             "homemade": false,
