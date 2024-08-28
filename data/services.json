@@ -653,6 +653,24 @@
             "exclude_from_simple": false
         },
         {
+            "name": "Moner.ooo",
+            "url": "https://monerooo.private.coffee",
+            "homemade": false,
+            "tiny_description": "Monero/fiat exchange rates",
+            "short_description": "Moner.ooo is a service for checking Monero/fiat exchange rates.",
+            "long_description": "Moner.ooo is a service for checking Monero/fiat exchange rates. It allows you to see the current exchange rates for Monero in various fiat currencies.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Moner.ooo",
+                    "url": "https://monerooo.private.coffee"
+                }
+            ],
+            "icon": "money-wavy",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "Overpass",
             "url": "https://overpass.private.coffee",
             "homemade": false,
