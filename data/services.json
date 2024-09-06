@@ -671,6 +671,24 @@
             "exclude_from_simple": false
         },
         {
+            "name": "httpbin",
+            "url": "https://httpbin.private.coffee",
+            "homemade": false,
+            "tiny_description": "HTTP request testing service",
+            "short_description": "httpbin is a service for testing HTTP requests.",
+            "long_description": "httpbin is a service for testing HTTP requests. You can use it to see what your browser sends to a server, and to test various HTTP methods.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to httpbin",
+                    "url": "https://httpbin.private.coffee"
+                }
+            ],
+            "icon": "network",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "Overpass",
             "url": "https://overpass.private.coffee",
             "homemade": false,
