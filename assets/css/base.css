@@ -323,3 +323,7 @@ h5 {
 .accordion-item[open] .accordion-body {
   display: block;
 }
+
+.accordion-header .bs-icon svg {
+  width: 32px;
+}
