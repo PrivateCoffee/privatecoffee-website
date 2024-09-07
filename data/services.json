@@ -241,6 +241,24 @@
             "exclude_from_simple": false
         },
         {
+            "name": "QRMaker",
+            "url": "https://qrmaker.private.coffee",
+            "homemade": true,
+            "tiny_description": "QR code generator",
+            "short_description": "QRMaker is a service for generating QR codes.",
+            "long_description": "QRMaker is a service for generating QR codes. You can use it to create QR codes for URLs, text, and more, directly in your browser.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to QRMaker",
+                    "url": "https://qrmaker.private.coffee"
+                }
+            ],
+            "icon": "qr-code",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "FreshRSS",
             "url": "https://freshrss.private.coffee",
             "homemade": false,
