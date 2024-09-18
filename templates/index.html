@@ -50,12 +50,23 @@
             </div>
             {% endif %} {{ service.name }}{% if service.tiny_description %} - {{
             service.tiny_description }}{% endif %} {% if service.homemade %}
-            <div
-              class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-sm homemade"
-              title="Made by Private.coffee"
-            >
-              {{ "coffee" | icon | safe }}
-            </div>
+            <a href="{{ service.homemade }}">
+              <div
+                class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-sm homemade"
+                title="Made by Private.coffee"
+              >
+                {{ "coffee" | icon | safe }}
+              </div>
+            </a>
+            {% endif %} {% if service.fork %}
+            <a href="{{ service.fork }}">
+              <div
+                class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-sm fork"
+                title="Runs on a fork of the original software"
+              >
+                {{ "code-fork" | icon | safe }}
+              </div>
+            </a>
             {% endif %}
           </summary>
           <div class="accordion-body">
