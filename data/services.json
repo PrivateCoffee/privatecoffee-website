@@ -49,50 +49,6 @@
             "exclude_from_simple": false
         },
         {
-            "name": "Invidious",
-            "url": "https://invidious.private.coffee",
-            "homemade": false,
-            "fork": "https://git.private.coffee/PrivateCoffee/invidious",
-            "tiny_description": "tracking-free YouTube",
-            "short_description": "Watch YouTube videos without Google tracking.",
-            "long_description": "Invidious is an alternative front-end to YouTube. Unfortunately, it is under attack from Google, and is mostly unusable at the moment.",
-            "status": "NOK",
-            "links": [
-                {
-                    "name": "Go to Invidious",
-                    "url": "https://invidious.private.coffee",
-                    "alternatives": [
-                        {
-                            "name": "Tor",
-                            "url": "http://invidious.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion"
-                        }
-                    ]
-                }
-            ],
-            "icon": "video",
-            "exclude_from_index": false,
-            "exclude_from_simple": false
-        },
-        {
-            "name": "Piped",
-            "url": "https://piped.private.coffee",
-            "homemade": false,
-            "fork": false,
-            "tiny_description": "tracking-free YouTube",
-            "short_description": "Watch YouTube videos without Google tracking.",
-            "long_description": "Piped is an alternative front-end to YouTube. Unfortunately, it is under attack from Google, and may be slow or unavailable at times.",
-            "status": "NOK",
-            "links": [
-                {
-                    "name": "Go to Piped",
-                    "url": "https://piped.private.coffee"
-                }
-            ],
-            "icon": "video",
-            "exclude_from_index": true,
-            "exclude_from_simple": true
-        },
-        {
             "name": "Transfer.coffee",
             "url": "https://transfer.coffee",
             "homemade": "https://git.private.coffee/PrivateCoffee/transfer.coffee",
@@ -361,6 +317,50 @@
             "icon": "video",
             "exclude_from_index": false,
             "exclude_from_simple": false
+        },
+        {
+            "name": "Invidious",
+            "url": "https://invidious.private.coffee",
+            "homemade": false,
+            "fork": "https://git.private.coffee/PrivateCoffee/invidious",
+            "tiny_description": "tracking-free YouTube",
+            "short_description": "Watch YouTube videos without Google tracking.",
+            "long_description": "Invidious is an alternative front-end to YouTube. Unfortunately, it is under attack from Google, and is mostly unusable at the moment.",
+            "status": "NOK",
+            "links": [
+                {
+                    "name": "Go to Invidious",
+                    "url": "https://invidious.private.coffee",
+                    "alternatives": [
+                        {
+                            "name": "Tor",
+                            "url": "http://invidious.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion"
+                        }
+                    ]
+                }
+            ],
+            "icon": "video",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Piped",
+            "url": "https://piped.private.coffee",
+            "homemade": false,
+            "fork": false,
+            "tiny_description": "tracking-free YouTube",
+            "short_description": "Watch YouTube videos without Google tracking.",
+            "long_description": "Piped is an alternative front-end to YouTube. Unfortunately, it is under attack from Google, and is mostly unusable at the moment.",
+            "status": "NOK",
+            "links": [
+                {
+                    "name": "Go to Piped",
+                    "url": "https://piped.private.coffee"
+                }
+            ],
+            "icon": "video",
+            "exclude_from_index": true,
+            "exclude_from_simple": true
         },
         {
             "name": "Structables",
