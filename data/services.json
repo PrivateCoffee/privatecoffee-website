@@ -74,8 +74,8 @@
                 }
             ],
             "icon": "video",
-            "exclude_from_index": false,
-            "exclude_from_simple": false
+            "exclude_from_index": true,
+            "exclude_from_simple": true
         },
         {
             "name": "Transfer.coffee",
