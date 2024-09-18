@@ -255,7 +255,8 @@
         {
             "name": "QRMaker",
             "url": "https://qrmaker.private.coffee",
-            "homemade": true,
+            "homemade": "https://git.private.coffee/PrivateCoffee/QRMaker",
+            "fork": false,
             "tiny_description": "QR code generator",
             "short_description": "QRMaker is a service for generating QR codes.",
             "long_description": "QRMaker is a service for generating QR codes. You can use it to create QR codes for URLs, text, and more, directly in your browser.",
@@ -349,7 +350,7 @@
         {
             "name": "Structables",
             "url": "https://structables.private.coffee",
-            "homemade": true,
+            "homemade": "https://git.private.coffee/PrivateCoffee/structables",
             "fork": false,
             "tiny_description": "tracking-free Instructables",
             "short_description": "Browse Instructables without being tracked.",
@@ -393,7 +394,7 @@
         {
             "name": "Wikimore",
             "url": "https://wikimore.private.coffee",
-            "homemade": true,
+            "homemade": "https://git.private.coffee/PrivateCoffee/wikimore",
             "fork": false,
             "tiny_description": "censorship-free Wikipedia",
             "short_description": "Wikimore is a privacy-friendly alternative front-end to Wikimedia wikis.",
@@ -525,7 +526,7 @@
         {
             "name": "Ducks for Ducks",
             "url": "https://ducksforducks.private.coffee",
-            "homemade": true,
+            "homemade": "https://git.private.coffee/PrivateCoffee/ducksforducks",
             "fork": false,
             "tiny_description": "a private front-end to Geeks for Geeks",
             "short_description": "Ducks for Ducks is a privacy-friendly alternative front-end to Geeks for Geeks.",
@@ -763,7 +764,7 @@
         {
             "name": "GoogleDonts",
             "url": "https://googledonts.private.coffee",
-            "homemade": true,
+            "homemade": "https://git.private.coffee/PrivateCoffee/googledonts",
             "fork": false,
             "tiny_description": "privacy-friendly Google Fonts proxy",
             "short_description": "GoogleDonts is a privacy-friendly proxy to Google Fonts.",
@@ -782,7 +783,7 @@
         {
             "name": "nocdnbs",
             "url": "https://nocdnbs.private.coffee",
-            "homemade": true,
+            "homemade": "https://git.private.coffee/PrivateCoffee/nocdnbs",
             "fork": false,
             "tiny_description": "privacy-friendly cdnjs proxy",
             "short_description": "nocdnbs is a privacy-friendly proxy to cdnjs.cloudflare.com",
@@ -801,7 +802,7 @@
         {
             "name": "nobsdelivr",
             "url": "https://nobsdelivr.private.coffee",
-            "homemade": true,
+            "homemade": "https://git.private.coffee/PrivateCoffee/nobsdelivr",
             "fork": false,
             "tiny_description": "privacy-friendly jsDelivr proxy",
             "short_description": "nobsdelivr is a privacy-friendly proxy to cdn.jsdelivr.net",
