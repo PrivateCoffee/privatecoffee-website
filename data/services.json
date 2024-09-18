@@ -49,19 +49,15 @@
             "exclude_from_simple": false
         },
         {
-            "name": "Piped / Invidious",
-            "url": "https://piped.private.coffee",
+            "name": "Invidious",
+            "url": "https://invidious.private.coffee",
             "homemade": false,
-            "fork": false,
+            "fork": "https://git.private.coffee/PrivateCoffee/invidious",
             "tiny_description": "tracking-free YouTube",
             "short_description": "Watch YouTube videos without Google tracking.",
-            "long_description": "Piped and Invidious are alternative front-ends to YouTube. Unfortunately, they are under attack from Google, and may be slow or unavailable at times.",
+            "long_description": "Invidious is an alternative front-end to YouTube. Unfortunately, it is under attack from Google, and is mostly unusable at the moment.",
             "status": "NOK",
             "links": [
-                {
-                    "name": "Go to Piped",
-                    "url": "https://piped.private.coffee"
-                },
                 {
                     "name": "Go to Invidious",
                     "url": "https://invidious.private.coffee",
@@ -71,6 +67,25 @@
                             "url": "http://invidious.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion"
                         }
                     ]
+                }
+            ],
+            "icon": "video",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Piped",
+            "url": "https://piped.private.coffee",
+            "homemade": false,
+            "fork": false,
+            "tiny_description": "tracking-free YouTube",
+            "short_description": "Watch YouTube videos without Google tracking.",
+            "long_description": "Piped is an alternative front-end to YouTube. Unfortunately, it is under attack from Google, and may be slow or unavailable at times.",
+            "status": "NOK",
+            "links": [
+                {
+                    "name": "Go to Piped",
+                    "url": "https://piped.private.coffee"
                 }
             ],
             "icon": "video",
