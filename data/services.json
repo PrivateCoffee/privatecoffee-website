@@ -476,6 +476,25 @@
             "exclude_from_simple": false
         },
         {
+            "name": "Small",
+            "url": "https://small.private.coffee",
+            "homemade": "https://git.private.coffee/PrivateCoffee/small",
+            "fork": false,
+            "tiny_description": "tracking-free Medium",
+            "short_description": "Small is a privacy-friendly alternative front-end to Medium.",
+            "long_description": "Small is a privacy-friendly alternative front-end to Medium. It allows you to browse Medium without being tracked.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Small",
+                    "url": "https://small.private.coffee"
+                }
+            ],
+            "icon": "pencil-ruler",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "Scribe",
             "url": "https://scribe.private.coffee",
             "homemade": false,
