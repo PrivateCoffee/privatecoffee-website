@@ -1,0 +1,15 @@
+#logoContainer {
+    background-image: url(../../img/logo-inv_grad.svg);
+    background-size: contain;
+    max-width: 400px;
+    max-height: 400px;
+    width: 80vh;
+    height: 80vh;
+}
+
+#smallLogoContainer {
+    background-image: url(../../img/logo-inv_grad.svg);
+    background-size: contain;
+    width: 64px;
+    height: 64px;
+}

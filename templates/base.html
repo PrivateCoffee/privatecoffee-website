@@ -44,10 +44,11 @@
       name="twitter:image"
       content="https://private.coffee/assets/img/logo-inv_grad.png"
     />
-    <link rel="icon" type="image/png" href="assets/img/logo_inv_grad.png" />
+    <link rel="icon" type="image/png" href="assets/img/logo-inv_grad.png" />
     <title>{% block title %}{% endblock %} - Private.coffee</title>
     <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/base.css?v={{ timestamp }}" />
+    <link rel="stylesheet" href="assets/css/theme/{{ theme }}.css?v={{ timestamp }}" />
   </head>
 
   <body>
@@ -56,8 +57,7 @@
         <div class="row d-lg-flex align-items-lg-center">
           <div class="col p-0">
             <a href="/"
-              ><img src="assets/img/logo-inv_grad.svg" style="height: 60px"
-            /></a>
+              ><div id="smallLogoContainer"></div></a>
           </div>
           <div class="col d-flex">
             <a class="navbar-brand d-flex align-items-center" href="/">

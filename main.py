@@ -56,16 +56,18 @@ def render_template_to_file(template_name, output_name, **kwargs):
     try:
         template = env.get_template(template_name)
         output_path = output_dir / output_name
+        kwargs.setdefault("theme", "plain")
         with open(output_path, "w", encoding="utf-8") as f:
             f.write(template.render(**kwargs))
     except TemplateNotFound:
         print(f"Template {template_name} not found.")
 
 
-def generate_static_site(development_mode=False):
+def generate_static_site(development_mode=False, theme="plain"):
     # Common context
     kwargs = {
         "timestamp": int(datetime.datetime.now().timestamp()),
+        "theme": theme,
     }
 
     if development_mode:
@@ -171,10 +173,13 @@ if __name__ == "__main__":
     parser.add_argument(
         "--port", type=int, default=8000, help="Port to serve the site on"
     )
+    parser.add_argument(
+        "--theme", type=str, default="plain", help="Theme to use for the site"
+    )
 
     args = parser.parse_args()
 
-    generate_static_site(development_mode=args.dev)
+    generate_static_site(development_mode=args.dev, theme=args.theme)
 
     if args.serve:
         server = TCPServer(("", args.port), StaticPageHandler)
