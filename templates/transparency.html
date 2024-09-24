@@ -1,25 +1,24 @@
-{% extends "base.html" %} {% block title %}Membership / Donations{% endblock %}
+{% extends "base.html" %}
+{% block title %}Membership / Donations{% endblock %}
 {% block content %}
-<div class="container my-5">
-  <div class="text-center mb-5">
-    <h1 class="special-header fancy-text-primary">Transparency</h1>
-    <p class="lead">
-      Private.coffee is funded by its members and donations. We believe in
-      transparency and accountability. Below you can find financial reports for
-      each month since our inception.
-    </p>
-  </div>
-
-  {% for year, year_data in finances.items() %}
-  {% for month, month_data in year_data.items() %}
-  <div class="card shadow-sm mt-4">
-    <div class="card-body">
-      <h5 class="card-title">Transparency Report for {{ month|month_name }} {{ year }}</h5>
-      <div class="table-responsive">{{ month_data|safe }}</div>
+  <div class="container my-5">
+    <div class="text-center mb-5">
+      <h1 class="special-header fancy-text-primary">Transparency</h1>
+      <p class="lead">
+        Private.coffee is funded by its members and donations. We believe in
+        transparency and accountability. Below you can find financial reports for
+        each month since our inception.
+      </p>
     </div>
+    {% for year, year_data in finances.items() %}
+      {% for month, month_data in year_data.items() %}
+        <div class="card shadow-sm mt-4">
+          <div class="card-body">
+            <h5 class="card-title">Transparency Report for {{ month|month_name }} {{ year }}</h5>
+            <div class="table-responsive">{{ month_data|safe }}</div>
+          </div>
+        </div>
+      {% endfor %}
+    {% endfor %}
   </div>
-  {% endfor %}
-  {% endfor %}
-
-</div>
 {% endblock %}

@@ -1,41 +1,43 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
 {% block title %}Legal Notice{% endblock %}
 {% block content %}
-<section>
-  <div class="container py-5">
-    <div class="row align-items-center">
-      <div class="col">
-        <p class="text-end special-header fancy-text-primary mb-0">
-          Legal Notice
-        </p>
+  <section>
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col">
+          <p class="text-end special-header fancy-text-primary mb-0">Legal Notice</p>
+        </div>
+        <div class="col">
+          <p class="text-start mb-1" style="font-size: 1.6rem">
+            from the <strong>community</strong>
+          </p>
+          <p class="text-start mb-0" style="font-size: 1.6rem">
+            for the <strong>community</strong>
+          </p>
+        </div>
       </div>
-      <div class="col">
-        <p class="text-start mb-1" style="font-size: 1.6rem">
-          from the <strong>community</strong>
-        </p>
-        <p class="text-start mb-0" style="font-size: 1.6rem">
-          for the <strong>community</strong>
+      <div class="container">
+        <p>This is a legal notice for the website private.coffee</p>
+        <p>The website private.coffee is run by the following entity:</p>
+        <address>
+          Private.coffee &dash; Verein zur Förderung von Privatsphäre und
+          digitaler Souver&auml;nit&auml;t
+          <br />
+          c/o Klaus-Uwe Mitterer
+          <br />
+          Gartengasse 22/7/3
+          <br />
+          8010 Graz
+          <br />
+          Austria
+          <br />
+        </address>
+        <p>Central Register of Associations (ZVR) Number: 1758485319</p>
+        <p>
+          Email:
+          <a href="mailto:support@private.coffee">support@private.coffee</a>
         </p>
       </div>
     </div>
-
-    <div class="container">
-      <p>This is a legal notice for the website private.coffee</p>
-      <p>The website private.coffee is run by the following entity:</p>
-      <address>
-        Private.coffee &dash; Verein zur Förderung von Privatsphäre und
-        digitaler Souver&auml;nit&auml;t<br />
-        c/o Klaus-Uwe Mitterer<br />
-        Gartengasse 22/7/3<br />
-        8010 Graz<br />
-        Austria<br />
-      </address>
-      <p>Central Register of Associations (ZVR) Number: 1758485319</p>
-      <p>
-        Email:
-        <a href="mailto:support@private.coffee">support@private.coffee</a>
-      </p>
-    </div>
-  </div>
-</section>
+  </section>
 {% endblock %}

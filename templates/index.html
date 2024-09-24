@@ -1,206 +1,168 @@
-{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
-%}
-<header class="bg-primary-gradient">
-  <div class="container pt-4 pt-xl-5 pb-4 pb-xl-5">
-    <div class="row gy-5 pt-5">
-      <div class="col-md-8 col-xl-6 text-center text-md-start mx-auto">
-        <div class="text-center">
-          <h2>Empowering Privacy with Open Source</h2>
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content
+  %}
+  <header class="bg-primary-gradient">
+    <div class="container pt-4 pt-xl-5 pb-4 pb-xl-5">
+      <div class="row gy-5 pt-5">
+        <div class="col-md-8 col-xl-6 text-center text-md-start mx-auto">
+          <div class="text-center">
+            <h2>Empowering Privacy with Open Source</h2>
+          </div>
+          <p class="text-center special-header fancy-text-primary mb-0"
+             style="font-weight: 500">Private.coffee</p>
         </div>
-        <p
-          class="text-center special-header fancy-text-primary mb-0"
-          style="font-weight: 500"
-        >
-          Private.coffee
-        </p>
-      </div>
-      <div class="col-12 col-lg-10 mx-auto justify-content-center d-flex">
-        <div id="logoContainer"></div>
+        <div class="col-12 col-lg-10 mx-auto justify-content-center d-flex">
+          <div id="logoContainer"></div>
+        </div>
       </div>
     </div>
-  </div>
-</header>
-<section class="bg-white">
-  <div class="container bg-white py-5">
-    <div class="row">
-      <div class="col-md-8 col-xl-6 text-center mx-auto">
-        <p class="fw-bold mb-2 text-primary">Our self-hosted Services</p>
-        <h3 class="fw-bold">
-          Private.coffee provides a collection of services that respect your
-          privacy.
-        </h3>
+  </header>
+  <section class="bg-white">
+    <div class="container bg-white py-5">
+      <div class="row">
+        <div class="col-md-8 col-xl-6 text-center mx-auto">
+          <p class="fw-bold mb-2 text-primary">Our self-hosted Services</p>
+          <h3 class="fw-bold">
+            Private.coffee provides a collection of services that respect your
+            privacy.
+          </h3>
+        </div>
       </div>
-    </div>
-    <div class="py-5 p-lg-5">
-      <div class="accordion">
-        {% for service in services.services %} {% if not
-        service.exclude_from_index %}
-        <details class="accordion-item">
-          <summary class="accordion-header">
-            {% if service.icon %}
-            <div
-              class="bs-icon-lg d-flex justify-content-center align-items-center bs-icon"
-              title="{{ service.name }}"
-            >
-              {{ service.icon | icon | safe }}
-            </div>
-            {% endif %} {{ service.name }}{% if service.tiny_description %} - {{
-            service.tiny_description }}{% endif %} {% if service.homemade %}
-            <a href="{{ service.homemade }}">
-              <div
-                class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-sm homemade"
-                title="Made by Private.coffee"
-              >
-                {{ "coffee" | icon | safe }}
-              </div>
-            </a>
-            {% endif %} {% if service.fork %}
-            <a href="{{ service.fork }}">
-              <div
-                class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-sm fork"
-                title="Runs on a fork of the original software"
-              >
-                {{ "git-branch" | icon | safe }}
-              </div>
-            </a>
+      <div class="py-5 p-lg-5">
+        <div class="accordion">
+          {% for service in services.services %}
+            {% if not
+              service.exclude_from_index %}
+              <details class="accordion-item">
+                <summary class="accordion-header">
+                  {% if service.icon %}
+                    <div class="bs-icon-lg d-flex justify-content-center align-items-center bs-icon"
+                         title="{{ service.name }}">{{ service.icon | icon | safe }}</div>
+                  {% endif %}
+                  {{ service.name }}
+                  {% if service.tiny_description %}
+                    - {{
+                    service.tiny_description }}
+                  {% endif %}
+                  {% if service.homemade %}
+                    <a href="{{ service.homemade }}">
+                      <div class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-sm homemade"
+                           title="Made by Private.coffee">{{ "coffee" | icon | safe }}</div>
+                    </a>
+                  {% endif %}
+                  {% if service.fork %}
+                    <a href="{{ service.fork }}">
+                      <div class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-sm fork"
+                           title="Runs on a fork of the original software">{{ "git-branch" | icon | safe }}</div>
+                    </a>
+                  {% endif %}
+                </summary>
+                <div class="accordion-body">
+                  <p class="text-muted card-text mb-4">{{ service.long_description }}</p>
+                  {% for link in service.links %}
+                    {% if link.alternatives %}
+                      <div class="button-wrapper dropdown">
+                        <div class="btn btn-primary w-100 shadow">
+                          <a class="main-link" href="{{ link.url }}">{{ link.name }}</a>
+                          <div class="dropdown-toggle-area">&#9660;</div>
+                        </div>
+                        <div class="dropdown-content">
+                          {% for alternative in link.alternatives %}<a href="{{ alternative.url }}">{{ alternative.name }}</a>{% endfor %}
+                        </div>
+                      </div>
+                    {% else %}
+                      <a class="button-wrapper btn btn-primary shadow w-100 text-center"
+                         href="{{ link.url }}">{{ link.name }}</a>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </details>
             {% endif %}
-          </summary>
-          <div class="accordion-body">
-            <p class="text-muted card-text mb-4">
-              {{ service.long_description }}
-            </p>
-            {% for link in service.links %} {% if link.alternatives %}
-            <div class="button-wrapper dropdown">
-              <div class="btn btn-primary w-100 shadow">
-                <a class="main-link" href="{{ link.url }}">{{ link.name }}</a>
-                <div class="dropdown-toggle-area">&#9660;</div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-primary-gradient">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col">
+          <p class="text-end special-header fancy-text-primary mb-0">Privacy</p>
+        </div>
+        <div class="col">
+          <p class="text-start mb-1" style="font-size: 1.6rem">
+            from the <strong>community</strong>
+          </p>
+          <p class="text-start mb-0" style="font-size: 1.6rem">
+            for the <strong>community</strong>
+          </p>
+        </div>
+      </div>
+      <div class="mx-auto" style="max-width: 900px">
+        <div class="row row-cols-1 row-cols-md-2 d-flex justify-content-center">
+          <div class="col mb-4">
+            <div class="card bg-primary-subtle">
+              <div class="card-body text-center px-4 py-5 px-md-5">
+                <p class="fw-bold text-primary card-text mb-2">Join or donate</p>
+                <h5 class="fw-bold card-title mb-3">Be a part of the open source community!</h5>
+                <a class="btn btn-primary btn-sm" href="/membership.html">Learn more</a>
               </div>
-              <div class="dropdown-content">
-                {% for alternative in link.alternatives %}
-                <a href="{{ alternative.url }}">{{ alternative.name }}</a>
-                {% endfor %}
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="card bg-secondary-subtle">
+              <div class="card-body text-center px-4 py-5 px-md-5">
+                <p class="fw-bold text-secondary card-text mb-2">Private Hosting</p>
+                <h5 class="fw-bold card-title mb-3">Interested in Hosting Services?</h5>
+                <a class="btn btn-secondary btn-sm" href="mailto:support@private.coffee">Get in touch</a>
               </div>
             </div>
-            {% else %}
-            <a
-              class="button-wrapper btn btn-primary shadow w-100 text-center"
-              href="{{ link.url }}"
-              >{{ link.name }}</a
-            >
-            {% endif %} {% endfor %}
           </div>
-        </details>
-        {% endif %} {% endfor %}
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="bg-primary-gradient">
-  <div class="container py-5">
-    <div class="row align-items-center">
-      <div class="col">
-        <p class="text-end special-header fancy-text-primary mb-0">Privacy</p>
+  </section>
+  <section class="py-5">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-8 col-xl-6 text-center mx-auto">
+          <p class="fw-bold mb-2 text-primary">Contacts</p>
+          <h2 class="fw-bold">How you can reach us</h2>
+        </div>
       </div>
-      <div class="col">
-        <p class="text-start mb-1" style="font-size: 1.6rem">
-          from the <strong>community</strong>
-        </p>
-        <p class="text-start mb-0" style="font-size: 1.6rem">
-          for the <strong>community</strong>
-        </p>
-      </div>
-    </div>
-    <div class="mx-auto" style="max-width: 900px">
-      <div class="row row-cols-1 row-cols-md-2 d-flex justify-content-center">
-        <div class="col mb-4">
-          <div class="card bg-primary-subtle">
-            <div class="card-body text-center px-4 py-5 px-md-5">
-              <p class="fw-bold text-primary card-text mb-2">Join or donate</p>
-              <h5 class="fw-bold card-title mb-3">
-                Be a part of the open source community!
-              </h5>
-              <a class="btn btn-primary btn-sm" href="/membership.html"
-                >Learn more</a
-              >
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-4 col-xl-4 d-flex justify-content-center justify-content-xl-start">
+          <div class="d-flex flex-wrap flex-md-column justify-content-md-start align-items-md-start h-100">
+            <div class="d-flex align-items-center p-3">
+              <div class="bs-icon-md bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md">
+                {{ "envelope" | icon | safe }}
+              </div>
+              <div class="px-2">
+                <h6 class="fw-bold mb-0">Email</h6>
+                <p class="text-muted mb-0">support@private.coffee</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col mb-4">
-          <div class="card bg-secondary-subtle">
-            <div class="card-body text-center px-4 py-5 px-md-5">
-              <p class="fw-bold text-secondary card-text mb-2">
-                Private Hosting
-              </p>
-              <h5 class="fw-bold card-title mb-3">
-                Interested in Hosting Services?
-              </h5>
-              <a
-                class="btn btn-secondary btn-sm"
-                href="mailto:support@private.coffee"
-                >Get in touch</a
-              >
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-4 col-xl-4 d-flex justify-content-center justify-content-xl-start">
+          <div class="d-flex flex-wrap flex-md-column justify-content-md-start align-items-md-start h-100">
+            <div class="d-flex align-items-center p-3">
+              <div class="bs-icon-md bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md">
+                {{ "matrix-logo" | icon | safe }}
+              </div>
+              <div class="px-2">
+                <h6 class="fw-bold mb-0">Matrix</h6>
+                <p class="text-muted mb-0">
+                  <a href="https://matrix.pcof.fi/#/#private.coffee:private.coffee">#private.coffee:private.coffee</a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="py-5">
-  <div class="container">
-    <div class="row mb-5">
-      <div class="col-md-8 col-xl-6 text-center mx-auto">
-        <p class="fw-bold mb-2 text-primary">Contacts</p>
-        <h2 class="fw-bold">How you can reach us</h2>
-      </div>
-    </div>
-    <div class="row d-flex justify-content-center">
-      <div
-        class="col-md-4 col-xl-4 d-flex justify-content-center justify-content-xl-start"
-      >
-        <div
-          class="d-flex flex-wrap flex-md-column justify-content-md-start align-items-md-start h-100"
-        >
-          <div class="d-flex align-items-center p-3">
-            <div
-              class="bs-icon-md bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md"
-            >
-              {{ "envelope" | icon | safe }}
-            </div>
-            <div class="px-2">
-              <h6 class="fw-bold mb-0">Email</h6>
-              <p class="text-muted mb-0">support@private.coffee</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row d-flex justify-content-center">
-      <div
-        class="col-md-4 col-xl-4 d-flex justify-content-center justify-content-xl-start"
-      >
-        <div
-          class="d-flex flex-wrap flex-md-column justify-content-md-start align-items-md-start h-100"
-        >
-          <div class="d-flex align-items-center p-3">
-            <div
-              class="bs-icon-md bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md"
-            >
-              {{ "matrix-logo" | icon | safe }}
-            </div>
-            <div class="px-2">
-              <h6 class="fw-bold mb-0">Matrix</h6>
-              <p class="text-muted mb-0">
-                <a
-                  href="https://matrix.pcof.fi/#/#private.coffee:private.coffee"
-                  >#private.coffee:private.coffee</a
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 {% endblock %}

@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bridges and bots</title>
-</head>
-<body>
-    <div style="font-family: Arial, sans-serif; background-color: #f2f2f2; color: #333; line-height: 1.6; padding: 20px; max-width: 600px; margin: auto;">
-        <h2 style="color: #333;">Bridges and bots</h2>
-        <p>These are the bridges and bots available to Private.coffee Matrix users:</p>
-        <ul style="list-style: none; padding: 0;">
-          {% for bridge in bridges.bridges %}
-          <li style="padding: 8px 0;"><a style="color: #1a5dab; text-decoration: none;" href="https://matrix.pcof.fi/#/{{ bridge.mxid }}">{{ bridge.name }}</a> - {{ bridge.mxid }}</li>
-          {% endfor %}
-        </ul>
-      </div>      
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridges and bots</title>
+  </head>
+  <body>
+    <div style="font-family: Arial, sans-serif;
+                background-color: #f2f2f2;
+                color: #333;
+                line-height: 1.6;
+                padding: 20px;
+                max-width: 600px;
+                margin: auto">
+      <h2 style="color: #333;">Bridges and bots</h2>
+      <p>These are the bridges and bots available to Private.coffee Matrix users:</p>
+      <ul style="list-style: none; padding: 0;">
+        {% for bridge in bridges.bridges %}
+          <li style="padding: 8px 0;">
+            <a style="color: #1a5dab;
+                      text-decoration: none"
+               href="https://matrix.pcof.fi/#/{{ bridge.mxid }}">{{ bridge.name }}</a> - {{ bridge.mxid }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </body>
 </html>
