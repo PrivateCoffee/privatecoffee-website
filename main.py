@@ -106,7 +106,7 @@ def generate_static_site(development_mode=False, theme="plain"):
         if template_name == "bridges":
             context.update({"bridges": bridges})
 
-        if template_name == "membership":
+        if template_name.startswith("membership"):
             allow_current = development_mode
             finances_month, finances_year = get_latest_month(finances, allow_current)
             finances_period = datetime.date(finances_year, finances_month, 1)
