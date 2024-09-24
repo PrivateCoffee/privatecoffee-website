@@ -123,6 +123,23 @@ h5 {
   color: #604c2e;
 }
 
+/* Image Styles */
+#logoContainer {
+  background-size: contain;
+  background-repeat: no-repeat;
+  max-width: 400px;
+  max-height: 400px;
+  width: 80vh;
+  height: 80vh;
+}
+
+#smallLogoContainer {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 64px;
+  height: 64px;
+}
+
 .homemade,
 .fork {
   right: -0.5rem;
