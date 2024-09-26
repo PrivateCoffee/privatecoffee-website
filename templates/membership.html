@@ -1,5 +1,7 @@
 {% extends "base.html" %}
-{% block title %}Membership / Donations{% endblock %}
+{% block title %}
+  Membership / Donations
+{% endblock title %}
 {% block content %}
   <div class="container my-5">
     <div class="text-center mb-5">
@@ -11,7 +13,7 @@
         our services and reach more people.
       </p>
     </div>
-    {% block serviceinfo %}{% endblock %}
+    {% block serviceinfo %}{% endblock serviceinfo %}
     <div class="row">
       <div class="col-md-4 mb-4">
         <div class="card shadow-sm">
@@ -110,4 +112,4 @@
       </div>
     </div>
   </div>
-{% endblock %}
+{% endblock content %}
