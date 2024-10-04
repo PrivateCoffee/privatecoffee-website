@@ -1,6 +1,6 @@
 {
     "2024": {
-        "4": {
+        "04": {
             "Membership Fees": {
                 "EUR": 365
             },
@@ -12,7 +12,7 @@
                 "Notes": "Administrative fee for the formation of the association"
             }
         },
-        "5": {
+        "05": {
             "Membership Fees": {
                 "EUR": 390
             },
@@ -25,7 +25,7 @@
                 "Notes": "Includes setup costs and two monthly payments for new server"
             }
         },
-        "6": {
+        "06": {
             "Membership Fees": {
                 "EUR": 382.42
             },
@@ -36,7 +36,7 @@
                 "EUR": -49.05
             }
         },
-        "7": {
+        "07": {
             "Membership Fees": {
                 "EUR": 422.42
             },
@@ -47,7 +47,7 @@
                 "EUR": -264.99
             }
         },
-        "8": {
+        "08": {
             "Membership Fees": {
                 "EUR": 402.42
             },
@@ -55,12 +55,20 @@
                 "EUR": -416.47
             }
         },
-        "9": {
+        "09": {
             "Membership Fees": {
-                "EUR": 448.11
+                "EUR": 468.11
             },
             "Server Costs": {
                 "EUR": -243.46
+            },
+            "Bank Fees": {
+                "EUR": -53.32
+            }
+        },
+        "10": {
+            "Membership Fees": {
+                "EUR": 30.23
             }
         }
     }

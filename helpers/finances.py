@@ -30,12 +30,12 @@ def get_transparency_data(data, year=None, month=None, allow_current=False):
         month = max(data[year].keys())
 
     year = str(year)
-    month = str(month)
+    month = str(month).zfill(2)
 
     if (
         not allow_current
         and year == str(datetime.now().year)
-        and month == str(datetime.now().month)
+        and month == str(datetime.now().month).zfill(2)
     ):
         try:
             month = max([m for m in data[year].keys() if m != str(datetime.now().month)])
