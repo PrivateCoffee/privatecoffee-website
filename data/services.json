@@ -303,7 +303,7 @@
             "name": "Travelynx",
             "url": "https://traveling.coffee",
             "homemade": false,
-            "fork": false,
+            "fork": "https://git.private.coffee/PrivateCoffee/travelynx",
             "tiny_description": "rail journey logger (German)",
             "short_description": "Travelynx is a service for logging your rail journeys. (German)",
             "long_description": "Travelynx is a service for logging your rail journeys, primarily for Germany and surrounding Europe. You can use it to keep track of the trains you've taken, and to view statistics about your trips.",
