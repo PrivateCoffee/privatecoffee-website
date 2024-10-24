@@ -7,7 +7,7 @@
             "fork": false,
             "tiny_description": "decentralized messaging",
             "short_description": "Matrix is an open network for secure, decentralized communication.",
-            "long_description": "Private.coffee runs a Matrix server. You can use it to chat with other people at Private.coffee or around the world. Public registrations are currently disabled, send an email to support@private.coffee to request an account.",
+            "long_description": "Private.coffee runs a Matrix server. You can use it to chat with other people at Private.coffee or around the world.",
             "status": "OK",
             "links": [
                 {
