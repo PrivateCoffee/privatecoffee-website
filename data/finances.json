@@ -72,6 +72,10 @@
             },
             "Server Costs": {
                 "EUR": -440.98
+            },
+            "Miscellaneous": {
+                "EUR": 0.01,
+                "Notes": "Bank account verification"
             }
         }
     }
