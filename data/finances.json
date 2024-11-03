@@ -77,6 +77,14 @@
                 "EUR": 0.01,
                 "Notes": "Bank account verification"
             }
+        },
+        "11": {
+            "Membership Fees": {
+                "EUR": 25
+            },
+            "Server Costs": {
+                "EUR": -32.72
+            }
         }
     }
 }
