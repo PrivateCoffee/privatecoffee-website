@@ -574,7 +574,7 @@
             "name": "wishthis",
             "url": "https://wishthis.private.coffee",
             "homemade": false,
-            "fork": false,
+            "fork": "https://git.private.coffee/PrivateCoffee/wishthis",
             "tiny_description": "create and share wishlists",
             "short_description": "wishthis is a service for creating and sharing wishlists.",
             "long_description": "wishthis is a service for creating wishlists. You can use it to create wishlists for yourself, or to share them with others.",
