@@ -29,7 +29,8 @@
           content="https://private.coffee/assets/img/logo-inv_grad.png" />
     <link rel="icon" type="image/png" href="assets/img/logo-inv_grad.png" />
     <title>
-      {% block title %}{% endblock title %}
+      {% block title %}
+      {% endblock title %}
     - Private.coffee</title>
     <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/base.css?v={{ timestamp }}" />
@@ -40,7 +41,7 @@
     <nav class="navbar navbar-expand-md py-3 navbar-light" id="mainNav">
       <div class="container">
         <div class="row d-lg-flex align-items-lg-center">
-          <div class="col p-0">
+          <div class="col p-0" id="logo-wrapper">
             <a href="/">
               <div id="smallLogoContainer"></div>
             </a>

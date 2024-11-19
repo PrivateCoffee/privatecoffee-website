@@ -233,6 +233,11 @@ h5 {
     .slogan {
       display: none;
     }
+
+    #logo-wrapper {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 
