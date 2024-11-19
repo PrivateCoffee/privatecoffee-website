@@ -167,10 +167,6 @@ h5 {
 
 /* Responsive Styles */
 @media (max-width: 991px) {
-  p.text-center.special-header {
-    font-size: 3rem;
-  }
-
   .navbar .container {
     display: flex;
     flex-direction: column;
