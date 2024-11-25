@@ -924,6 +924,25 @@
             "icon": "hard-hat",
             "exclude_from_index": false,
             "exclude_from_simple": false
+        },
+        {
+            "name": "TypeNot",
+            "url": "https://typenot.private.coffee",
+            "homemade": "https://git.private.coffee/PrivateCoffee/typenot",
+            "fork": false,
+            "tiny_description": "privacy-friendly Typekit proxy",
+            "short_description": "TypeNot is a privacy-friendly proxy to Typekit.",
+            "long_description": "TypeNot is a privacy-friendly proxy to Typekit. It allows you to use Typekit fonts without being tracked by Adobe.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to TypeNot",
+                    "url": "https://typenot.private.coffee"
+                }
+            ],
+            "icon": "hard-hat",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
         }
     ]
 }
