@@ -422,7 +422,13 @@
             "links": [
                 {
                     "name": "Go to Structables",
-                    "url": "https://structables.private.coffee"
+                    "url": "https://structables.private.coffee",
+                    "alternatives": [
+                        {
+                            "name": "Tor",
+                            "url": "http://structables.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion"
+                        }
+                    ]
                 }
             ],
             "icon": "lightbulb",
