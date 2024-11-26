@@ -22,13 +22,7 @@
                 },
                 {
                     "name": "Go to Element",
-                    "url": "https://element.private.coffee",
-                    "alternatives": [
-                        {
-                            "name": "Tor",
-                            "url": "http://element.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion"
-                        }
-                    ]
+                    "url": "https://element.private.coffee"
                 },
                 {
                     "name": "Go to Hydrogen",
