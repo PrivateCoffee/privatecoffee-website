@@ -2,12 +2,13 @@
 
 [![Support Private.coffee!](https://shields.private.coffee/badge/private.coffee-Support%20us!-pink?logo=coffeescript)](https://private.coffee)
 
-This is the source code for the [Private.coffee](https://private.coffee) 
+This is the source code for the [Private.coffee](https://private.coffee)
 website.
 
 It is a simple Jinja2 static website generator that compiles the templates in
 the `templates` directory in conjunction with the JSON files in the `data`
-directory to generate the static HTML files in the `build` directory.
+directory and Markdown blog entries in the `blog` directory to generate static
+HTML files in the `build` directory.
 
 ## Development
 
@@ -27,6 +28,14 @@ opening the `index.html` file in your browser or using the included HTTP server
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE)
 file for details.
+
+The assets in `assets/dist` are not part of this project and are subject to
+their own licenses.
+
+Blog posts in the `blog` directory are licensed under the [Creative Commons
+Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/),
+unless otherwise indicated. They may contain additional material under
+different licenses - see the individual blog posts for details.
 
 ## Attribution
 
