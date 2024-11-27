@@ -8,11 +8,12 @@ import math
 from http.server import SimpleHTTPRequestHandler
 from socketserver import TCPServer
 from threading import Thread
+from argparse import ArgumentParser
 
 import yaml
 import markdown2
 
-from argparse import ArgumentParser
+from PIL import Image
 
 from helpers.finances import (
     generate_transparency_table,
@@ -67,6 +68,12 @@ def render_template_to_file(template_name, output_name, **kwargs):
         print(f"Template {template_name} not found.")
 
 
+def create_thumbnail(input_image_path, output_image_path, size=(150, 150)):
+    with Image.open(input_image_path) as img:
+        img.thumbnail(size)
+        img.save(output_image_path)
+
+
 def calculate_relative_path(depth):
     return "../" * depth
 
@@ -107,6 +114,23 @@ def generate_blog_html(posts_per_page=5):
                 html_content = markdown2.markdown(md_content)
                 front_matter["content"] = html_content
                 front_matter["slug"] = post_dir.name
+
+                # Generate thumbnail if image is present
+                if "image" in front_matter:
+                    original_image = post_dir / front_matter["image"]
+                    thumbnail_image_name = f"thumb_{original_image.name}"
+                    thumbnail_image = (
+                        output_dir / "blog" / post_dir.name / thumbnail_image_name
+                    )
+                    create_thumbnail(original_image, thumbnail_image)
+
+                    front_matter["thumbnail"] = thumbnail_image_name
+
+                # Create excerpt if not present
+                if "excerpt" not in front_matter:
+                    excerpt = html_content.split("</p>")[0]
+                    front_matter["excerpt"] = excerpt
+
                 blog_posts.append(front_matter)
 
                 # Ensure the build directory structure exists
@@ -132,12 +156,19 @@ def generate_blog_html(posts_per_page=5):
             "posts": paginated_posts,
             "current_page": page + 1,
             "total_pages": total_pages,
-            "relative_path": calculate_relative_path(1 if page == 0 else 2),
+            "relative_path": calculate_relative_path(1 if page == 0 else 3),
         }
         output_path = (
             f"blog/index.html" if page == 0 else f"blog/page/{page + 1}/index.html"
         )
         render_template_to_file("blog/index.html", output_path, **context)
+
+        if page == 0:
+            pathlib.Path("build/blog/page/1").mkdir(parents=True, exist_ok=True)
+            context["relative_path"] = calculate_relative_path(3)
+            render_template_to_file(
+                "blog/index.html", "blog/page/1/index.html", **context
+            )
 
     # Render each individual post
     for post in blog_posts:

@@ -7,34 +7,43 @@
         <h1>Blog</h1>
         <ul class="list-unstyled">
             {% for post in posts %}
-                <li>
-                    <a href="/blog/{{ post.slug }}/index.html">
-                        {% if post.title %}
-                            {{ post.title }}
-                        {% else %}
-                            {{ post.slug }}
-                        {% endif %}
-                    </a>
-                    <br>
-                    <small>{{ post.date }}</small>
+                <li class="d-flex align-items-center mb-4 p-3 border-bottom">
+                    {% if post.thumbnail %}
+                        <img src="{{ relative_path }}blog/{{ post.slug }}/{{ post.thumbnail }}"
+                             alt="{{ post.title }} thumbnail"
+                             class="me-3"
+                             style="width: 150px;
+                                    height: 150px">
+                    {% endif %}
+                    <div>
+                        <h2>
+                            <a href="{{ relative_path }}blog/{{ post.slug }}/index.html">{{ post.title }}</a>
+                        </h2>
+                        <small class="text-muted">{{ post.date }}</small>
+                        <p>
+                            {{ post.excerpt }} <a href="{{ relative_path }}blog/{{ post.slug }}/index.html">[read more]</a>
+                        </p>
+                    </div>
                 </li>
             {% endfor %}
         </ul>
         <nav class="mt-4">
-            <ul class="pagination">
+            <ul class="pagination justify-content-center">
                 {% if current_page > 1 %}
                     <li class="page-item">
-                        <a class="page-link" href="/blog/page/{{ current_page - 1 }}/">Previous</a>
+                        <a class="page-link"
+                           href="{{ relative_path }}blog/page/{{ current_page - 1 }}/">Previous</a>
                     </li>
                 {% endif %}
                 {% for i in range(1, total_pages + 1) %}
                     <li class="page-item {% if i == current_page %}active{% endif %}">
-                        <a class="page-link" href="/blog/page/{{ i }}/">{{ i }}</a>
+                        <a class="page-link" href="{{ relative_path }}blog/page/{{ i }}/">{{ i }}</a>
                     </li>
                 {% endfor %}
                 {% if current_page < total_pages %}
                     <li class="page-item">
-                        <a class="page-link" href="/blog/page/{{ current_page + 1 }}/">Next</a>
+                        <a class="page-link"
+                           href="{{ relative_path }}blog/page/{{ current_page + 1 }}/">Next</a>
                     </li>
                 {% endif %}
             </ul>
