@@ -19,7 +19,7 @@
                         <h2>
                             <a href="{{ relative_path }}blog/{{ post.slug }}/index.html">{{ post.title }}</a>
                         </h2>
-                        <small class="text-muted">{{ post.date }}</small>
+                        <small class="text-muted">by {{ post.author }}, published {{ post.date }}</small>
                         <p>
                             {{ post.excerpt }} <a href="{{ relative_path }}blog/{{ post.slug }}/index.html">[read more]</a>
                         </p>
