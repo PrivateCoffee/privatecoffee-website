@@ -112,6 +112,18 @@ def generate_blog_html(posts_per_page=5):
             if md_path.exists():
                 front_matter, md_content = parse_markdown_file(md_path)
                 html_content = markdown2.markdown(md_content)
+
+                # Only process future posts in development mode
+                if front_matter.get("date"):
+                    post_date = datetime.datetime.strptime(
+                        front_matter["date"], "%Y-%m-%d %H:%M:%S"
+                    )
+                    if post_date > datetime.datetime.now():
+                        if not args.dev:
+                            print(f"Skipping future post: {post_dir.name}")
+                            continue
+                        front_matter["date"] = front_matter["date"] + " (future)"
+
                 front_matter["content"] = html_content
                 front_matter["slug"] = post_dir.name
 
