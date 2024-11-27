@@ -115,9 +115,12 @@ def generate_blog_html(posts_per_page=5):
 
                 # Only process future posts in development mode
                 if front_matter.get("date"):
-                    post_date = datetime.datetime.strptime(
-                        front_matter["date"], "%Y-%m-%d %H:%M:%S"
-                    )
+                    if isinstance(front_matter["date"], str):
+                        post_date = datetime.datetime.strptime(
+                            front_matter["date"], "%Y-%m-%d %H:%M:%S"
+                        )
+                    else:
+                        post_date = front_matter["date"]
                     if post_date > datetime.datetime.now():
                         if not args.dev:
                             print(f"Skipping future post: {post_dir.name}")
@@ -184,6 +187,11 @@ def generate_blog_html(posts_per_page=5):
 
     # Render each individual post
     for post in blog_posts:
+        post.setdefault("license", "CC BY-SA 4.0")
+        post.setdefault("license-url", "https://creativecommons.org/licenses/by-sa/4.0/")
+        post.setdefault("author", "Private.coffee Team")
+        post.setdefault("author-url", "https://private.coffee")
+
         post_slug = post["slug"]
         render_template_to_file(
             "blog/post.html",
