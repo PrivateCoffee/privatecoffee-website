@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}
+    {{ title }}
+{% endblock title %}
+{% block content %}
+    <div class="container my-5">
+        <h1>{{ title }}</h1>
+        <p>
+            <small>{{ date }}</small>
+        </p>
+        <div>{{ content|safe }}</div>
+    </div>
+{% endblock content %}

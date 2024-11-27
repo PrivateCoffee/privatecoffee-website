@@ -27,15 +27,19 @@
           content="Private.coffee is a privacy-focused non-profit association, dedicated to supporting privacy and digital sovereignty." />
     <meta name="twitter:image"
           content="https://private.coffee/assets/img/logo-inv_grad.png" />
-    <link rel="icon" type="image/png" href="assets/img/logo-inv_grad.png" />
+    <link rel="icon"
+          type="image/png"
+          href="{{ relative_path }}assets/img/logo-inv_grad.png" />
     <title>
       {% block title %}
       {% endblock title %}
     - Private.coffee</title>
-    <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/base.css?v={{ timestamp }}" />
     <link rel="stylesheet"
-          href="assets/css/theme/{{ theme }}.css?v={{ timestamp }}" />
+          href="{{ relative_path }}assets/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+          href="{{ relative_path }}assets/css/base.css?v={{ timestamp }}" />
+    <link rel="stylesheet"
+          href="{{ relative_path }}assets/css/theme/{{ theme }}.css?v={{ timestamp }}" />
   </head>
   <body>
     <nav class="navbar navbar-expand-md py-3 navbar-light" id="mainNav">

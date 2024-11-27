@@ -3,10 +3,14 @@ import json
 import pathlib
 import datetime
 import shutil
+import math
 
 from http.server import SimpleHTTPRequestHandler
 from socketserver import TCPServer
 from threading import Thread
+
+import yaml
+import markdown2
 
 from argparse import ArgumentParser
 
@@ -61,6 +65,90 @@ def render_template_to_file(template_name, output_name, **kwargs):
             f.write(template.render(**kwargs))
     except TemplateNotFound:
         print(f"Template {template_name} not found.")
+
+
+def calculate_relative_path(depth):
+    return "../" * depth
+
+
+def copy_assets(src_dir, dest_dir):
+    for item in src_dir.iterdir():
+        if item.is_dir():
+            # Recur for subdirectories
+            item_dest_dir = dest_dir / item.name
+            item_dest_dir.mkdir(parents=True, exist_ok=True)
+            copy_assets(item, item_dest_dir)
+        elif item.is_file() and item.suffix not in [".md"]:
+            shutil.copy(item, dest_dir)
+
+
+def parse_markdown_file(filepath):
+    with open(filepath, "r", encoding="utf-8") as f:
+        content = f.read()
+        # Split the front matter and markdown content
+        parts = content.split("---", 2)
+        if len(parts) == 3:
+            _, fm_text, md_content = parts
+            front_matter = yaml.safe_load(fm_text)
+        else:
+            front_matter, md_content = {}, content
+        return front_matter, md_content
+
+
+def generate_blog_html(posts_per_page=5):
+    blog_dir = pathlib.Path("blog")
+    blog_posts = []
+
+    for post_dir in blog_dir.iterdir():
+        if post_dir.is_dir():
+            md_path = post_dir / "index.md"
+            if md_path.exists():
+                front_matter, md_content = parse_markdown_file(md_path)
+                html_content = markdown2.markdown(md_content)
+                front_matter["content"] = html_content
+                front_matter["slug"] = post_dir.name
+                blog_posts.append(front_matter)
+
+                # Ensure the build directory structure exists
+                output_post_dir = output_dir / "blog" / post_dir.name
+                output_post_dir.mkdir(parents=True, exist_ok=True)
+
+                # Copy non-markdown assets
+                copy_assets(post_dir, output_post_dir)
+
+    # Sort posts by date, descending
+    blog_posts.sort(key=lambda x: x.get("date", ""), reverse=True)
+
+    # Calculate total pages
+    total_posts = len(blog_posts)
+    total_pages = math.ceil(total_posts / posts_per_page)
+
+    # Generate each index page
+    for page in range(total_pages):
+        start = page * posts_per_page
+        end = start + posts_per_page
+        paginated_posts = blog_posts[start:end]
+        context = {
+            "posts": paginated_posts,
+            "current_page": page + 1,
+            "total_pages": total_pages,
+            "relative_path": calculate_relative_path(1 if page == 0 else 2),
+        }
+        output_path = (
+            f"blog/index.html" if page == 0 else f"blog/page/{page + 1}/index.html"
+        )
+        render_template_to_file("blog/index.html", output_path, **context)
+
+    # Render each individual post
+    for post in blog_posts:
+        post_slug = post["slug"]
+        render_template_to_file(
+            "blog/post.html",
+            f"blog/{post_slug}/index.html",
+            **{**post, "relative_path": calculate_relative_path(2)},
+        )
+
+    print("Blog section generated successfully.")
 
 
 def generate_static_site(development_mode=False, theme="plain"):
@@ -137,6 +225,9 @@ def generate_static_site(development_mode=False, theme="plain"):
         render_template_to_file(
             f"{template_name}.html", f"{template_name}.html", **context
         )
+
+    # Generate blog section
+    generate_blog_html()
 
     # Generate metrics
     balances = get_transparency_data(finances, allow_current=True)["end_balance"]
