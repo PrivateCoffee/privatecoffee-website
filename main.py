@@ -115,17 +115,6 @@ def generate_blog_html(posts_per_page=5):
                 front_matter["content"] = html_content
                 front_matter["slug"] = post_dir.name
 
-                # Generate thumbnail if image is present
-                if "image" in front_matter:
-                    original_image = post_dir / front_matter["image"]
-                    thumbnail_image_name = f"thumb_{original_image.name}"
-                    thumbnail_image = (
-                        output_dir / "blog" / post_dir.name / thumbnail_image_name
-                    )
-                    create_thumbnail(original_image, thumbnail_image)
-
-                    front_matter["thumbnail"] = thumbnail_image_name
-
                 # Create excerpt if not present
                 if "excerpt" not in front_matter:
                     excerpt = html_content.split("</p>")[0]
@@ -136,6 +125,17 @@ def generate_blog_html(posts_per_page=5):
                 # Ensure the build directory structure exists
                 output_post_dir = output_dir / "blog" / post_dir.name
                 output_post_dir.mkdir(parents=True, exist_ok=True)
+
+                # Generate thumbnail if image is present
+                if "image" in front_matter:
+                    original_image = post_dir / front_matter["image"]
+                    thumbnail_image_name = f"thumb_{original_image.name}"
+                    thumbnail_image = (
+                        output_dir / "blog" / post_dir.name / thumbnail_image_name
+                    )
+                    create_thumbnail(original_image, thumbnail_image)
+
+                    front_matter["thumbnail"] = thumbnail_image_name
 
                 # Copy non-markdown assets
                 copy_assets(post_dir, output_post_dir)
