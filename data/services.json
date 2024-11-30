@@ -22,7 +22,13 @@
                 },
                 {
                     "name": "Go to Element",
-                    "url": "https://element.private.coffee"
+                    "url": "https://element.private.coffee",
+                    "alternatives": [
+                        {
+                            "name": "Fork Source Code",
+                            "url": "https://git.private.coffee/PrivateCoffee/element-web"
+                        }
+                    ]
                 },
                 {
                     "name": "Go to Hydrogen",
