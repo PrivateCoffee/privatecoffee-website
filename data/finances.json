@@ -88,7 +88,11 @@
         },
         "12": {
             "Membership Fees": {
-                "EUR": 25
+                "EUR": 95
+            },
+            "Marketing": {
+                "EUR": -75.8,
+                "Notes": "Branded coffee mugs"
             }
         }
     }
