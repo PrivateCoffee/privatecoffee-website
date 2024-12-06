@@ -85,6 +85,18 @@
             "Server Costs": {
                 "EUR": -366.93
             }
+        },
+        "12": {
+            "Membership Fees": {
+                "EUR": 400.23
+            },
+            "Server Costs":{
+                "EUR": -40.62
+            },
+            "Marketing": {
+                "EUR": -75.8,
+                "Notes": "Branded coffee mugs"
+            }
         }
     }
 }
