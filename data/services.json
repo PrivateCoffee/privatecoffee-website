@@ -466,8 +466,8 @@
             "homemade": "https://git.private.coffee/PrivateCoffee/wikimore",
             "fork": false,
             "tiny_description": "censorship-free Wikipedia",
-            "short_description": "Wikimore is a privacy-friendly alternative front-end to Wikimedia wikis.",
-            "long_description": "Wikimore is a privacy-friendly alternative front-end to Wikipedia and other Wikimedia wikis.",
+            "short_description": "Wikimore is an alternative front-end to Wikimedia wikis.",
+            "long_description": "Wikimore is an alternative front-end to Wikipedia and other Wikimedia wikis.",
             "status": "OK",
             "links": [
                 {
