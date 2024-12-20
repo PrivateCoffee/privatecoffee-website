@@ -183,7 +183,7 @@ def generate_transparency_table(result, currencies=None):
     """
 
     # Add start balance row
-    html += "<tr><td>Account Balance (start of month)</td>"
+    html += "<tr class=\"transparency-start-balance-row\"><td>Account Balance (start of month)</td>"
     for currency in currencies:
         value = result["start_balance"].get(currency, Decimal(0))
         html += f"<td>{format_value(value, currency)}</td>"
