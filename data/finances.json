@@ -90,6 +90,9 @@
             "Membership Fees": {
                 "EUR": 400.23
             },
+            "Donations": {
+                "EUR": 75
+            },
             "Server Costs":{
                 "EUR": -315.12
             },
