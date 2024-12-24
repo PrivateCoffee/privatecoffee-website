@@ -91,7 +91,10 @@
                 "EUR": 407.65
             },
             "Donations": {
-                "EUR": 75
+                "EUR": 80
+            },
+            "Bank Fees": {
+                "EUR": -0.52
             },
             "Server Costs":{
                 "EUR": -375.09
