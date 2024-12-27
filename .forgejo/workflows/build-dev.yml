@@ -12,13 +12,16 @@ jobs:
     container: python:3.13-bookworm
 
     steps:
+      - name: Install nodejs
+        run: |
+          apt update
+          apt install -y nodejs npm
+
       - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Install dependencies
         run: |
-          apt update
-          apt install -y nodejs npm
           python3 -m pip install -r requirements.txt --break-system-packages
 
       - name: Generate static site
