@@ -4,8 +4,8 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Private.coffee Blog</title>
-    <link>https://private.coffee/blog</link>
-    <atom:link href="https://private.coffee/blog/rss.xml" rel="self" type="application/rss+xml" />
+    <link>https://{% if development_mode %}dev.{% endif %}private.coffee/blog</link>
+    <atom:link href="https://{% if development_mode %}dev.{% endif %}private.coffee/blog/rss.xml" rel="self" type="application/rss+xml" />
     <description>Your dose of private caffeine!</description>
     <pubDate>{{ current_time }}</pubDate>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>

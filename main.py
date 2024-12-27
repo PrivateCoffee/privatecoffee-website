@@ -240,6 +240,7 @@ def generate_blog_rss(development_mode=False):
     blog_posts.sort(key=lambda x: x.get("date", ""), reverse=True)
 
     context = {
+        "development_mode": development_mode,
         "posts": blog_posts,
         "current_time": datetime.datetime.now()
         .astimezone()
