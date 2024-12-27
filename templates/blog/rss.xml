@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Private.coffee Blog</title>
+    <link>https://private.coffee/blog</link>
+    <atom:link href="https://private.coffee/blog/rss.xml" rel="self" type="application/rss+xml" />
+    <description>Your dose of private caffeine!</description>
+    <pubDate>{{ current_time }}</pubDate>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+
+    {% for post in posts %}
+    <item>
+       <title>{{ post.title }}</title>
+       <description>{{ post.description|safe }}</description>
+       <pubDate>{{ post.date }}</pubDate>
+       <guid>{{ post.link }}</guid>
+       <link>{{ post.link }}</link>
+       <dc:creator><![CDATA[{{ post.author }}]]></dc:creator>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

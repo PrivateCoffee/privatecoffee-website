@@ -188,7 +188,9 @@ def generate_blog_html(posts_per_page=5):
     # Render each individual post
     for post in blog_posts:
         post.setdefault("license", "CC BY-SA 4.0")
-        post.setdefault("license-url", "https://creativecommons.org/licenses/by-sa/4.0/")
+        post.setdefault(
+            "license-url", "https://creativecommons.org/licenses/by-sa/4.0/"
+        )
         post.setdefault("author", "Private.coffee Team")
         post.setdefault("author-url", "https://private.coffee")
 
@@ -200,6 +202,45 @@ def generate_blog_html(posts_per_page=5):
         )
 
     print("Blog section generated successfully.")
+
+
+def generate_blog_rss(development_mode=False):
+    blog_dir = pathlib.Path("blog")
+    blog_posts = []
+
+    for post_dir in blog_dir.iterdir():
+        if post_dir.is_dir():
+            md_path = post_dir / "index.md"
+            if md_path.exists():
+                front_matter, _ = parse_markdown_file(md_path)
+
+                # Ensure date is RFC 822 compliant
+                if "date" in front_matter:
+                    if isinstance(front_matter["date"], str):
+                        post_date = datetime.datetime.strptime(
+                            front_matter["date"], "%Y-%m-%d %H:%M:%S"
+                        )
+                    else:
+                        post_date = front_matter["date"]
+                    front_matter["date"] = post_date.strftime(
+                        "%a, %d %b %Y %H:%M:%S %z"
+                    )
+
+                front_matter["link"] = (
+                    f"https://{"dev." if development_mode else ""}private.coffee/blog/{post_dir.name}/"
+                )
+
+                blog_posts.append(front_matter)
+
+    blog_posts.sort(key=lambda x: x.get("date", ""), reverse=True)
+
+    context = {
+        "posts": blog_posts,
+        "current_time": datetime.datetime.now().strftime("%a, %d %b %Y %H:%M:%S %z"),
+    }
+    render_template_to_file("blog/rss.xml", "blog/rss.xml", **context)
+
+    print("RSS feed generated successfully.")
 
 
 def generate_static_site(development_mode=False, theme="plain"):
@@ -279,6 +320,7 @@ def generate_static_site(development_mode=False, theme="plain"):
 
     # Generate blog section
     generate_blog_html()
+    generate_blog_rss(development_mode)
 
     # Generate metrics
     balances = get_transparency_data(finances, allow_current=True)["end_balance"]
