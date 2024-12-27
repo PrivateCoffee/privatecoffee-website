@@ -220,8 +220,13 @@ def generate_blog_rss(development_mode=False):
                         post_date = datetime.datetime.strptime(
                             front_matter["date"], "%Y-%m-%d %H:%M:%S"
                         )
+
                     else:
                         post_date = front_matter["date"]
+
+                    if post_date.tzinfo is None:
+                        post_date = post_date.astimezone()
+
                     front_matter["date"] = post_date.strftime(
                         "%a, %d %b %Y %H:%M:%S %z"
                     )
@@ -236,7 +241,9 @@ def generate_blog_rss(development_mode=False):
 
     context = {
         "posts": blog_posts,
-        "current_time": datetime.datetime.now().strftime("%a, %d %b %Y %H:%M:%S %z"),
+        "current_time": datetime.datetime.now()
+        .astimezone()
+        .strftime("%a, %d %b %Y %H:%M:%S %z"),
     }
     render_template_to_file("blog/rss.xml", "blog/rss.xml", **context)
 
