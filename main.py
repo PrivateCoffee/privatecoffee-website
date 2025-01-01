@@ -132,10 +132,12 @@ def generate_blog_html(template_kwargs={}, posts_per_page=5):
                         )
                     else:
                         post_date = front_matter["date"]
+                        front_matter["date"] = post_date.strftime("%Y-%m-%d %H:%M:%S")
                     if post_date > datetime.datetime.now():
                         if not args.dev:
                             logging.info(f"Skipping future post: {post_dir.name}")
                             continue
+
                         front_matter["date"] = front_matter["date"] + " (future)"
 
                 front_matter["content"] = html_content
