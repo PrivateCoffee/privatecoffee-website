@@ -343,3 +343,9 @@ h5 {
 .accordion-header .bs-icon svg {
   width: 32px;
 }
+
+/* Table Styles */
+
+.transparency-start-balance-row > td {
+  background-color: rgb(234, 255, 255) !important;
+}

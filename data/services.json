@@ -253,6 +253,25 @@
             "exclude_from_simple": false
         },
         {
+            "name": "AliasVault",
+            "url": "https://cuddly.pw",
+            "homemade": false,
+            "fork": false,
+            "tiny_description": "password manager with built-in email aliasing",
+            "short_description": "AliasVault is a password manager with built-in email aliasing.",
+            "long_description": "AliasVault is a password manager with built-in email aliasing. You can use it to store your passwords, and to receive emails without revealing your real email address.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to AliasVault",
+                    "url": "https://cuddly.pw"
+                }
+            ],
+            "icon": "lock-key",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "QRMaker",
             "url": "https://qrmaker.private.coffee",
             "homemade": "https://git.private.coffee/PrivateCoffee/QRMaker",
@@ -466,8 +485,8 @@
             "homemade": "https://git.private.coffee/PrivateCoffee/wikimore",
             "fork": false,
             "tiny_description": "censorship-free Wikipedia",
-            "short_description": "Wikimore is a privacy-friendly alternative front-end to Wikimedia wikis.",
-            "long_description": "Wikimore is a privacy-friendly alternative front-end to Wikipedia and other Wikimedia wikis.",
+            "short_description": "Wikimore is an alternative front-end to Wikimedia wikis.",
+            "long_description": "Wikimore is an alternative front-end to Wikipedia and other Wikimedia wikis.",
             "status": "OK",
             "links": [
                 {

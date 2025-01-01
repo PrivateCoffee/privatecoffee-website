@@ -88,10 +88,16 @@
         },
         "12": {
             "Membership Fees": {
-                "EUR": 400.23
+                "EUR": 407.65
+            },
+            "Donations": {
+                "EUR": 80
+            },
+            "Bank Fees": {
+                "EUR": -0.52
             },
             "Server Costs":{
-                "EUR": -117.90
+                "EUR": -399.29
             },
             "Marketing": {
                 "EUR": -75.8,
