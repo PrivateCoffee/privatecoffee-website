@@ -1,5 +1,5 @@
 ---
-title: Board Meeting 27/10/2025
+title: Board Meeting 27/10/2024
 date: 2025-01-01 17:00:00
 author: jupfi
 license: CC BY-SA 4.0
