@@ -117,6 +117,8 @@ def generate_blog_html(template_kwargs={}, posts_per_page=5):
     blog_dir = pathlib.Path("blog")
     blog_posts = []
 
+    blog_tags = {}
+
     for post_dir in blog_dir.iterdir():
         if post_dir.is_dir():
             md_path = post_dir / "index.md"
@@ -133,6 +135,7 @@ def generate_blog_html(template_kwargs={}, posts_per_page=5):
                     else:
                         post_date = front_matter["date"]
                         front_matter["date"] = post_date.strftime("%Y-%m-%d %H:%M:%S")
+
                     if post_date > datetime.datetime.now():
                         if not args.dev:
                             logging.info(f"Skipping future post: {post_dir.name}")
@@ -142,6 +145,16 @@ def generate_blog_html(template_kwargs={}, posts_per_page=5):
 
                 front_matter["content"] = html_content
                 front_matter["slug"] = post_dir.name
+
+                # Add post to relevant tag lists
+                if "tags" in front_matter:
+                    for tag in front_matter["tags"].split(","):
+                        tag = tag.strip()
+
+                        if tag not in blog_tags:
+                            blog_tags[tag] = []
+
+                        blog_tags[tag].append(front_matter)
 
                 # Create excerpt if not present
                 if "excerpt" not in front_matter:
@@ -171,11 +184,32 @@ def generate_blog_html(template_kwargs={}, posts_per_page=5):
     # Sort posts by date, descending
     blog_posts.sort(key=lambda x: x.get("date", ""), reverse=True)
 
-    # Calculate total pages
+    # Render each individual post
+    for post in blog_posts:
+        post.setdefault("license", "CC BY-SA 4.0")
+        post.setdefault(
+            "license-url", "https://creativecommons.org/licenses/by-sa/4.0/"
+        )
+        post.setdefault("author", "Private.coffee Team")
+        post.setdefault("author-url", "https://private.coffee")
+
+        post["tags"] = [tag.strip() for tag in post.get("tags", "").split(",") if tag]
+
+        post_slug = post["slug"]
+        render_template_to_file(
+            "blog/post.html",
+            f"blog/{post_slug}/index.html",
+            **{**post, "relative_path": calculate_relative_path(2)},
+            **template_kwargs,
+        )
+
+    # Add tags to template kwargs
+    template_kwargs["tags"] = blog_tags.keys()
+
+    # Generate each index page
     total_posts = len(blog_posts)
     total_pages = math.ceil(total_posts / posts_per_page)
 
-    # Generate each index page
     for page in range(total_pages):
         start = page * posts_per_page
         end = start + posts_per_page
@@ -199,22 +233,39 @@ def generate_blog_html(template_kwargs={}, posts_per_page=5):
                 "blog/index.html", "blog/page/1/index.html", **context
             )
 
-    # Render each individual post
-    for post in blog_posts:
-        post.setdefault("license", "CC BY-SA 4.0")
-        post.setdefault(
-            "license-url", "https://creativecommons.org/licenses/by-sa/4.0/"
-        )
-        post.setdefault("author", "Private.coffee Team")
-        post.setdefault("author-url", "https://private.coffee")
+    # Generate tag pages
+    for tag, posts in blog_tags.items():
+        tag_posts = sorted(posts, key=lambda x: x.get("date", ""), reverse=True)
+        total_tag_posts = len(tag_posts)
+        total_tag_pages = math.ceil(total_tag_posts / posts_per_page)
 
-        post_slug = post["slug"]
-        render_template_to_file(
-            "blog/post.html",
-            f"blog/{post_slug}/index.html",
-            **{**post, "relative_path": calculate_relative_path(2)},
-            **template_kwargs,
-        )
+        for page in range(total_tag_pages):
+            start = page * posts_per_page
+            end = start + posts_per_page
+            paginated_posts = tag_posts[start:end]
+            context = {
+                "posts": paginated_posts,
+                "current_page": page + 1,
+                "total_pages": total_tag_pages,
+                "tag": tag,
+                "relative_path": calculate_relative_path(3),
+                **template_kwargs,
+            }
+            output_path = (
+                f"blog/tag/{tag}/index.html"
+                if page == 0
+                else f"blog/tag/{tag}/page/{page + 1}/index.html"
+            )
+            render_template_to_file("blog/index.html", output_path, **context)
+
+            if page == 0:
+                pathlib.Path(f"build/blog/tag/{tag}/page/1").mkdir(
+                    parents=True, exist_ok=True
+                )
+                context["relative_path"] = calculate_relative_path(5)
+                render_template_to_file(
+                    "blog/index.html", f"blog/tag/{tag}/page/1/index.html", **context
+                )
 
     logging.info("Blog section generated successfully.")
 

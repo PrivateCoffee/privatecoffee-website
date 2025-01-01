@@ -6,6 +6,8 @@ author: Kumi
 author_url: https://kumi.website
 license: CC BY-SA 4.0
 license_url: https://creativecommons.org/licenses/by-sa/4.0/
+tags: test
+excerpt: This is the excerpt of a test post. It is displayed on the index pages.
 ---
 This is a test post.
 
