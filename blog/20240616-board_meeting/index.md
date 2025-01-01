@@ -9,7 +9,7 @@ tags: board-meeting
 
 _Disclaimer: This report was retrospectively translated and formatted into Markdown solely for publication purposes._
 
-# Protocol 16/06/2024
+# Board Meeting 16/06/2024
 
 ## Attendance  
 
