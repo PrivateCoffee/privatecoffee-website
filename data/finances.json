@@ -94,7 +94,7 @@
                 "EUR": 80
             },
             "Bank Fees": {
-                "EUR": -0.52
+                "EUR": -56.48
             },
             "Server Costs":{
                 "EUR": -399.29
@@ -102,6 +102,13 @@
             "Marketing": {
                 "EUR": -75.8,
                 "Notes": "Branded coffee mugs"
+            }
+        }
+    },
+    "2025": {
+        "01": {
+            "Membership Fees": {
+                "EUR": 25
             }
         }
     }
