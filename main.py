@@ -70,6 +70,9 @@ def render_template_to_file(template_name, output_name, **kwargs):
         template = env.get_template(template_name)
         output_path = output_dir / output_name
         kwargs.setdefault("theme", "plain")
+
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+
         with open(output_path, "w", encoding="utf-8") as f:
             f.write(template.render(**kwargs))
     except TemplateNotFound:
