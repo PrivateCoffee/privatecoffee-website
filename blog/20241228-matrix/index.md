@@ -1,7 +1,7 @@
 ---
 title: Using the private.coffee Matrix homeserver
 date: 2025-12-28 13:00:00
-image: image.png
+#image: image.png
 author: jupfi
 #author_url: https://kumi.website
 license: CC BY-SA 4.0
