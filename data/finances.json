@@ -109,6 +109,9 @@
         "01": {
             "Membership Fees": {
                 "EUR": 25
+            },
+            "Server Costs": {
+                "EUR": -77.28
             }
         }
     }
