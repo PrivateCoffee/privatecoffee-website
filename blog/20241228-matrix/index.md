@@ -6,6 +6,7 @@ author: jupfi
 #author_url: https://kumi.website
 license: CC BY-SA 4.0
 license_url: https://creativecommons.org/licenses/by-sa/4.0/
+excerpt: This blog post will give you a short overview of Matrix in general and our Private.coffee homeserver!
 ---
 
 ## Private.coffee Matrix homeserver

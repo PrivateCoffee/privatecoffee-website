@@ -1,6 +1,6 @@
 ---
 title: Board Meeting 27/10/2024
-date: 2025-01-01 17:00:00
+date: 2024-10-27 23:59:59
 author: jupfi
 license: CC BY-SA 4.0
 license_url: https://creativecommons.org/licenses/by-sa/4.0/
@@ -31,7 +31,7 @@ The quorum is thus established.
    - Does not sufficiently cover potential damage cases.  
    - Currently not required.  
      - _Unanimously approved_  
-   - Inquiry about legal protection with Generali (Julia).  
+   - Inquiry about legal protection with Generali (jupfi).  
 
 3. **Admission of Supporting Members without Board Meeting**  
    - Admission by an individual board member is allowed.  
