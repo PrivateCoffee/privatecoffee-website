@@ -1,6 +1,6 @@
 ---
 title: Board Meeting 24/03/2024
-date: 2024-03-23 23:59:59
+date: 2024-03-24 23:59:59
 author: jupfi
 license: CC BY-SA 4.0
 license_url: https://creativecommons.org/licenses/by-sa/4.0/
