@@ -714,7 +714,7 @@
             "tiny_description": "collaborative whiteboard",
             "short_description": "tldraw is a collaborative whiteboard.",
             "long_description": "tldraw is a collaborative whiteboard. You can use it to draw and write with others in real-time.",
-            "status": "OK",
+            "status": "NOK",
             "links": [
                 {
                     "name": "Go to tldraw",
@@ -722,8 +722,8 @@
                 }
             ],
             "icon": "pencil-ruler",
-            "exclude_from_index": false,
-            "exclude_from_simple": false
+            "exclude_from_index": true,
+            "exclude_from_simple": true
         },
         {
             "name": "YOURLS",
