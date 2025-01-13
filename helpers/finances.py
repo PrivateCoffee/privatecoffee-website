@@ -17,7 +17,7 @@ def get_latest_month(data, allow_current=False):
             latest_month = months[-2]
         except IndexError:
             latest_year = years[-2]
-            latest_month = months[-1]
+            latest_month = sorted(data[latest_year].keys())[-1]
 
     return int(latest_month), int(latest_year)
 
