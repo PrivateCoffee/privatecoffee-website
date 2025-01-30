@@ -3,7 +3,7 @@ name: Build and Deploy Static Site
 on:
   push:
     branches:
-      - dev
+      - main
   schedule:
     - cron: '0 * * * *'
 
