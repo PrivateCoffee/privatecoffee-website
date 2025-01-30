@@ -108,13 +108,16 @@
     "2025": {
         "01": {
             "Membership Fees": {
-                "EUR": 433.87
+                "EUR": 458.87
             },
             "Donations": {
                 "EUR": 15
             },
+            "Bank Fees": {
+                "EUR": -0.62
+            },
             "Server Costs": {
-                "EUR": -365.69
+                "EUR": -405.48
             }
         }
     }
