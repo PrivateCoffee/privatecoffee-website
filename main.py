@@ -1,14 +1,21 @@
-from jinja2 import Environment, FileSystemLoader, TemplateNotFound
 import json
 import pathlib
 import datetime
 import shutil
+import math
+import os
+import logging
 
 from http.server import SimpleHTTPRequestHandler
 from socketserver import TCPServer
 from threading import Thread
-
 from argparse import ArgumentParser
+
+import yaml
+import markdown2
+
+from PIL import Image
+from jinja2 import Environment, FileSystemLoader, TemplateNotFound
 
 from helpers.finances import (
     generate_transparency_table,
@@ -21,6 +28,12 @@ class StaticPageHandler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory="build", **kwargs)
 
+
+# Configure logging
+logging.basicConfig(
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    level=logging.INFO,
+)
 
 # Configure Jinja2 environment
 env = Environment(loader=FileSystemLoader("templates"))
@@ -57,65 +70,281 @@ def render_template_to_file(template_name, output_name, **kwargs):
         template = env.get_template(template_name)
         output_path = output_dir / output_name
         kwargs.setdefault("theme", "plain")
+
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+
         with open(output_path, "w", encoding="utf-8") as f:
             f.write(template.render(**kwargs))
     except TemplateNotFound:
-        print(f"Template {template_name} not found.")
+        logging.error(f"Template {template_name} not found.")
 
 
-def generate_static_site(development_mode=False, theme="plain"):
-    # Common context
-    kwargs = {
-        "timestamp": int(datetime.datetime.now().timestamp()),
-        "theme": theme,
-    }
+def create_thumbnail(input_image_path, output_image_path, size=(150, 150)):
+    with Image.open(input_image_path) as img:
+        img.thumbnail(size)
+        img.save(output_image_path)
 
-    if development_mode:
-        kwargs.update(
-            {
-                "warning": env.get_template("prod-warning.html").render(),
-            }
+
+def calculate_relative_path(depth):
+    return "../" * depth
+
+
+def copy_assets(src_dir, dest_dir):
+    for item in src_dir.iterdir():
+        if item.is_dir():
+            # Recur for subdirectories
+            item_dest_dir = dest_dir / item.name
+            item_dest_dir.mkdir(parents=True, exist_ok=True)
+            copy_assets(item, item_dest_dir)
+        elif item.is_file() and item.suffix not in [".md"]:
+            shutil.copy(item, dest_dir)
+
+
+def parse_markdown_file(filepath):
+    with open(filepath, "r", encoding="utf-8") as f:
+        content = f.read()
+        # Split the front matter and markdown content
+        parts = content.split("---", 2)
+        if len(parts) == 3:
+            _, fm_text, md_content = parts
+            front_matter = yaml.safe_load(fm_text)
+        else:
+            front_matter, md_content = {}, content
+        return front_matter, md_content
+
+
+def generate_blog_html(template_kwargs={}, posts_per_page=5):
+    blog_dir = pathlib.Path("blog")
+    blog_posts = []
+
+    blog_tags = {}
+
+    for post_dir in blog_dir.iterdir():
+        if post_dir.is_dir():
+            md_path = post_dir / "index.md"
+            if md_path.exists():
+                front_matter, md_content = parse_markdown_file(md_path)
+                html_content = markdown2.markdown(md_content)
+
+                # Only process future posts in development mode
+                if front_matter.get("date"):
+                    if isinstance(front_matter["date"], str):
+                        post_date = datetime.datetime.strptime(
+                            front_matter["date"], "%Y-%m-%d %H:%M:%S"
+                        )
+                    else:
+                        post_date = front_matter["date"]
+                        front_matter["date"] = post_date.strftime("%Y-%m-%d %H:%M:%S")
+
+                    if post_date > datetime.datetime.now():
+                        if not args.dev:
+                            logging.info(f"Skipping future post: {post_dir.name}")
+                            continue
+
+                        front_matter["date"] = front_matter["date"] + " (future)"
+
+                front_matter["content"] = html_content
+                front_matter["slug"] = post_dir.name
+
+                # Add post to relevant tag lists
+                if "tags" in front_matter:
+                    for tag in front_matter["tags"].split(","):
+                        tag = tag.strip()
+
+                        if tag not in blog_tags:
+                            blog_tags[tag] = []
+
+                        blog_tags[tag].append(front_matter)
+
+                # Create excerpt if not present
+                if "excerpt" not in front_matter:
+                    excerpt = html_content.split("</p>")[0]
+                    front_matter["excerpt"] = excerpt
+
+                blog_posts.append(front_matter)
+
+                # Ensure the build directory structure exists
+                output_post_dir = output_dir / "blog" / post_dir.name
+                output_post_dir.mkdir(parents=True, exist_ok=True)
+
+                # Generate thumbnail if image is present
+                if "image" in front_matter:
+                    original_image = post_dir / front_matter["image"]
+                    thumbnail_image_name = f"thumb_{original_image.name}"
+                    thumbnail_image = (
+                        output_dir / "blog" / post_dir.name / thumbnail_image_name
+                    )
+                    create_thumbnail(original_image, thumbnail_image)
+
+                    front_matter["thumbnail"] = thumbnail_image_name
+
+                # Copy non-markdown assets
+                copy_assets(post_dir, output_post_dir)
+
+    # Sort posts by date, descending
+    blog_posts.sort(key=lambda x: x.get("date", ""), reverse=True)
+
+    # Render each individual post
+    for post in blog_posts:
+        post.setdefault("license", "CC BY-SA 4.0")
+        post.setdefault(
+            "license-url", "https://creativecommons.org/licenses/by-sa/4.0/"
+        )
+        post.setdefault("author", "Private.coffee Team")
+        post.setdefault("author-url", "https://private.coffee")
+
+        post["tags"] = [tag.strip() for tag in post.get("tags", "").split(",") if tag]
+
+        post_slug = post["slug"]
+        render_template_to_file(
+            "blog/post.html",
+            f"blog/{post_slug}/index.html",
+            **{**post, "relative_path": calculate_relative_path(2)},
+            **template_kwargs,
         )
 
-    # Load services data
-    services = json.loads(
-        (pathlib.Path(__file__).parent / "data" / "services.json").read_text()
-    )
+    # Add tags to template kwargs
+    template_kwargs["tags"] = blog_tags.keys()
 
-    # Load finances data
-    finances = json.loads(
-        (pathlib.Path(__file__).parent / "data" / "finances.json").read_text()
-    )
+    # Generate each index page
+    total_posts = len(blog_posts)
+    total_pages = math.ceil(total_posts / posts_per_page)
 
-    # Load bridges data
-    bridges = json.loads(
-        (pathlib.Path(__file__).parent / "data" / "bridges.json").read_text()
-    )
+    for page in range(total_pages):
+        start = page * posts_per_page
+        end = start + posts_per_page
+        paginated_posts = blog_posts[start:end]
+        context = {
+            "posts": paginated_posts,
+            "current_page": page + 1,
+            "total_pages": total_pages,
+            "relative_path": calculate_relative_path(1 if page == 0 else 3),
+            **template_kwargs,
+        }
+        output_path = (
+            "blog/index.html" if page == 0 else f"blog/page/{page + 1}/index.html"
+        )
+        render_template_to_file("blog/index.html", output_path, **context)
 
+        if page == 0:
+            pathlib.Path("build/blog/page/1").mkdir(parents=True, exist_ok=True)
+            context["relative_path"] = calculate_relative_path(3)
+            render_template_to_file(
+                "blog/index.html", "blog/page/1/index.html", **context
+            )
+
+    # Generate tag pages
+    for tag, posts in blog_tags.items():
+        tag_posts = sorted(posts, key=lambda x: x.get("date", ""), reverse=True)
+        total_tag_posts = len(tag_posts)
+        total_tag_pages = math.ceil(total_tag_posts / posts_per_page)
+
+        for page in range(total_tag_pages):
+            start = page * posts_per_page
+            end = start + posts_per_page
+            paginated_posts = tag_posts[start:end]
+            context = {
+                "posts": paginated_posts,
+                "current_page": page + 1,
+                "total_pages": total_tag_pages,
+                "tag": tag,
+                "relative_path": calculate_relative_path(3),
+                **template_kwargs,
+            }
+            output_path = (
+                f"blog/tag/{tag}/index.html"
+                if page == 0
+                else f"blog/tag/{tag}/page/{page + 1}/index.html"
+            )
+            render_template_to_file("blog/index.html", output_path, **context)
+
+            if page == 0:
+                pathlib.Path(f"build/blog/tag/{tag}/page/1").mkdir(
+                    parents=True, exist_ok=True
+                )
+                context["relative_path"] = calculate_relative_path(5)
+                render_template_to_file(
+                    "blog/index.html", f"blog/tag/{tag}/page/1/index.html", **context
+                )
+
+    logging.info("Blog section generated successfully.")
+
+
+def generate_blog_rss(development_mode=False):
+    blog_dir = pathlib.Path("blog")
+    blog_posts = []
+
+    for post_dir in blog_dir.iterdir():
+        if post_dir.is_dir():
+            md_path = post_dir / "index.md"
+            if md_path.exists():
+                front_matter, _ = parse_markdown_file(md_path)
+
+                # Ensure date is RFC 822 compliant
+                if "date" in front_matter:
+                    if isinstance(front_matter["date"], str):
+                        post_date = datetime.datetime.strptime(
+                            front_matter["date"], "%Y-%m-%d %H:%M:%S"
+                        )
+
+                    else:
+                        post_date = front_matter["date"]
+
+                    if post_date.tzinfo is None:
+                        post_date = post_date.astimezone()
+
+                    front_matter["date"] = post_date.strftime(
+                        "%a, %d %b %Y %H:%M:%S %z"
+                    )
+
+                front_matter["link"] = (
+                    f"https://{"dev." if development_mode else ""}private.coffee/blog/{post_dir.name}/"
+                )
+
+                blog_posts.append(front_matter)
+
+    blog_posts.sort(key=lambda x: x.get("date", ""), reverse=True)
+
+    context = {
+        "development_mode": development_mode,
+        "posts": blog_posts,
+        "current_time": datetime.datetime.now()
+        .astimezone()
+        .strftime("%a, %d %b %Y %H:%M:%S %z"),
+    }
+    render_template_to_file("blog/rss.xml", "blog/rss.xml", **context)
+
+    logging.info("RSS feed generated successfully.")
+
+
+def generate_static_pages(development_mode=False, data={}, template_kwargs={}):
     # Iterate over all templates in the templates directory
     templates_path = pathlib.Path("templates")
     for template_file in templates_path.glob("*.html"):
         template_name = template_file.stem
-        context = kwargs.copy()
+        context = template_kwargs.copy()
 
         context["path"] = f"{template_name}.html" if template_name != "index" else ""
 
         if template_name in ["index", "simple"]:
-            context.update({"services": services})
+            context.update({"services": data["services"]})
 
         if template_name == "bridges":
-            context.update({"bridges": bridges})
+            context.update({"bridges": data["bridges"]})
 
         if template_name.startswith("membership"):
             allow_current = development_mode
-            finances_month, finances_year = get_latest_month(finances, allow_current)
+            finances_month, finances_year = get_latest_month(
+                data["finances"], allow_current
+            )
             finances_period = datetime.date(finances_year, finances_month, 1)
             finances_period_str = finances_period.strftime("%B %Y")
             finances_table = generate_transparency_table(
                 get_transparency_data(
-                    finances, finances_year, finances_month, allow_current
+                    data["finances"], finances_year, finances_month, allow_current
                 )
             )
+
             context.update(
                 {
                     "finances": finances_table,
@@ -125,21 +354,27 @@ def generate_static_site(development_mode=False, theme="plain"):
 
         if template_name == "transparency":
             finance_data = {}
-            for year in sorted(finances.keys(), reverse=True):
-                for month in sorted(finances[year].keys(), reverse=True):
+            for year in sorted(data["finances"].keys(), reverse=True):
+                for month in sorted(data["finances"][year].keys(), reverse=True):
                     if year not in finance_data:
                         finance_data[year] = {}
                     finance_data[year][month] = generate_transparency_table(
-                        get_transparency_data(finances, year, month, True)
+                        get_transparency_data(data["finances"], year, month, True)
                     )
+
             context.update({"finances": finance_data})
 
         render_template_to_file(
             f"{template_name}.html", f"{template_name}.html", **context
         )
 
-    # Generate metrics
-    balances = get_transparency_data(finances, allow_current=True)["end_balance"]
+    logging.info("Static pages generated successfully.")
+
+
+def generate_metrics(data):
+    balances = get_transparency_data(data["finances"], allow_current=True)[
+        "end_balance"
+    ]
 
     response = (
         "# HELP privatecoffee_balance The balance of the private.coffee account\n"
@@ -153,6 +388,50 @@ def generate_static_site(development_mode=False, theme="plain"):
     with open(metrics_path, "w", encoding="utf-8") as f:
         f.write(response)
 
+    logging.info("Metrics generated successfully.")
+
+
+def generate_static_site(development_mode=False, theme="plain"):
+    # Common context
+    template_kwargs = {
+        "timestamp": int(datetime.datetime.now().timestamp()),
+        "theme": theme,
+    }
+
+    if development_mode:
+        template_kwargs.update(
+            {
+                "warning": env.get_template("prod-warning.html").render(),
+            }
+        )
+
+    data = {}
+
+    # Load services data
+    data["services"] = json.loads(
+        (pathlib.Path(__file__).parent / "data" / "services.json").read_text()
+    )
+
+    # Load finances data
+    data["finances"] = json.loads(
+        (pathlib.Path(__file__).parent / "data" / "finances.json").read_text()
+    )
+
+    # Load bridges data
+    data["bridges"] = json.loads(
+        (pathlib.Path(__file__).parent / "data" / "bridges.json").read_text()
+    )
+
+    # Generate static pages
+    generate_static_pages(development_mode, data, template_kwargs)
+
+    # Generate blog section
+    generate_blog_html(template_kwargs)
+    generate_blog_rss(development_mode)
+
+    # Generate metrics
+    generate_metrics(data)
+
     # Copy static assets
     for folder in ["assets", "data"]:
         src = pathlib.Path(folder)
@@ -161,7 +440,7 @@ def generate_static_site(development_mode=False, theme="plain"):
             shutil.rmtree(dst)
         shutil.copytree(src, dst)
 
-    print("Static site generated successfully.")
+    logging.info("Static site generated successfully.")
 
 
 if __name__ == "__main__":
@@ -176,14 +455,28 @@ if __name__ == "__main__":
     parser.add_argument(
         "--theme", type=str, default="plain", help="Theme to use for the site"
     )
+    parser.add_argument("--debug", action="store_true", help="Enable debug output")
 
     args = parser.parse_args()
+
+    if os.environ.get("PRIVATECOFFEE_DEV"):
+        args.dev = True
+
+    if os.environ.get("PRIVATECOFFEE_THEME"):
+        args.theme = os.environ["PRIVATECOFFEE_THEME"]
+
+    if os.environ.get("PRIVATECOFFEE_PORT"):
+        args.serve = True
+        args.port = int(os.environ["PRIVATECOFFEE_PORT"])
+
+    if os.environ.get("PRIVATECOFFEE_DEBUG"):
+        logging.getLogger().setLevel(logging.DEBUG)
 
     generate_static_site(development_mode=args.dev, theme=args.theme)
 
     if args.serve:
         server = TCPServer(("", args.port), StaticPageHandler)
-        print(f"Serving on http://localhost:{args.port}")
+        logging.info(f"Serving on http://localhost:{args.port}")
         thread = Thread(target=server.serve_forever)
         thread.start()
         thread.join()

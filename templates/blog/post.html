@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}
+    {{ title }}
+{% endblock title %}
+{% block content %}
+    <div class="container my-5">
+        <h1>{{ title }}</h1>
+        <p>
+            <small>by <a href="{{ author_url }}">{{ author }}</a>, published {{ date }}</small>
+        </p>
+        <div>{{ content|safe }}</div>
+        <hr>
+        <p>
+            <small>This post by <a href="{{ author_url }}">{{ author }}</a> is licensed under the <a href="{{ license_url }}">{{ license }}</a>.</small>
+        </p>
+    </div>
+{% endblock content %}

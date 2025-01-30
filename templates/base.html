@@ -27,16 +27,21 @@
           content="Private.coffee is a privacy-focused non-profit association, dedicated to supporting privacy and digital sovereignty." />
     <meta name="twitter:image"
           content="https://private.coffee/assets/img/logo-inv_grad.png" />
-    <link rel="icon" type="image/png" href="assets/img/logo-inv_grad.png" />
+    <link rel="icon"
+          type="image/png"
+          href="{{ relative_path }}assets/img/logo-inv_grad.png" />
     <title>
       {% block title %}
       {% endblock title %}
     - Private.coffee</title>
-    <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/base.css?v={{ timestamp }}" />
     <link rel="stylesheet"
-          href="assets/css/theme/{{ theme }}.css?v={{ timestamp }}" />
-    <link rel="stylesheet" href="assets/dist/fonts/fonts.css?v={{ timestamp }}" />
+          href="{{ relative_path }}assets/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+          href="{{ relative_path }}assets/css/base.css?v={{ timestamp }}" />
+    <link rel="stylesheet"
+          href="{{ relative_path }}assets/css/theme/{{ theme }}.css?v={{ timestamp }}" />
+    <link rel="stylesheet"
+          href="{{ relative_path }}assets/dist/fonts/fonts.css?v={{ timestamp }}" />
   </head>
   <body>
     <nav class="navbar navbar-expand-md py-3 navbar-light" id="mainNav">
@@ -63,6 +68,9 @@
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
               <a class="nav-link active" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/">Blog</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://status.private.coffee/">Status</a>
