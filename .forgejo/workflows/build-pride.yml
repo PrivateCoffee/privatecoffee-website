@@ -9,14 +9,9 @@ on:
 
 jobs:
   build:
-    container: python:3.13-bookworm
+    container: privatecoffee/static-site-builder:latest
 
     steps:
-      - name: Install nodejs
-        run: |
-          apt update
-          apt install -y nodejs npm
-
       - name: Checkout repository
         uses: actions/checkout@v3
 
