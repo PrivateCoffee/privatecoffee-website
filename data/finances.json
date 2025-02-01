@@ -119,6 +119,11 @@
             "Server Costs": {
                 "EUR": -405.48
             }
+        },
+        "02": {
+            "Membership Fees": {
+                "EUR": 25
+            }
         }
     }
 }
