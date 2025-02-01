@@ -5,6 +5,7 @@ author: jupfi
 license: CC BY-SA 4.0
 license_url: https://creativecommons.org/licenses/by-sa/4.0/
 tags: board-meeting
+excerpt: Minutes of the board meeting on January 1st, 2025.
 ---
 
 # Board Meeting 01/01/2025

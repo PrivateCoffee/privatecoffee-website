@@ -5,6 +5,7 @@ author: jupfi
 license: CC BY-SA 4.0
 license_url: https://creativecommons.org/licenses/by-sa/4.0/
 tags: board-meeting
+excerpt: Minutes of the board meeting on October 27th, 2024.
 ---
 
 _Disclaimer: This report was retrospectively translated and formatted into Markdown solely for publication purposes._
