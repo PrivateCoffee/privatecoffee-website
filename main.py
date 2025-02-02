@@ -92,11 +92,11 @@ def calculate_relative_path(depth):
 def copy_assets(src_dir, dest_dir):
     for item in src_dir.iterdir():
         if item.is_dir():
-            # Recur for subdirectories
+            # Recurse for subdirectories
             item_dest_dir = dest_dir / item.name
             item_dest_dir.mkdir(parents=True, exist_ok=True)
             copy_assets(item, item_dest_dir)
-        elif item.is_file() and item.suffix not in [".md"]:
+        elif item.is_file():
             shutil.copy(item, dest_dir)
 
 
