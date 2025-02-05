@@ -158,6 +158,25 @@
             "exclude_from_simple": false
         },
         {
+            "name": "Pixelfed",
+            "url": "https://cuddly.pics",
+            "homemade": false,
+            "fork": false,
+            "tiny_description": "decentralized photo sharing",
+            "short_description": "Pixelfed is a decentralized photo sharing platform.",
+            "long_description": "Pixelfed is a decentralized photo sharing platform. You can use it to post photos, follow other people, and more. Registrations are open to everyone on CuddlyPics.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to CuddlyPics",
+                    "url": "https://cuddly.pics"
+                }
+            ],
+            "icon": "camera",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "Forgejo",
             "url": "https://git.private.coffee",
             "homemade": false,
