@@ -125,7 +125,7 @@
                 "EUR": 80.23
             },
             "Server Rent": {
-                "EUR" -110,
+                "EUR": -110,
                 "Notes": "Renamed from 'Server Costs' to better differentiate between rented and owned servers"
             },
             "Hardware Costs": {
