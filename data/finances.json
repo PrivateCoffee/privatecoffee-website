@@ -124,8 +124,11 @@
             "Membership Fees": {
                 "EUR": 80.23
             },
+            "Donations": {
+                "EUR": 100
+            },
             "Server Rent": {
-                "EUR": -110,
+                "EUR": -358.78,
                 "Notes": "Renamed from 'Server Costs' to better differentiate between rented and owned servers"
             },
             "Hardware Costs": {
