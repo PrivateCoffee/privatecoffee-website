@@ -59,6 +59,26 @@
             "exclude_from_simple": false
         },
         {
+            "name": "CoffeeGPT",
+            "url": "https://coffeegpt.private.coffee",
+            "homemade": false,
+            "fork": false,
+            "members_only": true,
+            "tiny_description": "AI text and image generation",
+            "short_description": "CoffeeGPT is a text and image generation service, only available for members of Private.coffee.",
+            "long_description": "CoffeeGPT is a text and image generation service based on open-source software like Open-WebUI, Ollama and ComfyUI, as well as free models like DeepSeek, FLUX and Llama. It is only available for members of Private.coffee.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to CoffeeGPT",
+                    "url": "https://coffeegpt.private.coffee"
+                }
+            ],
+            "icon": "robot",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "Transfer.coffee",
             "url": "https://transfer.coffee",
             "homemade": "https://git.private.coffee/PrivateCoffee/transfer.coffee",
