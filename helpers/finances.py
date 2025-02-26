@@ -4,20 +4,21 @@ from datetime import datetime
 
 def get_latest_month(data, allow_current=False):
     years = sorted(data.keys())
-    latest_year = years[-1]
-    months = sorted(data[latest_year].keys())
-    latest_month = months[-1]
 
-    if (
-        not allow_current
-        and latest_year == str(datetime.now().year)
-        and latest_month == str(datetime.now().month)
-    ):
-        try:
-            latest_month = months[-2]
-        except IndexError:
-            latest_year = years[-2]
-            latest_month = sorted(data[latest_year].keys())[-1]
+    if not years:
+        raise ValueError("No data found")
+
+    current_date = datetime.now()
+    latest_year = max(years)
+    latest_month = max(data[latest_year].keys())
+
+    if not allow_current:
+        if latest_year == str(current_date.year) and latest_month == str(current_date.month).zfill(2):
+            if len(data[latest_year]) > 1:
+                latest_month = sorted(data[latest_year].keys())[-2]
+            else:
+                latest_year = str(int(latest_year) - 1)
+                latest_month = max(data[latest_year].keys())
 
     return int(latest_month), int(latest_year)
 
