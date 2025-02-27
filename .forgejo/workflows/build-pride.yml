@@ -22,7 +22,7 @@ jobs:
       - name: Generate static site
         run: python3 main.py --theme pride
 
-      - name: Deploy to pages branch
+      - name: Deploy to pages-pride branch
         run: |
           # Configure Git
           git config --global user.name "Forgejo"
