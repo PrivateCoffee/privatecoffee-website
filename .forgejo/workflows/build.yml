@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    container: privatecoffee/static-site-builder:latest
+    container: git.private.coffee/privatecoffee/static-site-builder:latest
 
     steps:
       - name: Checkout repository
