@@ -139,6 +139,11 @@
                 "EUR": -175,
                 "Notes": "Food and drinks for General Assembly"
             }
+        },
+        "03": {
+            "Membership Fees": {
+                "EUR": 25
+            }
         }
     }
 }
