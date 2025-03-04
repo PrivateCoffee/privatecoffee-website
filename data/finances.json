@@ -122,22 +122,34 @@
         },
         "02": {
             "Membership Fees": {
-                "EUR": 103.46
+                "EUR": 373.46
             },
             "Donations": {
                 "EUR": 175
             },
             "Server Rent": {
-                "EUR": -358.78,
+                "EUR": -403.96,
                 "Notes": "Renamed from 'Server Costs' to better differentiate between rented and owned servers"
             },
             "Hardware Costs": {
-                "EUR": -59.73,
+                "EUR": -209.53,
                 "Notes": "Components for server rack"
             },
             "Events": {
                 "EUR": -175,
                 "Notes": "Food and drinks for General Assembly"
+            }
+        },
+        "03": {
+            "Membership Fees": {
+                "EUR": 80.23
+            },
+            "Donations": {
+                "EUR": 75
+            },
+            "Administrative Expenses": {
+                "EUR": -36.4,
+                "Notes": "Administrative fee for statute changes"
             }
         }
     }

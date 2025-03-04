@@ -12,8 +12,9 @@ jobs:
     container: git.private.coffee/privatecoffee/static-site-builder:latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Clone Git repository
+        run: |
+          git clone "https://git.private.coffee/PrivateCoffee/privatecoffee-website.git" .
 
       - name: Install dependencies
         run: |
@@ -45,6 +46,9 @@ jobs:
           # Add and commit the static site files
           git add .
           git commit -m "Deploy static site"
+
+          # Set the URL again
+          git remote set-url origin "https://${{ secrets.FORGEJO_USER }}:${{ secrets.FORGEJO_TOKEN }}@git.private.coffee/PrivateCoffee/privatecoffee-website.git"
 
           # Force push to the 'pages-pride' branch
           git push origin pages-pride --force
