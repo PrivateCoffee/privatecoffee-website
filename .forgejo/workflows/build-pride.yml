@@ -12,9 +12,8 @@ jobs:
     container: git.private.coffee/privatecoffee/static-site-builder:latest
 
     steps:
-      - name: Clone Git repository
-        run: |
-          git clone "https://git.private.coffee/PrivateCoffee/privatecoffee-website.git" .
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Install dependencies
         run: |
