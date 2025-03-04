@@ -12,6 +12,10 @@ jobs:
     container: git.private.coffee/privatecoffee/static-site-builder:latest
 
     steps:
+      - name: Set Git URL
+        run: |
+          git remote set-url origin "https://${{ env.GITHUB_ACTOR }}:${{ env.GITHUB_TOKEN }}@git.private.coffee/PrivateCoffee/privatecoffee-website.git"
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -45,9 +49,6 @@ jobs:
           # Add and commit the static site files
           git add .
           git commit -m "Deploy static site"
-
-          # Workaround for sudden write permission issue
-          git remote set-url origin "https://${{ env.GITHUB_ACTOR }}:${{ env.GITHUB_TOKEN }}@git.private.coffee/PrivateCoffee/privatecoffee-website.git"
 
           # Force push to the 'pages-pride' branch
           git push origin pages-pride --force
