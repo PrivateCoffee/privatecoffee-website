@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Clone Git repository
         run: |
-          git clone "https://${{ env.GITHUB_ACTOR }}:${{ env.GITHUB_TOKEN }}@git.private.coffee/PrivateCoffee/privatecoffee-website.git" .
+          git clone "https://git.private.coffee/PrivateCoffee/privatecoffee-website.git" .
 
       - name: Install dependencies
         run: |
@@ -48,7 +48,7 @@ jobs:
           git commit -m "Deploy static site"
 
           # Set the URL again
-          git remote set-url origin "https://${{ env.GITHUB_ACTOR }}:${{ env.GITHUB_TOKEN }}@git.private.coffee/PrivateCoffee/privatecoffee-website.git"
+          git remote set-url origin "https://${{ secrets.FORGEJO_USER }}:${{ secrets.FORGEJO_TOKEN }}@git.private.coffee/PrivateCoffee/privatecoffee-website.git"
 
           # Force push to the 'pages-pride' branch
           git push origin pages-pride --force
