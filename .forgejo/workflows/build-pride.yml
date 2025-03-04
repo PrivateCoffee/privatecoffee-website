@@ -46,5 +46,8 @@ jobs:
           git add .
           git commit -m "Deploy static site"
 
+          # DEBUG: Output the origin URL
+          git remote -v
+
           # Force push to the 'pages-pride' branch
           git push origin pages-pride --force
