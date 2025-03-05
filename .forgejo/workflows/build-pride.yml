@@ -55,4 +55,5 @@ jobs:
       - name: Save as artifact
         uses: https://code.forgejo.org/forgejo/upload-artifact@v4
         with:
-          name: static-site
+          name: static-site.zip
+          path: .

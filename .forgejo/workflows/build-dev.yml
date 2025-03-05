@@ -53,3 +53,9 @@ jobs:
 
           # Force push to the 'pages-dev' branch
           git push origin pages-dev --force
+
+      - name: Save as artifact
+        uses: https://code.forgejo.org/forgejo/upload-artifact@v4
+        with:
+          name: static-site.zip
+          path: .
