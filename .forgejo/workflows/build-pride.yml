@@ -57,3 +57,4 @@ jobs:
         uses: https://code.forgejo.org/forgejo/upload-artifact@v4
         with:
           name: static-site
+          path: .
