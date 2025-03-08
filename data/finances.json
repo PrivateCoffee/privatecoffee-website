@@ -145,7 +145,13 @@
                 "EUR": 80.23
             },
             "Donations": {
-                "EUR": 75
+                "EUR": 77
+            },
+            "Server Rent": {
+                "EUR": -4.87
+            },
+            "Bank Fees": {
+                "EUR": -0.42
             },
             "Administrative Expenses": {
                 "EUR": -36.4,
