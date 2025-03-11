@@ -1019,6 +1019,25 @@
             "icon": "hard-hat",
             "exclude_from_index": false,
             "exclude_from_simple": false
+        },
+        {
+            "name": "mjnml",
+            "url": "https://mjnml.private.coffee",
+            "homemade": "https://git.private.coffee/PrivateCoffee/mjnml",
+            "fork": false,
+            "tiny_description": "privacy-friendly MJML renderer",
+            "short_description": "mjnml is a privacy-friendly MJML renderer.",
+            "long_description": "mjnml is a privacy-friendly MJML renderer. It allows you to render MJML templates into HTML without tracking or API keys.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to mjnml",
+                    "url": "https://mjnml.private.coffee"
+                }
+            ],
+            "icon": "hard-hat",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
         }
     ]
 }
