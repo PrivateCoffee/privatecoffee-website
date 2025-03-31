@@ -1,0 +1,11 @@
+.bg-primary-gradient {
+    background: linear-gradient(0deg, #e63144, #f78449, #fcca5a, #9ad772, #22af76);
+}
+
+#logoContainer {
+    background-image: url(../../img/logo-white.svg);
+}
+
+#smallLogoContainer {
+    background-image: url(../../img/logo-inv_grad.svg);
+}
