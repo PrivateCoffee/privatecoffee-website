@@ -1,0 +1,9 @@
+// Schedule of special themes for the main page
+[
+    {
+        // Trans Day of Visibility
+        "name": "trans",
+        "start": "1970-03-30",
+        "end": "1970-04-01"
+    }
+]
