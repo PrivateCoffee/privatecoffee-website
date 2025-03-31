@@ -10,6 +10,7 @@ from http.server import SimpleHTTPRequestHandler
 from socketserver import TCPServer
 from threading import Thread
 from argparse import ArgumentParser
+from typing import Optional
 
 import yaml
 import markdown2
@@ -391,7 +392,54 @@ def generate_metrics(data):
     logging.info("Metrics generated successfully.")
 
 
-def generate_static_site(development_mode=False, theme="plain"):
+def autoselect_theme():
+    # Load schedule from file
+    json_content = (
+        pathlib.Path(__file__).parent / "data" / "theme_schedule.jsonc"
+    ).read_text()
+
+    # Remove comments
+    json_content = "\n".join(
+        line.split("//", 1)[0] for line in json_content.split("\n")
+    )
+
+    schedule = json.loads(json_content)
+
+    # Find the current theme
+    current_time = datetime.datetime.now().timestamp()
+
+    for theme in schedule:
+        start_time = datetime.datetime.strptime(theme["start"], "%Y-%m-%d").replace(
+            hour=0, minute=0, second=0
+        )
+
+        # Special case for recurring themes - if the start time is *far* in the past, assume it's recurring
+        if start_time.year < 2000:
+            start_time = start_time.replace(year=datetime.datetime.now().year)
+
+        end_time = datetime.datetime.strptime(theme["end"], "%Y-%m-%d").replace(
+            hour=23, minute=59, second=59
+        )
+
+        if end_time.year < 2000:
+            end_time = end_time.replace(year=datetime.datetime.now().year)
+
+        # Special case for themes that span the new year
+        if start_time > end_time:
+            end_time = end_time.replace(year=end_time.year + 1)
+
+        if start_time.timestamp() <= current_time <= end_time.timestamp():
+            logging.info(f"Selected theme: {theme['name']}")
+            return theme["name"]
+
+    logging.info("No theme selected or scheduled, defaulting to plain.")
+    return "plain"
+
+
+def generate_static_site(development_mode: bool = False, theme: Optional[str] = None):
+    if not theme:
+        theme = autoselect_theme()
+
     # Common context
     template_kwargs = {
         "timestamp": int(datetime.datetime.now().timestamp()),
@@ -452,9 +500,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--port", type=int, default=8000, help="Port to serve the site on"
     )
-    parser.add_argument(
-        "--theme", type=str, default="plain", help="Theme to use for the site"
-    )
+    parser.add_argument("--theme", type=str, help="Theme to use for the site")
     parser.add_argument("--debug", action="store_true", help="Enable debug output")
 
     args = parser.parse_args()

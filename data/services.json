@@ -235,6 +235,25 @@
             "exclude_from_simple": false
         },
         {
+            "name": "Jitsi",
+            "url": "https://jitsi.private.coffee",
+            "homemade": false,
+            "fork": false,
+            "tiny_description": "video conferencing",
+            "short_description": "Jitsi is an open-source video conferencing system.",
+            "long_description": "Jitsi is an open-source video conferencing system. You can use it to hold video conferences, webinars, and more.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Jitsi",
+                    "url": "https://jitsi.private.coffee"
+                }
+            ],
+            "icon": "webcam",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "HedgeDoc",
             "url": "https://hedgedoc.private.coffee",
             "homemade": false,
@@ -626,6 +645,25 @@
             "exclude_from_simple": false
         },
         {
+            "name": "Tent",
+            "url": "https://tent.private.coffee",
+            "homemade": false,
+            "fork": false,
+            "tiny_description": "tracking-free Bandcamp",
+            "short_description": "Tent is a privacy-friendly alternative front-end to Bandcamp.",
+            "long_description": "Tent is a privacy-friendly alternative front-end to Bandcamp. It allows you to browse Bandcamp without being tracked.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Tent",
+                    "url": "https://tent.private.coffee"
+                }
+            ],
+            "icon": "guitar",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "LibreTranslate",
             "url": "https://translate.private.coffee",
             "homemade": false,
@@ -996,6 +1034,25 @@
                 {
                     "name": "Go to TypeNot",
                     "url": "https://typenot.private.coffee"
+                }
+            ],
+            "icon": "hard-hat",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "mjnml",
+            "url": "https://mjnml.private.coffee",
+            "homemade": "https://git.private.coffee/PrivateCoffee/mjnml",
+            "fork": false,
+            "tiny_description": "privacy-friendly MJML renderer",
+            "short_description": "mjnml is a privacy-friendly MJML renderer.",
+            "long_description": "mjnml is a privacy-friendly MJML renderer. It allows you to render MJML templates into HTML without tracking or API keys.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to mjnml",
+                    "url": "https://mjnml.private.coffee"
                 }
             ],
             "icon": "hard-hat",
