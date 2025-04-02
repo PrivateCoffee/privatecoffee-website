@@ -1,6 +1,20 @@
 .bg-primary-gradient {
-    background: linear-gradient(180deg, #e3505f, #f8a67d, #feda8d, #a4d186, #63aa8e);
-}
+    background: linear-gradient(
+      to right,
+      #e3505f 0%,
+      #e3505f 16.66%,
+      #f8a67d 16.66%,
+      #f8a67d 33.32%,
+      #feda8d 33.32%,
+      #feda8d 49.98%,
+      #feda8d 49.98%,
+      #feda8d 66.64%,
+      #a4d186 66.64%,
+      #a4d186 83.3%,
+      #63aa8e 83.3%,
+      #63aa8e 100%
+    );
+  }
 
 #logoContainer {
     background-image: url(../../img/logo-white.svg);
