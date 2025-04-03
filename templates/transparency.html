@@ -10,6 +10,10 @@
         each month since our inception.
       </p>
     </div>
+    <div class="alert alert-warning">
+      <strong>Notice:</strong> The data is manually updated, so data for the
+      current month may be a little outdated.
+    </div>
     {% for year, year_data in finances.items() %}
       {% for month, month_data in year_data.items() %}
         <div class="card shadow-sm mt-4">
