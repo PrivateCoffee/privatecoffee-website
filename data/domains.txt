@@ -1,0 +1,4 @@
+private.coffee
+www.private.coffee
+pride.coffee
+www.pride.coffee

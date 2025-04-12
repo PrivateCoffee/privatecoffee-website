@@ -488,6 +488,14 @@ def generate_static_site(development_mode: bool = False, theme: Optional[str] = 
             shutil.rmtree(dst)
         shutil.copytree(src, dst)
 
+    # Create .domains for Forgejo Pages
+    domains_path = pathlib.Path("data/domains.txt")
+    if domains_path.exists():
+        domains_dest_path = output_dir / ".domains"
+        if domains_dest_path.exists():
+            domains_dest_path.unlink()
+        shutil.copy(domains_path, domains_dest_path)
+
     logging.info("Static site generated successfully.")
 
 
