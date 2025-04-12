@@ -1,2 +1,4 @@
 /security.txt https://security.private.coffee/security.txt
 /.well-known/security.txt https://security.private.coffee/security.txt
+/metrics /metrics.txt
+/metrics/ /metrics.txt
