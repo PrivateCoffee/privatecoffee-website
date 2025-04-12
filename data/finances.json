@@ -142,20 +142,25 @@
         },
         "03": {
             "Membership Fees": {
-                "EUR": 353.46
+                "EUR": 373.46
             },
             "Donations": {
                 "EUR": 79
             },
             "Server Rent": {
-                "EUR": -399.24
+                "EUR": -423.44
             },
             "Bank Fees": {
-                "EUR": -0.70
+                "EUR": -60.76
             },
             "Administrative Expenses": {
                 "EUR": -36.4,
                 "Notes": "Administrative fee for statute changes"
+            }
+        },
+        "04": {
+            "Membership Fees": {
+                "EUR": 330.23
             }
         }
     }
