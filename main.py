@@ -436,7 +436,7 @@ def autoselect_theme():
     return "plain"
 
 
-def generate_static_site(development_mode: bool = False, theme: Optional[str] = None):
+def generate_static_site(development_mode: bool = False, theme: Optional[str] = None, domains: Optional[str] = None):
     if not theme:
         theme = autoselect_theme()
 
@@ -489,12 +489,20 @@ def generate_static_site(development_mode: bool = False, theme: Optional[str] = 
         shutil.copytree(src, dst)
 
     # Create .domains for Forgejo Pages
-    domains_path = pathlib.Path("data/domains.txt")
-    if domains_path.exists():
-        domains_dest_path = output_dir / ".domains"
-        if domains_dest_path.exists():
-            domains_dest_path.unlink()
-        shutil.copy(domains_path, domains_dest_path)
+    domains_dest_path = output_dir / ".domains"
+
+    if domains:
+        for domain in domains.split(","):
+            domain = domain.strip()
+            if domain:
+                with open(domains_dest_path, "a", encoding="utf-8") as f:
+                    f.write(f"{domain}\n")
+    else:
+        # Default to domains from data/domains.txt
+        domains_path = pathlib.Path("data/domains.txt")
+        if domains_path.exists():
+            with open(domains_dest_path, "w", encoding="utf-8") as f:
+                f.write(domains_path.read_text())
 
     logging.info("Static site generated successfully.")
 
@@ -509,6 +517,7 @@ if __name__ == "__main__":
         "--port", type=int, default=8000, help="Port to serve the site on"
     )
     parser.add_argument("--theme", type=str, help="Theme to use for the site")
+    parser.add_argument("--domains", type=str, help="Domains to use for Forgejo Pages (default: domains from data/domains.txt)")
     parser.add_argument("--debug", action="store_true", help="Enable debug output")
 
     args = parser.parse_args()
@@ -523,10 +532,13 @@ if __name__ == "__main__":
         args.serve = True
         args.port = int(os.environ["PRIVATECOFFEE_PORT"])
 
+    if os.environ.get("PRIVATECOFFEE_DOMAINS"):
+        args.domains = os.environ["PRIVATECOFFEE_DOMAINS"]
+
     if os.environ.get("PRIVATECOFFEE_DEBUG"):
         logging.getLogger().setLevel(logging.DEBUG)
 
-    generate_static_site(development_mode=args.dev, theme=args.theme)
+    generate_static_site(development_mode=args.dev, theme=args.theme, domains=args.domains)
 
     if args.serve:
         server = TCPServer(("", args.port), StaticPageHandler)
