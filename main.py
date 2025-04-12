@@ -436,7 +436,11 @@ def autoselect_theme():
     return "plain"
 
 
-def generate_static_site(development_mode: bool = False, theme: Optional[str] = None, domains: Optional[str] = None):
+def generate_static_site(
+    development_mode: bool = False,
+    theme: Optional[str] = None,
+    domains: Optional[str] = None,
+):
     if not theme:
         theme = autoselect_theme()
 
@@ -491,6 +495,9 @@ def generate_static_site(development_mode: bool = False, theme: Optional[str] = 
     # Create .domains for Forgejo Pages
     domains_dest_path = output_dir / ".domains"
 
+    if domains_dest_path.exists():
+        os.remove(domains_dest_path)
+
     if domains:
         for domain in domains.split(","):
             domain = domain.strip()
@@ -503,6 +510,27 @@ def generate_static_site(development_mode: bool = False, theme: Optional[str] = 
         if domains_path.exists():
             with open(domains_dest_path, "w", encoding="utf-8") as f:
                 f.write(domains_path.read_text())
+
+    # Copy the .well-known directory
+    well_known_src = pathlib.Path("assets") / ".well-known"
+    well_known_dst = output_dir / ".well-known"
+
+    if well_known_src.exists():
+        if well_known_dst.exists():
+            shutil.rmtree(well_known_dst)
+
+        shutil.copytree(well_known_src, well_known_dst)
+
+    # Create _redirects file for Forgejo Pages
+    redirects_dst = output_dir / "_redirects"
+    redirects_src = pathlib.Path("data") / "redirects.txt"
+
+    if redirects_src.exists():
+        if redirects_dst.exists():
+            os.remove(redirects_dst)
+
+        with open(redirects_dst, "w", encoding="utf-8") as f:
+            f.write(redirects_src.read_text())
 
     logging.info("Static site generated successfully.")
 
@@ -517,7 +545,11 @@ if __name__ == "__main__":
         "--port", type=int, default=8000, help="Port to serve the site on"
     )
     parser.add_argument("--theme", type=str, help="Theme to use for the site")
-    parser.add_argument("--domains", type=str, help="Domains to use for Forgejo Pages (default: domains from data/domains.txt)")
+    parser.add_argument(
+        "--domains",
+        type=str,
+        help="Domains to use for Forgejo Pages (default: domains from data/domains.txt)",
+    )
     parser.add_argument("--debug", action="store_true", help="Enable debug output")
 
     args = parser.parse_args()
@@ -538,7 +570,9 @@ if __name__ == "__main__":
     if os.environ.get("PRIVATECOFFEE_DEBUG"):
         logging.getLogger().setLevel(logging.DEBUG)
 
-    generate_static_site(development_mode=args.dev, theme=args.theme, domains=args.domains)
+    generate_static_site(
+        development_mode=args.dev, theme=args.theme, domains=args.domains
+    )
 
     if args.serve:
         server = TCPServer(("", args.port), StaticPageHandler)
