@@ -327,7 +327,38 @@ def generate_static_pages(development_mode=False, data={}, template_kwargs={}):
 
         context["path"] = f"{template_name}.html" if template_name != "index" else ""
 
-        if template_name in ["index", "simple"]:
+        if template_name == "index":
+            # Get featured services for the homepage
+            featured_services = [
+                service
+                for service in data["services"]["services"]
+                if service.get("featured", False)
+                and not service.get("exclude_from_index", False)
+            ]
+            # Limit to 3 featured services if there are more
+            # TODO: Do something smarter here
+            if len(featured_services) > 6:
+                featured_services = featured_services[:3]
+            context.update(
+                {"services": data["services"], "featured_services": featured_services}
+            )
+
+        if template_name == "services":
+            # Extract all categories from services
+            categories = sorted(
+                list(
+                    set(
+                        [
+                            service.get("category", "Uncategorized")
+                            for service in data["services"]["services"]
+                            if not service.get("exclude_from_index", False)
+                        ]
+                    )
+                )
+            )
+            context.update({"services": data["services"], "categories": categories})
+
+        if template_name == "simple":
             context.update({"services": data["services"]})
 
         if template_name == "bridges":

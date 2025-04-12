@@ -1,6 +1,7 @@
 # Private.coffee Website
 
 [![Support Private.coffee!](https://shields.private.coffee/badge/private.coffee-Support%20us!-pink?logo=coffeescript)](https://private.coffee)
+[![MIT License](https://shields.private.coffee/badge/license-MIT-blue.svg)](LICENSE)
 
 This is the source code for the [Private.coffee](https://private.coffee)
 website.

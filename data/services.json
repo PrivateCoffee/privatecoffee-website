@@ -3,6 +3,8 @@
         {
             "name": "Matrix",
             "url": "https://element.private.coffee",
+            "category": "Communication & Social",
+            "featured": true,
             "homemade": false,
             "fork": false,
             "tiny_description": "decentralized messaging",
@@ -42,6 +44,8 @@
         {
             "name": "CryptPad",
             "url": "https://cryptpad.private.coffee",
+            "category": "Productivity & Collaboration",
+            "featured": true,
             "homemade": false,
             "fork": false,
             "tiny_description": "collaborative document editing",
@@ -61,6 +65,7 @@
         {
             "name": "CoffeeGPT",
             "url": "https://coffeegpt.private.coffee",
+            "category": "Security & Privacy",
             "homemade": false,
             "fork": false,
             "members_only": true,
@@ -81,6 +86,8 @@
         {
             "name": "Transfer.coffee",
             "url": "https://transfer.coffee",
+            "category": "Security & Privacy",
+            "featured": true,
             "homemade": "https://git.private.coffee/PrivateCoffee/transfer.coffee",
             "fork": false,
             "tiny_description": "secure direct file transfer",
@@ -100,6 +107,7 @@
         {
             "name": "MyIP.Coffee",
             "url": "https://myip.coffee",
+            "category": "Development & Technical Tools",
             "homemade": "https://git.private.coffee/PrivateCoffee/myip.coffee",
             "fork": false,
             "tiny_description": "check your IP address",
@@ -119,6 +127,7 @@
         {
             "name": "Overleaf",
             "url": "https://overleaf.private.coffee",
+            "category": "Productivity & Collaboration",
             "homemade": false,
             "fork": false,
             "tiny_description": "collaborative LaTeX editor",
@@ -138,6 +147,7 @@
         {
             "name": "Mastodon",
             "url": "https://cuddly.space",
+            "category": "Communication & Social",
             "homemade": false,
             "fork": false,
             "tiny_description": "decentralized social network",
@@ -161,6 +171,8 @@
         {
             "name": "PeerTube",
             "url": "https://cuddly.tube",
+            "category": "Media & Content",
+            "featured": true,
             "homemade": false,
             "fork": false,
             "tiny_description": "decentralized video hosting",
@@ -180,6 +192,7 @@
         {
             "name": "Pixelfed",
             "url": "https://cuddly.pics",
+            "category": "Media & Content",
             "homemade": false,
             "fork": false,
             "tiny_description": "decentralized photo sharing",
@@ -199,6 +212,8 @@
         {
             "name": "Forgejo",
             "url": "https://git.private.coffee",
+            "category": "Development & Technical Tools",
+            "featured": true,
             "homemade": false,
             "fork": false,
             "tiny_description": "self-hosted Git forge",
@@ -218,6 +233,8 @@
         {
             "name": "BigBlueButton",
             "url": "https://bbb.private.coffee",
+            "category": "Communication & Social",
+            "featured": true,
             "homemade": false,
             "fork": false,
             "tiny_description": "video conferencing",
@@ -237,6 +254,7 @@
         {
             "name": "Jitsi",
             "url": "https://jitsi.private.coffee",
+            "category": "Communication & Social",
             "homemade": false,
             "fork": false,
             "tiny_description": "video conferencing",
@@ -256,6 +274,7 @@
         {
             "name": "HedgeDoc",
             "url": "https://hedgedoc.private.coffee",
+            "category": "Productivity & Collaboration",
             "homemade": false,
             "fork": false,
             "tiny_description": "collaborative markdown editor",
@@ -275,6 +294,7 @@
         {
             "name": "FacilMap",
             "url": "https://facilmap.private.coffee",
+            "category": "Productivity & Collaboration",
             "homemade": false,
             "fork": false,
             "tiny_description": "open-source map editor",
@@ -294,6 +314,7 @@
         {
             "name": "OTS - One Time Secrets",
             "url": "https://ots.private.coffee",
+            "category": "Security & Privacy",
             "homemade": false,
             "fork": false,
             "tiny_description": "share secrets securely",
@@ -313,6 +334,7 @@
         {
             "name": "AliasVault",
             "url": "https://cuddly.pw",
+            "category": "Security & Privacy",
             "homemade": false,
             "fork": false,
             "tiny_description": "password manager with built-in email aliasing",
@@ -332,6 +354,7 @@
         {
             "name": "QRMaker",
             "url": "https://qrmaker.private.coffee",
+            "category": "Web Utilities",
             "homemade": "https://git.private.coffee/PrivateCoffee/QRMaker",
             "fork": false,
             "tiny_description": "QR code generator",
@@ -351,6 +374,7 @@
         {
             "name": "FreshRSS",
             "url": "https://freshrss.private.coffee",
+            "category": "Media & Content",
             "homemade": false,
             "fork": false,
             "tiny_description": "RSS feed reader",
@@ -370,6 +394,7 @@
         {
             "name": "redlib",
             "url": "https://redlib.private.coffee",
+            "category": "Privacy-friendly Frontends",
             "homemade": false,
             "fork": false,
             "tiny_description": "tracking-free Reddit",
@@ -389,6 +414,7 @@
         {
             "name": "CyberChef",
             "url": "https://cyberchef.private.coffee",
+            "category": "Development & Technical Tools",
             "homemade": false,
             "fork": false,
             "tiny_description": "Web app for encryption and encoding",
@@ -408,6 +434,7 @@
         {
             "name": "Travelynx",
             "url": "https://traveling.coffee",
+            "category": "Web Utilities",
             "homemade": false,
             "fork": "https://git.private.coffee/PrivateCoffee/travelynx",
             "tiny_description": "rail journey logger (German)",
@@ -427,6 +454,7 @@
         {
             "name": "AllTube",
             "url": "https://alltube.private.coffee",
+            "category": "Media & Content",
             "homemade": false,
             "fork": "https://git.private.coffee/PrivateCoffee/alltube",
             "tiny_description": "universal video downloader",
@@ -446,6 +474,7 @@
         {
             "name": "Invidious",
             "url": "https://invidious.private.coffee",
+            "category": "Privacy-friendly Frontends",
             "homemade": false,
             "fork": "https://git.private.coffee/PrivateCoffee/invidious",
             "tiny_description": "tracking-free YouTube",
@@ -471,6 +500,7 @@
         {
             "name": "Piped",
             "url": "https://piped.private.coffee",
+            "category": "Privacy-friendly Frontends",
             "homemade": false,
             "fork": false,
             "tiny_description": "tracking-free YouTube",
@@ -490,6 +520,7 @@
         {
             "name": "Structables",
             "url": "https://structables.private.coffee",
+            "category": "Privacy-friendly Frontends",
             "homemade": "https://git.private.coffee/PrivateCoffee/structables",
             "fork": false,
             "tiny_description": "tracking-free Instructables",
@@ -515,6 +546,7 @@
         {
             "name": "Quetre",
             "url": "https://quetre.private.coffee",
+            "category": "Privacy-friendly Frontends",
             "homemade": false,
             "fork": false,
             "tiny_description": "tracking-free Quora",
@@ -540,6 +572,7 @@
         {
             "name": "Wikimore",
             "url": "https://wikimore.private.coffee",
+            "category": "Privacy-friendly Frontends",
             "homemade": "https://git.private.coffee/PrivateCoffee/wikimore",
             "fork": false,
             "tiny_description": "censorship-free Wikipedia",
@@ -565,6 +598,7 @@
         {
             "name": "Priviblur",
             "url": "https://priviblur.private.coffee",
+            "category": "Privacy-friendly Frontends",
             "homemade": false,
             "fork": false,
             "tiny_description": "tracking-free Tumblr",
@@ -590,6 +624,7 @@
         {
             "name": "BiblioReads",
             "url": "https://biblioreads.private.coffee",
+            "category": "Privacy-friendly Frontends",
             "homemade": false,
             "fork": false,
             "tiny_description": "tracking-free Goodreads",
@@ -609,6 +644,7 @@
         {
             "name": "Small",
             "url": "https://small.private.coffee",
+            "category": "Privacy-friendly Frontends",
             "homemade": "https://git.private.coffee/PrivateCoffee/small",
             "fork": false,
             "tiny_description": "tracking-free Medium",
@@ -628,6 +664,7 @@
         {
             "name": "Scribe",
             "url": "https://scribe.private.coffee",
+            "category": "Privacy-friendly Frontends",
             "homemade": false,
             "fork": false,
             "tiny_description": "tracking-free Medium",
@@ -647,6 +684,7 @@
         {
             "name": "Tent",
             "url": "https://tent.private.coffee",
+            "category": "Privacy-friendly Frontends",
             "homemade": false,
             "fork": false,
             "tiny_description": "tracking-free Bandcamp",
@@ -666,6 +704,7 @@
         {
             "name": "LibreTranslate",
             "url": "https://translate.private.coffee",
+            "category": "Development & Technical Tools",
             "homemade": false,
             "fork": false,
             "tiny_description": "self-hosted translation",
@@ -685,6 +724,7 @@
         {
             "name": "wishthis",
             "url": "https://wishthis.private.coffee",
+            "category": "Web Utilities",
             "homemade": false,
             "fork": "https://git.private.coffee/PrivateCoffee/wishthis",
             "tiny_description": "create and share wishlists",
@@ -704,6 +744,7 @@
         {
             "name": "BreezeWiki",
             "url": "https://breezewiki.private.coffee",
+            "category": "Privacy-friendly Frontends",
             "homemade": false,
             "fork": false,
             "tiny_description": "tracking-free Fandom",
@@ -729,6 +770,7 @@
         {
             "name": "Ducks for Ducks",
             "url": "https://ducksforducks.private.coffee",
+            "category": "Privacy-friendly Frontends",
             "homemade": "https://git.private.coffee/PrivateCoffee/ducksforducks",
             "fork": false,
             "tiny_description": "a private front-end to Geeks for Geeks",
@@ -748,6 +790,7 @@
         {
             "name": "NocoDB",
             "url": "https://nocodb.private.coffee",
+            "category": "Productivity & Collaboration",
             "homemade": false,
             "fork": false,
             "tiny_description": "Airtable alternative",
@@ -767,6 +810,7 @@
         {
             "name": "Penpot",
             "url": "https://penpot.private.coffee",
+            "category": "Productivity & Collaboration",
             "homemade": false,
             "fork": false,
             "tiny_description": "open-source design platform",
@@ -786,6 +830,7 @@
         {
             "name": "tldraw",
             "url": "https://tldraw.private.coffee",
+            "category": "Productivity & Collaboration",
             "homemade": false,
             "fork": false,
             "tiny_description": "collaborative whiteboard",
@@ -805,6 +850,7 @@
         {
             "name": "YOURLS",
             "url": "https://pcof.fi",
+            "category": "Web Utilities",
             "homemade": false,
             "fork": false,
             "tiny_description": "URL shortener",
@@ -824,6 +870,7 @@
         {
             "name": "Rallly",
             "url": "https://rallly.private.coffee",
+            "category": "Communication & Social",
             "homemade": false,
             "fork": false,
             "tiny_description": "collaborative scheduling (Doodle)",
@@ -843,6 +890,7 @@
         {
             "name": "LibreY",
             "url": "https://librey.private.coffee",
+            "category": "Web Utilities",
             "homemade": false,
             "fork": false,
             "tiny_description": "search engine",
@@ -872,6 +920,7 @@
         {
             "name": "GotHub",
             "url": "https://gothub.private.coffee",
+            "category": "Privacy-friendly Frontends",
             "homemade": false,
             "fork": false,
             "tiny_description": "tracking-free GitHub",
@@ -891,6 +940,7 @@
         {
             "name": "Binternet",
             "url": "https://binternet.private.coffee",
+            "category": "Privacy-friendly Frontends",
             "homemade": false,
             "fork": false,
             "tiny_description": "tracking-free Pinterest",
@@ -910,6 +960,7 @@
         {
             "name": "Moner.ooo",
             "url": "https://monerooo.private.coffee",
+            "category": "Web Utilities",
             "homemade": false,
             "fork": "https://git.private.coffee/kumi/moner.ooo",
             "tiny_description": "Monero/fiat exchange rates",
@@ -929,6 +980,7 @@
         {
             "name": "httpbin",
             "url": "https://httpbin.private.coffee",
+            "category": "Development & Technical Tools",
             "homemade": false,
             "fork": false,
             "tiny_description": "HTTP request testing service",
@@ -948,6 +1000,7 @@
         {
             "name": "Overpass",
             "url": "https://overpass.private.coffee",
+            "category": "Development & Technical Tools",
             "homemade": false,
             "fork": false,
             "tiny_description": "OpenStreetMap API",
@@ -967,6 +1020,7 @@
         {
             "name": "GoogleDonts",
             "url": "https://googledonts.private.coffee",
+            "category": "Developer Utilities",
             "homemade": "https://git.private.coffee/PrivateCoffee/googledonts",
             "fork": false,
             "tiny_description": "privacy-friendly Google Fonts proxy",
@@ -986,6 +1040,7 @@
         {
             "name": "nocdnbs",
             "url": "https://nocdnbs.private.coffee",
+            "category": "Developer Utilities",
             "homemade": "https://git.private.coffee/PrivateCoffee/nocdnbs",
             "fork": false,
             "tiny_description": "privacy-friendly cdnjs proxy",
@@ -1005,6 +1060,7 @@
         {
             "name": "nobsdelivr",
             "url": "https://nobsdelivr.private.coffee",
+            "category": "Developer Utilities",
             "homemade": "https://git.private.coffee/PrivateCoffee/nobsdelivr",
             "fork": false,
             "tiny_description": "privacy-friendly jsDelivr proxy",
@@ -1024,6 +1080,7 @@
         {
             "name": "TypeNot",
             "url": "https://typenot.private.coffee",
+            "category": "Developer Utilities",
             "homemade": "https://git.private.coffee/PrivateCoffee/typenot",
             "fork": false,
             "tiny_description": "privacy-friendly Typekit proxy",
@@ -1043,6 +1100,7 @@
         {
             "name": "mjnml",
             "url": "https://mjnml.private.coffee",
+            "category": "Developer Utilities",
             "homemade": "https://git.private.coffee/PrivateCoffee/mjnml",
             "fork": false,
             "tiny_description": "privacy-friendly MJML renderer",

@@ -357,6 +357,35 @@ h5 {
 
 /* Table Styles */
 
-.transparency-start-balance-row > td {
+.transparency-start-balance-row>td {
   background-color: rgb(234, 255, 255) !important;
+}
+
+/* Service page styles */
+.service-section {
+  scroll-margin-top: 80px;
+}
+
+.category-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.category-nav a {
+  margin: 0.25rem;
+}
+
+.service-section h2 {
+  border-bottom: 2px solid var(--bs-primary);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Smooth scrolling for modern browsers (progressive enhancement) */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }

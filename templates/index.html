@@ -20,113 +20,60 @@
       </div>
     </div>
   </header>
+  <section class="bg-light">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-8 col-xl-6 text-center mx-auto">
+          <p class="fw-bold mb-2 text-primary">Featured Services</p>
+          <h3 class="fw-bold">Privacy-respecting alternatives to common services</h3>
+          <p class="text-muted">
+            These are just a few of our services. <a href="/services.html">View all services →</a>
+          </p>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+        {% for service in featured_services %}
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  {% if service.icon %}
+                    <div class="bs-icon-md bs-icon-circle bs-icon-primary me-3">{{ service.icon | icon | safe }}</div>
+                  {% endif %}
+                  <h5 class="card-title mb-0">{{ service.name }}</h5>
+                </div>
+                <p class="card-text">{{ service.short_description }}</p>
+              </div>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="{{ service.links[0].url }}" class="btn btn-primary btn-sm">Try it now</a>
+                {% if service.homemade %}
+                  <a href="{{ service.homemade }}"
+                     class="btn btn-outline-secondary btn-sm">
+                    <small>Source Code</small>
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="text-center mt-4">
+        <a href="/services.html" class="btn btn-outline-primary">View All Services</a>
+      </div>
+    </div>
+  </section>
   <section class="bg-white">
     <div class="container bg-white py-5">
       <div class="row">
         <div class="col-md-8 col-xl-6 text-center mx-auto">
-          <p class="fw-bold mb-2 text-primary">Our self-hosted Services</p>
+          <p class="fw-bold mb-2 text-primary">Our Mission</p>
           <h3 class="fw-bold">
-            Private.coffee provides a collection of services that respect your
-            privacy.
+            Private.coffee is a non-profit association dedicated to supporting privacy and digital sovereignty.
           </h3>
-        </div>
-      </div>
-      <div class="py-5 p-lg-5">
-        <div class="accordion">
-          {% for service in services.services %}
-            {% if not
-              service.exclude_from_index %}
-              <details class="accordion-item">
-                <summary class="accordion-header">
-                  {% if service.icon %}
-                    <div class="bs-icon-lg d-flex justify-content-center align-items-center bs-icon"
-                         title="{{ service.name }}">{{ service.icon | icon | safe }}</div>
-                  {% endif %}
-                  {{ service.name }}
-                  {% if service.tiny_description %}
-                    - {{
-                    service.tiny_description }}
-                  {% endif %}
-                  {% if service.homemade %}
-                    <a href="{{ service.homemade }}">
-                      <div class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-sm homemade"
-                           title="Made by Private.coffee">{{ "coffee" | icon | safe }}</div>
-                    </a>
-                  {% endif %}
-                  {% if service.fork %}
-                    <a href="{{ service.fork }}">
-                      <div class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-sm fork"
-                           title="Runs on a fork of the original software">{{ "git-branch" | icon | safe }}</div>
-                    </a>
-                  {% endif %}
-                  {% if service.members_only %}
-                    <a href="/membership.html">
-                      <div class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-sm members-only"
-                           title="Members only">{{ "star" | icon | safe }}</div>
-                    </a>
-                  {% endif %}
-                  <div class="accordion-icon">&#9660;</div>
-                </summary>
-                <div class="accordion-body">
-                  <p class="text-muted card-text mb-4">{{ service.long_description }}</p>
-                  {% for link in service.links %}
-                    {% if link.alternatives %}
-                      <div class="button-wrapper dropdown">
-                        <div class="btn btn-primary w-100 shadow">
-                          <a class="main-link" href="{{ link.url }}">{{ link.name }}</a>
-                          <div class="dropdown-toggle-area">&#9660;</div>
-                        </div>
-                        <div class="dropdown-content">
-                          {% for alternative in link.alternatives %}<a href="{{ alternative.url }}">{{ alternative.name }}</a>{% endfor %}
-                        </div>
-                      </div>
-                    {% else %}
-                      <a class="button-wrapper btn btn-primary shadow w-100 text-center"
-                         href="{{ link.url }}">{{ link.name }}</a>
-                    {% endif %}
-                  {% endfor %}
-                </div>
-              </details>
-            {% endif %}
-          {% endfor %}
-        </div>
-        <!-- Legend -->
-        <div class="row mt-5">
-          <div class="col-md-8 col-xl-6 text-center mx-auto">
-            <h4 class="fw-bold mb-2 text-primary">Legend</h4>
-            <div class="row row-cols-1 row-cols-md-2">
-              <div class="col">
-                <div class="d-flex align-items-center">
-                  <div class="bs-icon-md bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md">
-                    {{ "coffee" | icon | safe }}
-                  </div>
-                  <p class="px-2 mb-0">Made by Private.coffee*</p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="d-flex align-items-center">
-                  <div class="bs-icon-md bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md">
-                    {{ "git-branch" | icon | safe }}
-                  </div>
-                  <p class="px-2 mb-0">Runs on a fork of the original software*</p>
-                </div>
-            </div>
-          </div>
-          <div class="row row-cols-1 row-cols-md-1">
-            <div class="col">
-              <div class="d-flex align-items-center">
-                <div class="bs-icon-md bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md">
-                  {{ "star" | icon | safe }}
-                </div>
-                <p class="px-2 mb-0">For members of the Private.coffee association only</p>
-              </div>
-            </div>
-          </div>
-          <div class="row row-cols-1 row-cols-md-1">
-            <div class="col">
-              <p class="text-muted mt-3">*Click the symbol to go to the source code!</p>
-            </div>
-          </div>
+          <p class="text-muted">
+            We provide privacy-respecting alternatives to common services, educate users about digital privacy,
+            and advocate for a more private and secure internet.
+          </p>
         </div>
       </div>
     </div>
