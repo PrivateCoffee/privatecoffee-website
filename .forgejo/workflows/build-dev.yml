@@ -22,7 +22,7 @@ jobs:
           python3 -m pip install -r requirements.txt --break-system-packages
 
       - name: Generate static site
-        run: python3 main.py --dev
+        run: python3 main.py --dev --domains dev.private.coffee
 
       - name: Deploy to pages-dev branch
         run: |
