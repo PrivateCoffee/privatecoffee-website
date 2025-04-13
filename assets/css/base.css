@@ -142,6 +142,7 @@ h5 {
 }
 
 .homemade,
+.upstream,
 .fork,
 .members-only {
   right: -0.5rem;
@@ -150,6 +151,7 @@ h5 {
   position: absolute;
 }
 
+.upstream svg,
 .homemade svg,
 .fork svg {
   fill: var(--bs-primary-bg-subtle) !important;
