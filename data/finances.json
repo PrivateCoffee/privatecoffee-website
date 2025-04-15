@@ -160,7 +160,10 @@
         },
         "04": {
             "Membership Fees": {
-                "EUR": 330.23
+                "EUR": 380.23
+            },
+            "Server Rent": {
+                "EUR": -316.72
             }
         }
     }
