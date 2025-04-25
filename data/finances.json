@@ -166,7 +166,11 @@
                 "EUR": 200
             },
             "Server Rent": {
-                "EUR": -394
+                "EUR": -358.78
+            },
+            "Domains": {
+                "EUR": -35.22,
+                "Notes": "Now separated from server costs for better clarity"
             },
             "Marketing": {
                 "EUR": -296.02,
