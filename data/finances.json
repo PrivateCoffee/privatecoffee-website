@@ -160,13 +160,17 @@
         },
         "04": {
             "Membership Fees": {
-                "EUR": 380.23
+                "EUR": 403.46
             },
             "Donations": {
                 "EUR": 200
             },
             "Server Rent": {
-                "EUR": -316.72
+                "EUR": -394
+            },
+            "Marketing": {
+                "EUR": -296.02,
+                "Notes": "Branded shirts/hoodies for events, stickers"
             }
         }
     }
