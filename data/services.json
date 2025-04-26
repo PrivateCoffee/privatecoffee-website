@@ -728,6 +728,27 @@
             "exclude_from_simple": false
         },
         {
+            "name": "Soundcloak",
+            "url": "https://soundcloak.private.coffee",
+            "category": "Privacy-friendly Frontends",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://git.maid.zone/stuff/soundcloak",
+            "tiny_description": "tracking-free Soundcloud",
+            "short_description": "Soundcloak is a privacy-friendly alternative front-end to Soundcloud.",
+            "long_description": "Soundcloak is a privacy-friendly alternative front-end to Soundcloud. It allows you to browse Soundcloud without being tracked.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Soundcloak",
+                    "url": "https://soundcloak.private.coffee"
+                }
+            ],
+            "icon": "music",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "LibreTranslate",
             "url": "https://translate.private.coffee",
             "category": "Development & Technical Tools",
