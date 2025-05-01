@@ -176,6 +176,11 @@
                 "EUR": -296.02,
                 "Notes": "Branded shirts/hoodies for events, stickers"
             }
+        },
+        "05": {
+            "Membership Fees": {
+                "EUR": 25
+            }
         }
     }
 }
