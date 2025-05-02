@@ -79,6 +79,17 @@
               <a class="nav-link" href="https://status.private.coffee/">Status</a>
             </li>
           </ul>
+          <div class="theme-toggle-container me-2">
+            {% if theme == 'dark' %}
+              <a href="https://private.coffee{{ request.path }}"
+                 class="btn btn-outline-primary"
+                 aria-label="Switch to light theme">{{ "sun" | icon | safe }}</a>
+            {% else %}
+              <a href="https://dark.private.coffee{{ request.path }}"
+                 class="btn btn-outline-primary"
+                 aria-label="Switch to dark theme">{{ "moon" | icon | safe }}</a>
+            {% endif %}
+          </div>
           <a class="btn btn-primary shadow navbar-btn"
              role="button"
              href="/membership.html">JOIN &amp; SUPPORT</a>
