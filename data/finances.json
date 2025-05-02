@@ -179,7 +179,17 @@
         },
         "05": {
             "Membership Fees": {
-                "EUR": 25
+                "EUR": 75
+            },
+            "Donations": {
+                "EUR": 60
+            },
+            "Bank Fees": {
+                "EUR": -2.2
+            },
+            "Reimbursements": {
+                "EUR": 160,
+                "Notes": "Reimbursements for hoodies"
             }
         }
     }
