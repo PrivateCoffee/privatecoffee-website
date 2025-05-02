@@ -1,4 +1,4 @@
-name: Build and Deploy Static Site
+name: Build and Deploy Pride-Theme Static Site
 
 on:
   push:

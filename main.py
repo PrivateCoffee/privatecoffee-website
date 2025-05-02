@@ -67,10 +67,24 @@ env.filters["month_name"] = month_name
 
 
 def render_template_to_file(template_name, output_name, **kwargs):
+    """Render a template to a file.
+
+    Args:
+        template_name (str): The name of the template file.
+        output_name (str): The name of the output file.
+        **kwargs: Additional keyword arguments to pass to the template.
+    """
     try:
         template = env.get_template(template_name)
         output_path = output_dir / output_name
         kwargs.setdefault("theme", "plain")
+        
+        path = "/" + output_name
+        if path.endswith("/index.html"):
+            path = path[:-10]
+        elif path == "/index.html":
+            path = "/"
+        kwargs.setdefault("request", {"path": path})
 
         output_path.parent.mkdir(parents=True, exist_ok=True)
 
