@@ -160,13 +160,13 @@
         },
         "04": {
             "Membership Fees": {
-                "EUR": 403.46
+                "EUR": 423.46
             },
             "Donations": {
-                "EUR": 200
+                "EUR": 300
             },
             "Server Rent": {
-                "EUR": -358.78
+                "EUR": -382.98
             },
             "Domains": {
                 "EUR": -35.22,
@@ -175,6 +175,21 @@
             "Marketing": {
                 "EUR": -296.02,
                 "Notes": "Branded shirts/hoodies for events, stickers"
+            }
+        },
+        "05": {
+            "Membership Fees": {
+                "EUR": 75
+            },
+            "Donations": {
+                "EUR": 60
+            },
+            "Bank Fees": {
+                "EUR": -2.2
+            },
+            "Reimbursements": {
+                "EUR": 160,
+                "Notes": "Reimbursements for hoodies"
             }
         }
     }

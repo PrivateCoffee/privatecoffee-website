@@ -1,0 +1,357 @@
+/* Dark theme */
+:root,
+[data-bs-theme="dark"] {
+  --bs-primary: #d25ea0;
+  --bs-primary-rgb: 210, 94, 160;
+  --bs-primary-text-emphasis: #e07eb4;
+  --bs-primary-bg-subtle: #3d2936;
+  --bs-primary-border-subtle: #5e3e52;
+  
+  --bs-body-color: #e0e0e0;
+  --bs-body-color-rgb: 224, 224, 224;
+  --bs-body-bg: #2a2a2a;
+  --bs-body-bg-rgb: 42, 42, 42;
+  
+  --bs-secondary-color: rgba(224, 224, 224, 0.75);
+  --bs-secondary-color-rgb: 224, 224, 224;
+  --bs-tertiary-color: rgba(224, 224, 224, 0.5);
+  --bs-tertiary-color-rgb: 224, 224, 224;
+  
+  --bs-emphasis-color: #fff;
+  --bs-emphasis-color-rgb: 255, 255, 255;
+  
+  --bs-border-color: #444444;
+  --bs-border-color-translucent: rgba(255, 255, 255, 0.1);
+  
+  --bs-light-rgb: 50, 50, 50;
+  --bs-dark-rgb: 34, 34, 34;
+  --bs-white-rgb: 42, 42, 42;
+}
+
+/* Background gradient */
+.bg-primary-gradient {
+  background: linear-gradient(135deg, #3d2936, #4d3946);
+}
+
+/* Logo images */
+#logoContainer {
+  background-image: url(../../img/logo-white.svg);
+}
+
+#smallLogoContainer {
+  background-image: url(../../img/logo-white.svg);
+}
+
+/* Card and accordion styles */
+.card, .accordion {
+  background-color: #333333;
+  border-color: #444444;
+}
+
+.card-body, .accordion-body {
+  color: var(--bs-body-color);
+}
+
+.accordion-header {
+  background-color: #3a3a3a;
+  color: var(--bs-body-color);
+}
+
+.accordion-header:hover {
+  background-color: #444444;
+}
+
+/* Dropdown styles */
+.dropdown-content {
+  background-color: #333333;
+  border: 1px solid #444444;
+}
+
+.dropdown-content a {
+  color: var(--bs-body-color);
+}
+
+.dropdown-content a:hover {
+  background-color: #444444;
+}
+
+/* Table styles */
+.transparency-start-balance-row>td {
+  background-color: rgba(61, 41, 54, 0.3) !important;
+}
+
+.table {
+  color: var(--bs-body-color);
+}
+
+.table-light {
+  --bs-table-bg: #3a3a3a;
+  --bs-table-color: var(--bs-body-color);
+}
+
+.table-secondary {
+  --bs-table-bg: #444444;
+  --bs-table-color: var(--bs-body-color);
+}
+
+.table-bordered {
+  border-color: #444444;
+}
+
+/* Button styles */
+.btn-primary {
+  --bs-btn-color: #222222;
+  --bs-btn-bg: #d25ea0;
+  --bs-btn-border-color: #d25ea0;
+  --bs-btn-hover-color: #222222;
+  --bs-btn-hover-bg: #db74ab;
+  --bs-btn-hover-border-color: #d868a6;
+  --bs-btn-focus-shadow-rgb: 210, 94, 160;
+  --bs-btn-active-color: #222222;
+  --bs-btn-active-bg: #e07eb4;
+  --bs-btn-active-border-color: #d868a6;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #d25ea0;
+  --bs-btn-border-color: #d25ea0;
+  --bs-btn-hover-color: #222222;
+  --bs-btn-hover-bg: #d25ea0;
+  --bs-btn-hover-border-color: #d25ea0;
+  --bs-btn-active-color: #222222;
+  --bs-btn-active-bg: #d25ea0;
+  --bs-btn-active-border-color: #d25ea0;
+}
+
+/* Link styles */
+a {
+  color: #d25ea0;
+}
+
+a:hover {
+  color: #e07eb4;
+}
+
+/* Text styles */
+.text-muted {
+  color: #aaaaaa !important; /* My thoughts. */
+}
+
+.fancy-text-primary {
+  background: -webkit-linear-gradient(45deg, #d25ea0, #e07eb4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Navbar styles */
+.navbar-light {
+  background-color: #333333 !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #e0e0e0;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+  color: #d25ea0;
+}
+
+/* Fix for navbar brand text color */
+.navbar-brand p {
+  color: #e0e0e0 !important;
+}
+
+.navbar-brand span[style*="color: rgb(35, 35, 35)"] {
+  color: #e0e0e0 !important;
+}
+
+/* Footer styles */
+footer.bg-primary-gradient {
+  color: #e0e0e0;
+}
+
+footer a {
+  color: #d25ea0;
+}
+
+footer a:hover {
+  color: #e07eb4;
+}
+
+footer .text-muted {
+  color: #aaaaaa !important;
+}
+
+/* Alert styles */
+.alert-warning {
+  background-color: #3d3223;
+  border-color: #594832;
+  color: #e0c088;
+}
+
+.alert-warning .alert-link {
+  color: #e0c088;
+}
+
+/* Icon styles */
+.bs-icon.bs-icon-primary svg {
+  fill: #d25ea0 !important;
+}
+
+.bs-icon-circle.bs-icon-primary {
+  background-color: #3d2936;
+}
+
+.bs-icon-circle.bs-icon-primary svg {
+  fill: #d25ea0 !important;
+}
+
+/* Fix for service icons */
+.bs-icon-sm.bs-icon-circle.homemade svg,
+.bs-icon-sm.bs-icon-circle.upstream svg,
+.bs-icon-sm.bs-icon-circle.fork svg,
+.bs-icon-sm.bs-icon-circle.members-only svg {
+  fill: #d25ea0 !important;
+}
+
+.bs-icon-sm.bs-icon-circle.homemade,
+.bs-icon-sm.bs-icon-circle.upstream,
+.bs-icon-sm.bs-icon-circle.fork,
+.bs-icon-sm.bs-icon-circle.members-only {
+  background-color: #3d2936 !important;
+  border: 1px solid #d25ea0;
+}
+
+/* Fix for icon in accordion headers */
+.accordion-header .bs-icon svg {
+  fill: #d25ea0 !important;
+}
+
+/* Background color overrides */
+.bg-light {
+  background-color: #333333 !important;
+}
+
+.bg-white {
+  background-color: #2a2a2a !important;
+}
+
+.bg-secondary-subtle {
+  background-color: #3a3a3a !important;
+}
+
+.bg-primary-subtle {
+  background-color: #3d2936 !important;
+}
+
+/* Theme toggle styles */
+.theme-toggle-container {
+  display: inline-flex;
+  align-items: center;
+}
+
+.theme-toggle-container .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #d25ea0; /* Toned down from #f570b9 */
+  color: #d25ea0; /* Toned down from #f570b9 */
+}
+
+.theme-toggle-container .btn:hover {
+  background-color: #d25ea0; /* Toned down from #f570b9 */
+  color: #333333;
+}
+
+.theme-toggle-container .btn svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Fix for any remaining white sections */
+section.bg-white {
+  background-color: #2a2a2a !important;
+}
+
+section.bg-light {
+  background-color: #333333 !important;
+}
+
+.container.bg-white {
+  background-color: #2a2a2a !important;
+}
+
+[class*="bg-white"] {
+  background-color: #2a2a2a !important;
+}
+
+/* Code blocks */
+code {
+  color: #d25ea0; /* Toned down from #f570b9 */
+  background-color: #333333;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+pre {
+  background-color: #333333;
+  color: #e0e0e0;
+  border: 1px solid #444444;
+  border-radius: 4px;
+  padding: 1em;
+}
+
+/* Input fields */
+input, textarea, select {
+  background-color: #3a3a3a !important;
+  border-color: #444444 !important;
+  color: #e0e0e0 !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #888888 !important;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid #3d2936;
+  padding-left: 1em;
+  color: #cccccc;
+}
+
+/* Fix for inline styles that might set text to black */
+[style*="color: rgb(35, 35, 35)"] {
+  color: #e0e0e0 !important;
+}
+
+[style*="color: #232323"] {
+  color: #e0e0e0 !important;
+}
+
+/* Make sure the body background is consistently applied */
+body {
+  background-color: #2a2a2a;
+}
+
+/* Ensure header bar is lighter */
+#mainNav {
+  background-color: #333333 !important;
+}
+
+/* Legend section icons */
+.col .d-flex .bs-icon-md svg {
+  fill: #d25ea0 !important; /* Toned down from #f570b9 */
+}
+
+/* Fix for any SVG icons that might be hard to see */
+svg {
+  fill: currentColor;
+}
