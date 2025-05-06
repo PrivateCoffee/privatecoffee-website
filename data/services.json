@@ -744,7 +744,7 @@
                     "url": "https://soundcloak.private.coffee"
                 }
             ],
-            "icon": "music",
+            "icon": "cassette-tape",
             "exclude_from_index": false,
             "exclude_from_simple": false
         },

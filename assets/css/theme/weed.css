@@ -1,15 +1,19 @@
 /* 4/20 Theme */
 
+:root {
+    /* Override gradient colors */
+    --gradient-start: #fe8d8d;
+    --gradient-end: hsl(120, 100%, 79%);
+}
+
 .bg-primary-gradient {
-    background: linear-gradient(
-      to bottom,
-        #fe8d8d 0%,
-        #fe8d8d 33.33%,
-        #ffff80 33.33%,
-        #ffff80 66.66%,
-        hsl(120, 100%, 79%) 66.66%,
-        hsl(120, 100%, 79%) 100%
-    );
+    background: linear-gradient(to bottom,
+            #fe8d8d 0%,
+            #fe8d8d 33.33%,
+            #ffff80 33.33%,
+            #ffff80 66.66%,
+            hsl(120, 100%, 79%) 66.66%,
+            hsl(120, 100%, 79%) 100%);
 }
 
 .special-header {
