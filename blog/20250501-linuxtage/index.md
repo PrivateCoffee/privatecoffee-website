@@ -1,5 +1,5 @@
 ---
-title: Linuxtage 01/05/2025
+title: Linuxtage 26/04/2025
 date: 2025-05-01 17:00:00
 author: jupfi
 license: CC BY-SA 4.0
