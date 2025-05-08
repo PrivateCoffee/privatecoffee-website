@@ -94,6 +94,10 @@ header.bg-primary-gradient .fancy-text-primary {
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.6));
 }
 
+#smallLogoContainer {
+    background-image: url(../../img/logo-inv_grad.svg);
+}
+
 .bs-icon.bs-icon-primary {
     background-color: var(--accent-yellow);
     color: var(--europe-blue);
