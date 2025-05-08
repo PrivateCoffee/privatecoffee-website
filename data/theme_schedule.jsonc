@@ -37,6 +37,12 @@
     "end": "1970-05-17"
   },
   {
+    // Europe Day
+    "name": "europe",
+    "start": "1970-05-05",
+    "end": "1970-05-09"
+  },
+  {
     // Pride Month
     "name": "pride",
     "start": "1970-06-01",
