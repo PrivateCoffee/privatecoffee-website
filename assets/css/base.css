@@ -1,0 +1,454 @@
+/* This file was created as part of the Private.coffee project
+   It is licensed under the MIT license
+   For more information, please visit https://private.coffee
+*/
+
+/* General styles */
+:root,
+[data-bs-theme="light"] {
+  /* Primary color palette */
+  --bs-primary: #f570b9;
+  --bs-primary-rgb: 245, 112, 185;
+  --bs-primary-text-emphasis: #622d4a;
+  --bs-primary-bg-subtle: #fde2f1;
+  --bs-primary-border-subtle: #fbc6e3;
+
+  /* Primary button variations */
+  --bs-primary-hover: #f785c4;
+  --bs-primary-active: #f78dc7;
+
+  /* Body colors */
+  --bs-body-color: #232323;
+  --bs-body-color-rgb: 35, 35, 35;
+  --bs-secondary-color: rgba(35, 35, 35, 0.75);
+  --bs-secondary-color-rgb: 35, 35, 35, 0.75;
+  --bs-tertiary-color: rgba(35, 35, 35, 0.5);
+  --bs-tertiary-color-rgb: 35, 35, 35, 0.5;
+
+  /* Font family */
+  --bs-body-font-family: Inconsolata, monospace;
+
+  /* UI element colors */
+  --border-color: #e0e0e0;
+  --card-bg: #f9f9f9;
+  --card-hover-bg: #e9e9e9;
+  --dropdown-bg: #f9f9f9;
+  --alert-warning-bg: #fff3cd;
+  --alert-warning-border: #ffeeba;
+  --alert-warning-color: #856404;
+  --alert-warning-hover: #604c2e;
+  --table-highlight-bg: rgb(234, 255, 255);
+
+  /* Gradient colors */
+  --gradient-start: #ba77fc;
+  --gradient-end: #ff7f8c;
+}
+
+.btn-primary {
+  --bs-btn-color: #000000;
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-color: #000000;
+  --bs-btn-hover-bg: var(--bs-primary-hover);
+  --bs-btn-hover-border-color: var(--bs-primary-hover);
+  --bs-btn-focus-shadow-rgb: 37, 17, 28;
+  --bs-btn-active-color: #000000;
+  --bs-btn-active-bg: var(--bs-primary-active);
+  --bs-btn-active-border-color: var(--bs-primary-hover);
+  --bs-btn-disabled-color: #000000;
+  --bs-btn-disabled-bg: var(--bs-primary);
+  --bs-btn-disabled-border-color: var(--bs-primary);
+  color: #fff;
+}
+
+.button-wrapper:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-focus-shadow-rgb: var(--bs-primary-rgb);
+  --bs-btn-hover-color: #000000;
+  --bs-btn-hover-bg: var(--bs-primary);
+  --bs-btn-hover-border-color: var(--bs-primary);
+  --bs-btn-active-color: #000000;
+  --bs-btn-active-bg: var(--bs-primary);
+  --bs-btn-active-border-color: var(--bs-primary);
+  --bs-btn-disabled-color: var(--bs-primary);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: var(--bs-primary);
+}
+
+h2 .special-header {
+  font-size: 10rem !important;
+}
+
+.special-header {
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+.fancy-text-primary {
+  background: -webkit-linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  letter-spacing: 0.03rem;
+  font-size: 1.1rem;
+}
+
+h5 {
+  letter-spacing: 0.05rem;
+}
+
+.navbar-brand {
+  font-weight: 800 !important;
+  font-size: x-large;
+}
+
+.card-body :not(p):not(:first-child):not(.dropdown-content):not(.dropdown-toggle-area) {
+  margin-top: 10px;
+}
+
+.currency-col {
+  width: 200px;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.table-transparency td:not(:first-child) {
+  text-align: right;
+}
+
+.section {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.alert-warning {
+  background-color: var(--alert-warning-bg);
+  border-color: var(--alert-warning-border);
+  color: var(--alert-warning-color);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.alert-warning .alert-link {
+  color: var(--alert-warning-color);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.alert-warning .alert-link:hover {
+  color: var(--alert-warning-hover);
+}
+
+/* Image Styles */
+#logoContainer {
+  background-size: contain;
+  background-repeat: no-repeat;
+  max-width: 400px;
+  max-height: 400px;
+  width: 80vh;
+  height: 80vh;
+}
+
+#smallLogoContainer {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 64px;
+  height: 64px;
+}
+
+.homemade,
+.upstream,
+.fork,
+.members-only {
+  right: -0.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  position: absolute;
+}
+
+.upstream svg,
+.homemade svg,
+.fork svg {
+  fill: var(--bs-primary-bg-subtle) !important;
+}
+
+.bs-icon.bs-icon-primary svg {
+  fill: var(--bs-primary-bg-subtle);
+}
+
+.bs-icon.bs-icon-lg svg {
+  fill: var(--bs-primary);
+}
+
+.bs-icon-circle svg {
+  fill: var(--bs-primary-bg-subtle);
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .navbar .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar .col {
+    text-align: center;
+  }
+
+  .navbar-brand p {
+    font-size: 0.9rem;
+  }
+
+  .navbar-brand span.fancy-text-primary {
+    font-size: 1.1rem;
+  }
+
+  .navbar-brand span {
+    display: block;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  .navbar-nav .nav-item {
+    display: inline-block;
+    padding: 0 1rem;
+  }
+
+  .navbar-btn {
+    margin: 0 auto !important;
+  }
+
+  @media (max-width: 768px) {
+    .btn.btn-primary {
+      margin: 1rem auto;
+      display: block;
+      width: 80%;
+    }
+
+    h2 .special-header {
+      font-size: 6rem !important;
+    }
+
+    .special-header {
+      font-size: 2rem;
+    }
+
+    .that-br {
+      display: none;
+    }
+
+    .slogan {
+      display: none;
+    }
+
+    #logo-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+/* Dropdown Styles */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--dropdown-bg);
+  min-width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-toggle-area {
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+}
+
+.btn-primary:has(.dropdown-toggle-area) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.btn-primary .main-link {
+  flex-grow: 1;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+.btn-primary .main-link:hover {
+  text-decoration: none;
+  color: black;
+}
+
+/* Accordion Styles */
+
+.accordion {
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+  cursor: pointer;
+  background-color: var(--card-bg);
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.accordion-header:hover {
+  background-color: var(--card-hover-bg);
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.bs-icon {
+  position: relative;
+}
+
+.accordion-body {
+  padding: 1rem;
+  display: none;
+}
+
+.accordion-item[open] .accordion-body {
+  display: block;
+}
+
+.accordion-header .bs-icon svg {
+  width: 32px;
+}
+
+.accordion-icon {
+  margin-left: auto;
+  padding: 0.5rem;
+}
+
+.accordion-item[open] .accordion-icon {
+  transform: rotate(180deg);
+}
+
+/* Table Styles */
+
+.transparency-start-balance-row>td {
+  background-color: var(--table-highlight-bg) !important;
+}
+
+/* Service page styles */
+.service-section {
+  scroll-margin-top: 80px;
+}
+
+.category-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.category-nav a {
+  margin: 0.25rem;
+}
+
+.service-section h2 {
+  border-bottom: 2px solid var(--bs-primary);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Smooth scrolling for modern browsers (progressive enhancement) */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Theme toggle styles */
+.theme-toggle-container {
+  display: inline-flex;
+  align-items: center;
+}
+
+.theme-toggle-container .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.theme-toggle-container .btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Dark theme specific toggle styles */
+[data-bs-theme="dark"] .theme-toggle-container .btn-outline-primary {
+  color: var(--bs-primary-hover);
+  border-color: var(--bs-primary-hover);
+}
+
+[data-bs-theme="dark"] .theme-toggle-container .btn-outline-primary:hover {
+  background-color: var(--bs-primary-hover);
+  color: var(--bs-body-bg);
+}
+
+/* Footer styles */
+footer a {
+  text-decoration: none;
+}
