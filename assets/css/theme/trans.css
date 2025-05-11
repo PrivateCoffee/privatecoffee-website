@@ -1,0 +1,19 @@
+/* Trans pride flag theme */
+
+:root {
+    /* Override gradient colors */
+    --gradient-start: #87ddff;
+    --gradient-end: #F7A8B8;
+}
+
+.bg-primary-gradient {
+    background: linear-gradient(0deg, #87ddff, #F7A8B8, #FFFFFF, #F7A8B8, #87ddff);
+}
+
+#logoContainer {
+    background-image: url(../../img/logo-white.svg);
+}
+
+#smallLogoContainer {
+    background-image: url(../../img/logo-inv_grad.svg);
+}
