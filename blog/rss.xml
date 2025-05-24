@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Private.coffee Blog</title>
+    <link>https://private.coffee/blog</link>
+    <atom:link href="https://private.coffee/blog/rss.xml" rel="self" type="application/rss+xml" />
+    <description>Your dose of private caffeine!</description>
+    <pubDate>Sat, 24 May 2025 00:02:17 +0000</pubDate>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+
+    
+    <item>
+       <title>Board Meeting 01/01/2025</title>
+       <description></description>
+       <pubDate>Wed, 01 Jan 2025 17:00:00 +0000</pubDate>
+       <guid>https://private.coffee/blog/20250101-board_meeting/</guid>
+       <link>https://private.coffee/blog/20250101-board_meeting/</link>
+       <dc:creator><![CDATA[jupfi]]></dc:creator>
+    </item>
+    
+    <item>
+       <title>Linuxtage 26/04/2025</title>
+       <description></description>
+       <pubDate>Thu, 01 May 2025 17:00:00 +0000</pubDate>
+       <guid>https://private.coffee/blog/20250501-linuxtage/</guid>
+       <link>https://private.coffee/blog/20250501-linuxtage/</link>
+       <dc:creator><![CDATA[jupfi]]></dc:creator>
+    </item>
+    
+    <item>
+       <title>Board Meeting 30/06/2024</title>
+       <description></description>
+       <pubDate>Sun, 30 Jun 2024 23:59:59 +0000</pubDate>
+       <guid>https://private.coffee/blog/20240630-board_meeting/</guid>
+       <link>https://private.coffee/blog/20240630-board_meeting/</link>
+       <dc:creator><![CDATA[jupfi]]></dc:creator>
+    </item>
+    
+    <item>
+       <title>Using the private.coffee Matrix homeserver</title>
+       <description></description>
+       <pubDate>Sun, 28 Dec 2025 13:00:00 +0000</pubDate>
+       <guid>https://private.coffee/blog/20241228-matrix/</guid>
+       <link>https://private.coffee/blog/20241228-matrix/</link>
+       <dc:creator><![CDATA[jupfi]]></dc:creator>
+    </item>
+    
+    <item>
+       <title>Board Meeting 27/10/2024</title>
+       <description></description>
+       <pubDate>Sun, 27 Oct 2024 23:59:59 +0000</pubDate>
+       <guid>https://private.coffee/blog/20241027-board_meeting/</guid>
+       <link>https://private.coffee/blog/20241027-board_meeting/</link>
+       <dc:creator><![CDATA[jupfi]]></dc:creator>
+    </item>
+    
+    <item>
+       <title>Board Meeting 24/03/2024</title>
+       <description></description>
+       <pubDate>Sun, 24 Mar 2024 23:59:59 +0000</pubDate>
+       <guid>https://private.coffee/blog/20240324-board_meeting/</guid>
+       <link>https://private.coffee/blog/20240324-board_meeting/</link>
+       <dc:creator><![CDATA[jupfi]]></dc:creator>
+    </item>
+    
+    <item>
+       <title>Board Meeting 16/06/2024</title>
+       <description></description>
+       <pubDate>Sun, 16 Jun 2024 23:59:59 +0000</pubDate>
+       <guid>https://private.coffee/blog/20240616-board_meeting/</guid>
+       <link>https://private.coffee/blog/20240616-board_meeting/</link>
+       <dc:creator><![CDATA[jupfi]]></dc:creator>
+    </item>
+    
+    <item>
+       <title>General Assembly 01/02/2025</title>
+       <description></description>
+       <pubDate>Sun, 02 Feb 2025 12:00:00 +0000</pubDate>
+       <guid>https://private.coffee/blog/20250202-general_assembly/</guid>
+       <link>https://private.coffee/blog/20250202-general_assembly/</link>
+       <dc:creator><![CDATA[jupfi]]></dc:creator>
+    </item>
+    
+    <item>
+       <title>Board Meeting 30/11/2024</title>
+       <description></description>
+       <pubDate>Sat, 30 Nov 2024 23:59:59 +0000</pubDate>
+       <guid>https://private.coffee/blog/20241130-board_meeting/</guid>
+       <link>https://private.coffee/blog/20241130-board_meeting/</link>
+       <dc:creator><![CDATA[jupfi]]></dc:creator>
+    </item>
+    
+    <item>
+       <title>Test Post</title>
+       <description></description>
+       <pubDate>Sat, 27 Nov 2049 09:00:00 +0000</pubDate>
+       <guid>https://private.coffee/blog/2024112701-test/</guid>
+       <link>https://private.coffee/blog/2024112701-test/</link>
+       <dc:creator><![CDATA[Kumi]]></dc:creator>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 900 600" width="900" height="600">
+
+  <defs>
+    <polygon id="star" points="0,-100 29.389,-30.902 95.106,-30.902 42.863,19.098 58.779,80.902 0,40 -58.779,80.902 -42.863,19.098 -95.106,-30.902 -29.389,-30.902" fill="#FFCC00"/>
+  </defs>
+
+  <!-- Blue background rectangle -->
+  <rect width="900" height="600" fill="#003399"/>
+
+  <!-- Group for stars, centered and scaled -->
+  <g transform="translate(450, 300) scale(0.3)">
+    <use xlink:href="#star" transform="translate(0, -700)"/>
+    <use xlink:href="#star" transform="translate(350, -606.21778)"/>
+    <use xlink:href="#star" transform="translate(606.21778, -350)"/>
+    <use xlink:href="#star" transform="translate(700, 0)"/>
+    <use xlink:href="#star" transform="translate(606.21778, 350)"/>
+    <use xlink:href="#star" transform="translate(350, 606.21778)"/>
+    <use xlink:href="#star" transform="translate(0, 700)"/>
+    <use xlink:href="#star" transform="translate(-350, 606.21778)"/>
+    <use xlink:href="#star" transform="translate(-606.21778, 350)"/>
+    <use xlink:href="#star" transform="translate(-700, 0)"/>
+     <use xlink:href="#star" transform="translate(-606.21778, -350)"/>
+    <use xlink:href="#star" transform="translate(-350, -606.21778)"/>
+  </g>
+</svg>
