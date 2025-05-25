@@ -1,0 +1,45 @@
+// Schedule of special themes for the main page
+// Please feel free to suggest new special themes or changes to the existing ones!
+//
+// The format is an array of objects, each object representing a special theme/occasion.
+// Each object has the following properties:
+// - name: the name of the theme, used to identify it, must match the .css file name
+// - start: the start date of the theme, in the format "YYYY-MM-DD"
+// - end: the end date of the theme, in the format "YYYY-MM-DD"
+//
+// The start and end dates are inclusive. If the start and end dates are the same, the theme will only be active on that day.
+// The dates are in the format "YYYY-MM-DD" (ISO 8601). If the year is set to anything before 2020, the theme will be active every year.
+//
+// If multiple themes are listed as active on the same day, the first match will be used.
+[
+  {
+    // Trans Day of Visibility
+    "name": "trans",
+    "start": "1970-03-30",
+    "end": "1970-04-01"
+  },
+  { 
+    // 4/20
+    "name": "weed",
+    "start": "1970-04-20",
+    "end": "1970-04-20"
+  },
+  {
+    // Autism Acceptance Month
+    "name": "autism",
+    "start": "1970-04-01",
+    "end": "1970-04-30"
+  },
+  {
+    // International Day Against Homophobia, Biphobia, Interphobia and Transphobia
+    "name": "pride",
+    "start": "1970-05-17",
+    "end": "1970-05-17"
+  },
+  {
+    // Pride Month
+    "name": "pride",
+    "start": "1970-06-01",
+    "end": "1970-06-30"
+  }
+]
