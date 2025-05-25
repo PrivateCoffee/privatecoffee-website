@@ -1,0 +1,1202 @@
+{
+    "services": [
+        {
+            "name": "Matrix",
+            "url": "https://element.private.coffee",
+            "category": "Communication & Social",
+            "featured": true,
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/element-hq/synapse",
+            "tiny_description": "decentralized messaging",
+            "short_description": "Matrix is an open network for secure, decentralized communication.",
+            "long_description": "Private.coffee runs a Matrix server. You can use it to chat with other people at Private.coffee or around the world.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Request an Account",
+                    "url": "https://register.matrix.private.coffee",
+                    "alternatives": [
+                        {
+                            "name": "Source Code",
+                            "url": "https://git.private.coffee/PrivateCoffee/synapse-registration"
+                        }
+                    ]
+                },
+                {
+                    "name": "Go to Element",
+                    "url": "https://element.private.coffee",
+                    "alternatives": [
+                        {
+                            "name": "Fork Source Code",
+                            "url": "https://git.private.coffee/PrivateCoffee/element-web"
+                        }
+                    ]
+                },
+                {
+                    "name": "Go to Hydrogen",
+                    "url": "https://hydrogen.private.coffee"
+                }
+            ],
+            "icon": "matrix-logo",
+            "exclude_from_index": false,
+            "exclude_from_simple": true
+        },
+        {
+            "name": "CryptPad",
+            "url": "https://cryptpad.private.coffee",
+            "category": "Productivity & Collaboration",
+            "featured": true,
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/cryptpad/cryptpad",
+            "tiny_description": "collaborative document editing",
+            "short_description": "Private, encrypted, real-time collaborative editor.",
+            "long_description": "CryptPad is a private, encrypted, zero-knowledge, realtime collaborative editor, similar to Google Docs and Office 365.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to CryptPad",
+                    "url": "https://cryptpad.private.coffee"
+                }
+            ],
+            "icon": "article-ny-times",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "CoffeeGPT",
+            "url": "https://coffeegpt.private.coffee",
+            "category": "Security & Privacy",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/open-webui/open-webui",
+            "members_only": true,
+            "tiny_description": "AI text and image generation",
+            "short_description": "CoffeeGPT is a text and image generation service, only available for members of Private.coffee.",
+            "long_description": "CoffeeGPT is a text and image generation service based on open-source software like Open-WebUI, Ollama and ComfyUI, as well as free models like Gemma, FLUX and Llama. It is only available for members of Private.coffee.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to CoffeeGPT",
+                    "url": "https://coffeegpt.private.coffee"
+                }
+            ],
+            "icon": "robot",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Transfer.coffee",
+            "url": "https://transfer.coffee",
+            "category": "Security & Privacy",
+            "featured": true,
+            "homemade": "https://git.private.coffee/PrivateCoffee/transfer.coffee",
+            "fork": false,
+            "tiny_description": "secure direct file transfer",
+            "short_description": "Transfer files securely using peer-to-peer connections.",
+            "long_description": "Transfer.coffee allows you to transfer files securely using peer-to-peer connections. Your files are never stored on our servers.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Transfer.coffee",
+                    "url": "https://transfer.coffee"
+                }
+            ],
+            "icon": "upload",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "MyIP.Coffee",
+            "url": "https://myip.coffee",
+            "category": "Development & Technical Tools",
+            "homemade": "https://git.private.coffee/PrivateCoffee/myip.coffee",
+            "fork": false,
+            "tiny_description": "check your IP address",
+            "short_description": "Check your IP address.",
+            "long_description": "MyIP.Coffee allows you to check your current IPv4 and IPv6 addresses.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to MyIP.Coffee",
+                    "url": "https://myip.coffee"
+                }
+            ],
+            "icon": "network",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Overleaf",
+            "url": "https://overleaf.private.coffee",
+            "category": "Productivity & Collaboration",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/overleaf/overleaf",
+            "tiny_description": "collaborative LaTeX editor",
+            "short_description": "Overleaf is an online LaTeX editor for writing and sharing documents.",
+            "long_description": "Overleaf is an online LaTeX editor for writing and sharing documents. It allows you to write documents in LaTeX, and to collaborate with others.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Overleaf",
+                    "url": "https://overleaf.private.coffee"
+                }
+            ],
+            "icon": "leaf",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Mastodon",
+            "url": "https://cuddly.space",
+            "category": "Communication & Social",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/mastodon/mastodon",
+            "tiny_description": "decentralized social network",
+            "short_description": "Mastodon is a decentralized social network.",
+            "long_description": "Mastodon is a decentralized social network. You can use it to post short messages, follow other people, and more. Registrations are open to everyone on Cuddly Space.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Cuddly Space",
+                    "url": "https://cuddly.space"
+                },
+                {
+                    "name": "Go to Skrt Social",
+                    "url": "https://skrt.social"
+                }
+            ],
+            "icon": "mastodon-logo",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "PeerTube",
+            "url": "https://cuddly.tube",
+            "category": "Media & Content",
+            "featured": true,
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/Chocobozzz/PeerTube",
+            "tiny_description": "decentralized video hosting",
+            "short_description": "PeerTube is a decentralized video hosting platform.",
+            "long_description": "PeerTube is a decentralized video hosting platform. You can use it to watch videos, follow channels, and more. Registrations are open to everyone on CuddlyTube.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to CuddlyTube",
+                    "url": "https://cuddly.tube"
+                }
+            ],
+            "icon": "video",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Pixelfed",
+            "url": "https://cuddly.pics",
+            "category": "Media & Content",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/pixelfed/pixelfed",
+            "tiny_description": "decentralized photo sharing",
+            "short_description": "Pixelfed is a decentralized photo sharing platform.",
+            "long_description": "Pixelfed is a decentralized photo sharing platform. You can use it to post photos, follow other people, and more. Registrations are open to everyone on CuddlyPics.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to CuddlyPics",
+                    "url": "https://cuddly.pics"
+                }
+            ],
+            "icon": "camera",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Forgejo",
+            "url": "https://git.private.coffee",
+            "category": "Development & Technical Tools",
+            "featured": true,
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://codeberg.org/forgejo/forgejo",
+            "tiny_description": "self-hosted Git forge",
+            "short_description": "Forgejo is our in-house Git forge.",
+            "long_description": "Forgejo is our in-house Git forge. You can use it to host your Git repositories, and to collaborate with others.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Forgejo",
+                    "url": "https://git.private.coffee"
+                }
+            ],
+            "icon": "git-branch",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "BigBlueButton",
+            "url": "https://bbb.private.coffee",
+            "category": "Communication & Social",
+            "featured": true,
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/bigbluebutton/bigbluebutton",
+            "tiny_description": "video conferencing",
+            "short_description": "BigBlueButton is an open-source video conferencing system.",
+            "long_description": "BigBlueButton is an open-source video conferencing system. You can use it to hold video conferences, webinars, and more.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to BigBlueButton",
+                    "url": "https://bbb.private.coffee"
+                }
+            ],
+            "icon": "webcam",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Jitsi",
+            "url": "https://jitsi.private.coffee",
+            "category": "Communication & Social",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/jitsi/jitsi",
+            "tiny_description": "video conferencing",
+            "short_description": "Jitsi is an open-source video conferencing system.",
+            "long_description": "Jitsi is an open-source video conferencing system. You can use it to hold video conferences, webinars, and more.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Jitsi",
+                    "url": "https://jitsi.private.coffee"
+                }
+            ],
+            "icon": "webcam",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Ducks.now",
+            "url": "https://ducks.now",
+            "category": "Media & Content",
+            "homemade": "https://git.private.coffee/privatecoffee/ducks.now",
+            "fork": false,
+            "upstream": false,
+            "tiny_description": "duck image repository",
+            "short_descripion": "Ducks.now is a platform for sharing duck images",
+            "long_description": "Ducks.now is a modern, community-driven platform for sharing and discovering beautiful duck images.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Ducks.now",
+                    "url": "https://ducks.now"
+                }
+            ],
+            "icon": "camera",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "HedgeDoc",
+            "url": "https://hedgedoc.private.coffee",
+            "category": "Productivity & Collaboration",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/hedgedoc/hedgedoc",
+            "tiny_description": "collaborative markdown editor",
+            "short_description": "HedgeDoc is an open-source collaborative markdown editor.",
+            "long_description": "HedgeDoc is an open-source collaborative markdown editor. You can use it to write and edit documents in markdown, and to collaborate with others.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to HedgeDoc",
+                    "url": "https://hedgedoc.private.coffee"
+                }
+            ],
+            "icon": "markdown-logo",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "FacilMap",
+            "url": "https://facilmap.private.coffee",
+            "category": "Productivity & Collaboration",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/FacilMap/facilmap",
+            "tiny_description": "open-source map editor",
+            "short_description": "FacilMap is an open-source map editor.",
+            "long_description": "FacilMap is an open-source map editor. You can use it to create and edit maps, and to share them with others.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to FacilMap",
+                    "url": "https://facilmap.private.coffee"
+                }
+            ],
+            "icon": "map-trifold",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "OTS - One Time Secrets",
+            "url": "https://ots.private.coffee",
+            "category": "Security & Privacy",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/Luzifer/ots",
+            "tiny_description": "share secrets securely",
+            "short_description": "OTS is a service for sharing secrets securely.",
+            "long_description": "OTS is a service for sharing secrets securely. You can use it to share passwords, API keys, and other sensitive information.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to OTS",
+                    "url": "https://ots.private.coffee"
+                }
+            ],
+            "icon": "lock-key",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "AliasVault",
+            "url": "https://cuddly.pw",
+            "category": "Security & Privacy",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/lanedirt/AliasVault",
+            "tiny_description": "password manager with built-in email aliasing",
+            "short_description": "AliasVault is a password manager with built-in email aliasing.",
+            "long_description": "AliasVault is a password manager with built-in email aliasing. You can use it to store your passwords, and to receive emails without revealing your real email address.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to AliasVault",
+                    "url": "https://cuddly.pw"
+                }
+            ],
+            "icon": "lock-key",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "QRMaker",
+            "url": "https://qrmaker.private.coffee",
+            "category": "Web Utilities",
+            "homemade": "https://git.private.coffee/PrivateCoffee/QRMaker",
+            "fork": false,
+            "tiny_description": "QR code generator",
+            "short_description": "QRMaker is a service for generating QR codes.",
+            "long_description": "QRMaker is a service for generating QR codes. You can use it to create QR codes for URLs, text, and more, directly in your browser.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to QRMaker",
+                    "url": "https://qrmaker.private.coffee"
+                }
+            ],
+            "icon": "qr-code",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "FreshRSS",
+            "url": "https://freshrss.private.coffee",
+            "category": "Media & Content",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/FreshRSS/FreshRSS",
+            "tiny_description": "RSS feed reader",
+            "short_description": "FreshRSS is a RSS feed reader.",
+            "long_description": "FreshRSS is a RSS feed reader. You can use it to subscribe to RSS feeds and read the latest articles from your favorite websites.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to FreshRSS",
+                    "url": "https://freshrss.private.coffee"
+                }
+            ],
+            "icon": "rss",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "redlib",
+            "url": "https://redlib.private.coffee",
+            "category": "Privacy-friendly Frontends",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/redlib-org/redlib",
+            "tiny_description": "tracking-free Reddit",
+            "short_description": "redlib is a privacy-friendly alternative front-end to Reddit.",
+            "long_description": "redlib is a privacy-friendly alternative front-end to Reddit. It allows you to browse Reddit without being tracked.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to redlib",
+                    "url": "https://redlib.private.coffee"
+                }
+            ],
+            "icon": "chats",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "CyberChef",
+            "url": "https://cyberchef.private.coffee",
+            "category": "Development & Technical Tools",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/gchq/CyberChef",
+            "tiny_description": "Web app for encryption and encoding",
+            "short_description": "CyberChef is a web app for encryption, encoding, compression, and data analysis.",
+            "long_description": "CyberChef is a web app for encryption, encoding, compression, and data analysis. It allows you to perform a wide range of operations on your data within your browser.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to CyberChef",
+                    "url": "https://cyberchef.private.coffee"
+                }
+            ],
+            "icon": "lock-key",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Travelynx",
+            "url": "https://traveling.coffee",
+            "category": "Web Utilities",
+            "homemade": false,
+            "fork": "https://git.private.coffee/PrivateCoffee/travelynx",
+            "upstream": "https://github.com/derf/travelynx",
+            "tiny_description": "rail journey logger (German)",
+            "short_description": "Travelynx is a service for logging your rail journeys. (German)",
+            "long_description": "Travelynx is a service for logging your rail journeys, primarily for Germany and surrounding Europe. You can use it to keep track of the trains you've taken, and to view statistics about your trips.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Travelynx",
+                    "url": "https://traveling.coffee"
+                }
+            ],
+            "icon": "train",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "AllTube",
+            "url": "https://alltube.private.coffee",
+            "category": "Media & Content",
+            "homemade": false,
+            "fork": "https://git.private.coffee/PrivateCoffee/alltube",
+            "upstream": "https://github.com/Rudloff/alltube/",
+            "tiny_description": "universal video downloader",
+            "short_description": "Download videos from YouTube, Vimeo, and more.",
+            "long_description": "AllTube is a video downloader powered by yt-dlp. It allows you to download videos from YouTube, Vimeo, and many other sites. You can also stream the download through our server for extra privacy.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to AllTube",
+                    "url": "https://alltube.private.coffee"
+                }
+            ],
+            "icon": "video",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Invidious",
+            "url": "https://invidious.private.coffee",
+            "category": "Privacy-friendly Frontends",
+            "homemade": false,
+            "fork": "https://git.private.coffee/PrivateCoffee/invidious",
+            "upstream": "https://github.com/iv-org/invidious",
+            "tiny_description": "tracking-free YouTube",
+            "short_description": "Watch YouTube videos without Google tracking.",
+            "long_description": "Invidious is an alternative front-end to YouTube. Unfortunately, it is under attack from Google, and is mostly unusable at the moment.",
+            "status": "NOK",
+            "links": [
+                {
+                    "name": "Go to Invidious",
+                    "url": "https://invidious.private.coffee",
+                    "alternatives": [
+                        {
+                            "name": "Tor",
+                            "url": "http://invidious.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion"
+                        }
+                    ]
+                }
+            ],
+            "icon": "video",
+            "exclude_from_index": true,
+            "exclude_from_simple": true
+        },
+        {
+            "name": "Piped",
+            "url": "https://piped.private.coffee",
+            "category": "Privacy-friendly Frontends",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/TeamPiped/Piped",
+            "tiny_description": "tracking-free YouTube",
+            "short_description": "Watch YouTube videos without Google tracking.",
+            "long_description": "Piped is an alternative front-end to YouTube. Unfortunately, it is under attack from Google, and is mostly unusable at the moment.",
+            "status": "NOK",
+            "links": [
+                {
+                    "name": "Go to Piped",
+                    "url": "https://piped.private.coffee"
+                }
+            ],
+            "icon": "video",
+            "exclude_from_index": true,
+            "exclude_from_simple": true
+        },
+        {
+            "name": "Structables",
+            "url": "https://structables.private.coffee",
+            "category": "Privacy-friendly Frontends",
+            "homemade": "https://git.private.coffee/PrivateCoffee/structables",
+            "fork": false,
+            "tiny_description": "tracking-free Instructables",
+            "short_description": "Browse Instructables without being tracked.",
+            "long_description": "Structables allows you to browse Instructables without being tracked.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Structables",
+                    "url": "https://structables.private.coffee",
+                    "alternatives": [
+                        {
+                            "name": "Tor",
+                            "url": "http://structables.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion"
+                        }
+                    ]
+                }
+            ],
+            "icon": "lightbulb",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Quetre",
+            "url": "https://quetre.private.coffee",
+            "category": "Privacy-friendly Frontends",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/zyachel/quetre",
+            "tiny_description": "tracking-free Quora",
+            "short_description": "Quetre is a privacy-friendly alternative front-end to Quora.",
+            "long_description": "Quetre is a privacy-friendly alternative front-end to Quora. It allows you to browse Quora without being tracked or having to log in.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Quetre",
+                    "url": "https://quetre.private.coffee",
+                    "alternatives": [
+                        {
+                            "name": "Tor",
+                            "url": "http://quetre.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion"
+                        }
+                    ]
+                }
+            ],
+            "icon": "question",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Wikimore",
+            "url": "https://wikimore.private.coffee",
+            "category": "Privacy-friendly Frontends",
+            "homemade": "https://git.private.coffee/PrivateCoffee/wikimore",
+            "fork": false,
+            "tiny_description": "censorship-free Wikipedia",
+            "short_description": "Wikimore is an alternative front-end to Wikimedia wikis.",
+            "long_description": "Wikimore is an alternative front-end to Wikipedia and other Wikimedia wikis.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Wikimore",
+                    "url": "https://wikimore.private.coffee",
+                    "alternatives": [
+                        {
+                            "name": "Tor",
+                            "url": "http://wikimore.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion"
+                        }
+                    ]
+                }
+            ],
+            "icon": "books",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Priviblur",
+            "url": "https://priviblur.private.coffee",
+            "category": "Privacy-friendly Frontends",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/syeopite/priviblur",
+            "tiny_description": "tracking-free Tumblr",
+            "short_description": "Priviblur is a privacy-friendly alternative front-end to Tumblr.",
+            "long_description": "Priviblur is a privacy-friendly alternative front-end to Tumblr. It allows you to browse Tumblr without being tracked.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Priviblur",
+                    "url": "https://priviblur.private.coffee",
+                    "alternatives": [
+                        {
+                            "name": "Tor",
+                            "url": "http://priviblur.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion"
+                        }
+                    ]
+                }
+            ],
+            "icon": "camera",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "BiblioReads",
+            "url": "https://biblioreads.private.coffee",
+            "category": "Privacy-friendly Frontends",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/nesaku/BiblioReads",
+            "tiny_description": "tracking-free Goodreads",
+            "short_description": "BiblioReads is a privacy-friendly alternative front-end to Goodreads.",
+            "long_description": "BiblioReads is a privacy-friendly alternative front-end to Goodreads. It allows you to browse Goodreads without being tracked.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to BiblioReads",
+                    "url": "https://biblioreads.private.coffee"
+                }
+            ],
+            "icon": "books",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Small",
+            "url": "https://small.private.coffee",
+            "category": "Privacy-friendly Frontends",
+            "homemade": "https://git.private.coffee/PrivateCoffee/small",
+            "fork": false,
+            "tiny_description": "tracking-free Medium",
+            "short_description": "Small is a privacy-friendly alternative front-end to Medium.",
+            "long_description": "Small is a privacy-friendly alternative front-end to Medium. It allows you to browse Medium without being tracked.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Small",
+                    "url": "https://small.private.coffee"
+                }
+            ],
+            "icon": "pencil-ruler",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Scribe",
+            "url": "https://scribe.private.coffee",
+            "category": "Privacy-friendly Frontends",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://git.sr.ht/~edwardloveall/scribe/",
+            "tiny_description": "tracking-free Medium",
+            "short_description": "Scribe is a privacy-friendly alternative front-end to Medium.",
+            "long_description": "Scribe is a privacy-friendly alternative front-end to Medium. It allows you to browse Medium without being tracked.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Scribe",
+                    "url": "https://scribe.private.coffee"
+                }
+            ],
+            "icon": "pencil-ruler",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Tent",
+            "url": "https://tent.private.coffee",
+            "category": "Privacy-friendly Frontends",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://forgejo.sny.sh/sun/Tent",
+            "tiny_description": "tracking-free Bandcamp",
+            "short_description": "Tent is a privacy-friendly alternative front-end to Bandcamp.",
+            "long_description": "Tent is a privacy-friendly alternative front-end to Bandcamp. It allows you to browse Bandcamp without being tracked.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Tent",
+                    "url": "https://tent.private.coffee"
+                }
+            ],
+            "icon": "guitar",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Soundcloak",
+            "url": "https://soundcloak.private.coffee",
+            "category": "Privacy-friendly Frontends",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://git.maid.zone/stuff/soundcloak",
+            "tiny_description": "tracking-free Soundcloud",
+            "short_description": "Soundcloak is a privacy-friendly alternative front-end to Soundcloud.",
+            "long_description": "Soundcloak is a privacy-friendly alternative front-end to Soundcloud. It allows you to browse Soundcloud without being tracked.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Soundcloak",
+                    "url": "https://soundcloak.private.coffee"
+                }
+            ],
+            "icon": "cassette-tape",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "LibreTranslate",
+            "url": "https://translate.private.coffee",
+            "category": "Development & Technical Tools",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/LibreTranslate/LibreTranslate",
+            "tiny_description": "self-hosted translation",
+            "short_description": "LibreTranslate is a self-hosted translation service powered by Argos Translate.",
+            "long_description": "LibreTranslate is a self-hosted translation service powered by Argos Translate. It allows you to translate text between many languages.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to LibreTranslate",
+                    "url": "https://translate.private.coffee"
+                }
+            ],
+            "icon": "translate",
+            "exclude_from_index": true,
+            "exclude_from_simple": true
+        },
+        {
+            "name": "wishthis",
+            "url": "https://wishthis.private.coffee",
+            "category": "Web Utilities",
+            "homemade": false,
+            "fork": "https://git.private.coffee/PrivateCoffee/wishthis",
+            "upstream": "https://github.com/wishthis/wishthis",
+            "tiny_description": "create and share wishlists",
+            "short_description": "wishthis is a service for creating and sharing wishlists.",
+            "long_description": "wishthis is a service for creating wishlists. You can use it to create wishlists for yourself, or to share them with others.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to wishthis",
+                    "url": "https://wishthis.private.coffee"
+                }
+            ],
+            "icon": "gift",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "BreezeWiki",
+            "url": "https://breezewiki.private.coffee",
+            "category": "Privacy-friendly Frontends",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://gitdab.com/cadence/breezewiki",
+            "tiny_description": "tracking-free Fandom",
+            "short_description": "BreezeWiki is a privacy-friendly alternative front-end to Fandom.",
+            "long_description": "BreezeWiki is a privacy-friendly alternative front-end to Fandom. It allows you to browse Fandom wikis without ads or tracking.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to BreezeWiki",
+                    "url": "https://breezewiki.private.coffee",
+                    "alternatives": [
+                        {
+                            "name": "Tor",
+                            "url": "http://breezewiki.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion"
+                        }
+                    ]
+                }
+            ],
+            "icon": "books",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Ducks for Ducks",
+            "url": "https://ducksforducks.private.coffee",
+            "category": "Privacy-friendly Frontends",
+            "homemade": "https://git.private.coffee/PrivateCoffee/ducksforducks",
+            "fork": false,
+            "tiny_description": "a private front-end to Geeks for Geeks",
+            "short_description": "Ducks for Ducks is a privacy-friendly alternative front-end to Geeks for Geeks.",
+            "long_description": "Ducks for Ducks is a privacy-friendly alternative front-end to Geeks for Geeks. It allows you to browse Geeks for Geeks without ads or tracking.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Ducks for Ducks",
+                    "url": "https://ducksforducks.private.coffee"
+                }
+            ],
+            "icon": "books",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "NocoDB",
+            "url": "https://nocodb.private.coffee",
+            "category": "Productivity & Collaboration",
+            "homemade": false,
+            "fork": false,
+            "tiny_description": "Airtable alternative",
+            "short_description": "NocoDB is a self-hosted alternative to Airtable.",
+            "long_description": "NocoDB is a self-hosted alternative to Airtable. It allows you to create databases and tables, and to view and edit them in a spreadsheet-like interface. (Note: If you are unable to create tables upon registration, simply wait a minute or two, log out and then log in again. Note that your email address will be visible to all registered users!)",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to NocoDB",
+                    "url": "https://nocodb.private.coffee"
+                }
+            ],
+            "icon": "database",
+            "exclude_from_index": true,
+            "exclude_from_simple": true
+        },
+        {
+            "name": "Penpot",
+            "url": "https://penpot.private.coffee",
+            "category": "Productivity & Collaboration",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/penpot/penpot",
+            "tiny_description": "open-source design platform",
+            "short_description": "Penpot is an open-source design and prototyping platform.",
+            "long_description": "Penpot is an open-source design and prototyping platform. It allows you to create designs and prototypes, and to collaborate with others.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Penpot",
+                    "url": "https://penpot.private.coffee"
+                }
+            ],
+            "icon": "pencil-ruler",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "tldraw",
+            "url": "https://tldraw.private.coffee",
+            "category": "Productivity & Collaboration",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/tldraw/tldraw",
+            "tiny_description": "collaborative whiteboard",
+            "short_description": "tldraw is a collaborative whiteboard.",
+            "long_description": "tldraw is a collaborative whiteboard. You can use it to draw and write with others in real-time.",
+            "status": "NOK",
+            "links": [
+                {
+                    "name": "Go to tldraw",
+                    "url": "https://tldraw.private.coffee"
+                }
+            ],
+            "icon": "pencil-ruler",
+            "exclude_from_index": true,
+            "exclude_from_simple": true
+        },
+        {
+            "name": "YOURLS",
+            "url": "https://pcof.fi",
+            "category": "Web Utilities",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/YOURLS/YOURLS",
+            "tiny_description": "URL shortener",
+            "short_description": "URL shortener for creating handy links.",
+            "long_description": "Use our URL shortener at pcof.fi to turn long, complicated URLs into something more handy.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to pcof.fi",
+                    "url": "https://pcof.fi"
+                }
+            ],
+            "icon": "link",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Rallly",
+            "url": "https://rallly.private.coffee",
+            "category": "Communication & Social",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/lukevella/rallly",
+            "tiny_description": "collaborative scheduling (Doodle)",
+            "short_description": "Rallly is a free collaborative scheduling service for voting and polls.",
+            "long_description": "Rallly is a free collaborative scheduling service. It allows you to create polls and vote on them, similar to Doodle. Pro features are enabled for free after signing in.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Rallly",
+                    "url": "https://rallly.private.coffee"
+                }
+            ],
+            "icon": "calendar",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "LibreY",
+            "url": "https://librey.private.coffee",
+            "category": "Web Utilities",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/Ahwxorg/librey",
+            "tiny_description": "search engine",
+            "short_description": "Privacy-friendly metasearch engine.",
+            "long_description": "LibreY is an open-source, privacy-friendly metasearch engine. It allows you to search for web, image, video, torrents, and more, and it can also search onion sites.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to LibreY",
+                    "url": "https://librey.private.coffee",
+                    "alternatives": [
+                        {
+                            "name": "Tor",
+                            "url": "http://librey.coffee2m3bjsrrqqycx6ghkxrnejl2q6nl7pjw2j4clchjj6uk5zozad.onion"
+                        },
+                        {
+                            "name": "I2P",
+                            "url": "http://xna5ydrj54ncvujz3f4c6y5i547hjwywygnr4uz6shz3f62suxwq.b32.i2p"
+                        }
+                    ]
+                }
+            ],
+            "icon": "magnifying-glass",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "GotHub",
+            "url": "https://gothub.private.coffee",
+            "category": "Privacy-friendly Frontends",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://codeberg.org/gothub/gothub",
+            "tiny_description": "tracking-free GitHub",
+            "short_description": "Alternative GitHub interface that respects privacy.",
+            "long_description": "Gothub is an alternative GitHub interface that respects your privacy. It is currently in alpha, but you can browse and download repositories, and you can also clone them using git+https (although the text on the main page would disagree).",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to GotHub",
+                    "url": "https://gothub.private.coffee"
+                }
+            ],
+            "icon": "git-branch",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Binternet",
+            "url": "https://binternet.private.coffee",
+            "category": "Privacy-friendly Frontends",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/Ahwxorg/Binternet",
+            "tiny_description": "tracking-free Pinterest",
+            "short_description": "Binternet is a privacy-friendly alternative front-end to Pinterest.",
+            "long_description": "Binternet is a privacy-friendly alternative front-end to Pinterest. It allows you to browse Pinterest without being tracked.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Binternet",
+                    "url": "https://binternet.private.coffee"
+                }
+            ],
+            "icon": "images",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Moner.ooo",
+            "url": "https://monerooo.private.coffee",
+            "category": "Web Utilities",
+            "homemade": false,
+            "fork": "https://git.private.coffee/kumi/moner.ooo",
+            "upstream": "https://github.com/nice42q/moner.ooo",
+            "tiny_description": "Monero/fiat exchange rates",
+            "short_description": "Moner.ooo is a service for checking Monero/fiat exchange rates.",
+            "long_description": "Moner.ooo is a service for checking Monero/fiat exchange rates. It allows you to see the current exchange rates for Monero in various fiat currencies.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Moner.ooo",
+                    "url": "https://monerooo.private.coffee"
+                }
+            ],
+            "icon": "money-wavy",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "httpbin",
+            "url": "https://httpbin.private.coffee",
+            "category": "Development & Technical Tools",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/postmanlabs/httpbin",
+            "tiny_description": "HTTP request testing service",
+            "short_description": "httpbin is a service for testing HTTP requests.",
+            "long_description": "httpbin is a service for testing HTTP requests. You can use it to see what your browser sends to a server, and to test various HTTP methods.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to httpbin",
+                    "url": "https://httpbin.private.coffee"
+                }
+            ],
+            "icon": "network",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "Overpass",
+            "url": "https://overpass.private.coffee",
+            "category": "Development & Technical Tools",
+            "homemade": false,
+            "fork": false,
+            "upstream": "https://github.com/drolbr/Overpass-API",
+            "tiny_description": "OpenStreetMap API",
+            "short_description": "Overpass is an API for OpenStreetMap.",
+            "long_description": "Overpass is an API for OpenStreetMap. You can use it to query OpenStreetMap data, and to get the results in various formats.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Overpass",
+                    "url": "https://overpass.private.coffee"
+                }
+            ],
+            "icon": "map-trifold",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "GoogleDonts",
+            "url": "https://googledonts.private.coffee",
+            "category": "Developer Utilities",
+            "homemade": "https://git.private.coffee/PrivateCoffee/googledonts",
+            "fork": false,
+            "tiny_description": "privacy-friendly Google Fonts proxy",
+            "short_description": "GoogleDonts is a privacy-friendly proxy to Google Fonts.",
+            "long_description": "GoogleDonts is a privacy-friendly proxy to Google Fonts. It allows you to use Google Fonts without being tracked by Google.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to GoogleDonts",
+                    "url": "https://googledonts.private.coffee"
+                }
+            ],
+            "icon": "hard-hat",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "nocdnbs",
+            "url": "https://nocdnbs.private.coffee",
+            "category": "Developer Utilities",
+            "homemade": "https://git.private.coffee/PrivateCoffee/nocdnbs",
+            "fork": false,
+            "tiny_description": "privacy-friendly cdnjs proxy",
+            "short_description": "nocdnbs is a privacy-friendly proxy to cdnjs.cloudflare.com",
+            "long_description": "nocdnbs is a privacy-friendly proxy to cdnjs.cloudflare.com. It allows you to use the cdnjs.cloudflare.com library without being tracked by Cloudflare.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to nocdnbs",
+                    "url": "https://nocdnbs.private.coffee"
+                }
+            ],
+            "icon": "hard-hat",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "nobsdelivr",
+            "url": "https://nobsdelivr.private.coffee",
+            "category": "Developer Utilities",
+            "homemade": "https://git.private.coffee/PrivateCoffee/nobsdelivr",
+            "fork": false,
+            "tiny_description": "privacy-friendly jsDelivr proxy",
+            "short_description": "nobsdelivr is a privacy-friendly proxy to cdn.jsdelivr.net",
+            "long_description": "nobsdelivr is a privacy-friendly proxy to cdn.jsdelivr.net. It allows you to use the cdn.jsdelivr.net library without being tracked by jsDelivr.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to nobsdelivr",
+                    "url": "https://nobsdelivr.private.coffee"
+                }
+            ],
+            "icon": "hard-hat",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "TypeNot",
+            "url": "https://typenot.private.coffee",
+            "category": "Developer Utilities",
+            "homemade": "https://git.private.coffee/PrivateCoffee/typenot",
+            "fork": false,
+            "tiny_description": "privacy-friendly Typekit proxy",
+            "short_description": "TypeNot is a privacy-friendly proxy to Typekit.",
+            "long_description": "TypeNot is a privacy-friendly proxy to Typekit. It allows you to use Typekit fonts without being tracked by Adobe.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to TypeNot",
+                    "url": "https://typenot.private.coffee"
+                }
+            ],
+            "icon": "hard-hat",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
+            "name": "mjnml",
+            "url": "https://mjnml.private.coffee",
+            "category": "Developer Utilities",
+            "homemade": "https://git.private.coffee/PrivateCoffee/mjnml",
+            "fork": false,
+            "tiny_description": "privacy-friendly MJML renderer",
+            "short_description": "mjnml is a privacy-friendly MJML renderer.",
+            "long_description": "mjnml is a privacy-friendly MJML renderer. It allows you to render MJML templates into HTML without tracking or API keys.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to mjnml",
+                    "url": "https://mjnml.private.coffee"
+                }
+            ],
+            "icon": "hard-hat",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        }
+    ]
+}

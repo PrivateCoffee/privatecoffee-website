@@ -1,0 +1,13 @@
+{
+    "contacts": [
+        {
+            "matrix_id": "@kumi:private.coffee",
+            "email_address": "kumi@private.coffee",
+            "role": "m.role.admin"
+        },
+        {
+            "email_address": "security@private.coffee",
+            "role": "m.role.security"
+        }
+    ]
+}
