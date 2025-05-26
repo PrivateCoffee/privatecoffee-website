@@ -1,0 +1,196 @@
+{
+    "2024": {
+        "04": {
+            "Membership Fees": {
+                "EUR": 365
+            },
+            "Server Costs": {
+                "EUR": -216.57
+            },
+            "Administrative Expenses": {
+                "EUR": -36.10,
+                "Notes": "Administrative fee for the formation of the association"
+            }
+        },
+        "05": {
+            "Membership Fees": {
+                "EUR": 390
+            },
+            "Donations": {
+                "BTC": 0.000434,
+                "XMR": 0.447661805527
+            },
+            "Server Costs": {
+                "EUR": -430.04,
+                "Notes": "Includes setup costs and two monthly payments for new server"
+            }
+        },
+        "06": {
+            "Membership Fees": {
+                "EUR": 382.42
+            },
+            "Server Costs": {
+                "EUR": -317.62
+            },
+            "Bank Fees": {
+                "EUR": -49.05
+            }
+        },
+        "07": {
+            "Membership Fees": {
+                "EUR": 422.42
+            },
+            "Donations": {
+                "XMR": 1.0
+            },
+            "Server Costs": {
+                "EUR": -264.99
+            }
+        },
+        "08": {
+            "Membership Fees": {
+                "EUR": 402.42
+            },
+            "Server Costs": {
+                "EUR": -416.47
+            }
+        },
+        "09": {
+            "Membership Fees": {
+                "EUR": 468.11
+            },
+            "Server Costs": {
+                "EUR": -243.46
+            },
+            "Bank Fees": {
+                "EUR": -53.32
+            }
+        },
+        "10": {
+            "Membership Fees": {
+                "EUR": 407.65
+            },
+            "Server Costs": {
+                "EUR": -440.98
+            },
+            "Miscellaneous": {
+                "EUR": 0.01,
+                "Notes": "Bank account verification"
+            }
+        },
+        "11": {
+            "Membership Fees": {
+                "EUR": 387.65
+            },
+            "Server Costs": {
+                "EUR": -366.93
+            }
+        },
+        "12": {
+            "Membership Fees": {
+                "EUR": 427.65
+            },
+            "Donations": {
+                "EUR": 80
+            },
+            "Bank Fees": {
+                "EUR": -56.48
+            },
+            "Server Costs":{
+                "EUR": -399.29
+            },
+            "Marketing": {
+                "EUR": -75.8,
+                "Notes": "Branded coffee mugs"
+            }
+        }
+    },
+    "2025": {
+        "01": {
+            "Membership Fees": {
+                "EUR": 458.87
+            },
+            "Donations": {
+                "EUR": 15
+            },
+            "Bank Fees": {
+                "EUR": -0.62
+            },
+            "Server Costs": {
+                "EUR": -405.48
+            }
+        },
+        "02": {
+            "Membership Fees": {
+                "EUR": 373.46
+            },
+            "Donations": {
+                "EUR": 175
+            },
+            "Server Rent": {
+                "EUR": -403.96,
+                "Notes": "Renamed from 'Server Costs' to better differentiate between rented and owned servers"
+            },
+            "Hardware Costs": {
+                "EUR": -209.53,
+                "Notes": "Components for server rack"
+            },
+            "Events": {
+                "EUR": -175,
+                "Notes": "Food and drinks for General Assembly"
+            }
+        },
+        "03": {
+            "Membership Fees": {
+                "EUR": 373.46
+            },
+            "Donations": {
+                "EUR": 79
+            },
+            "Server Rent": {
+                "EUR": -423.44
+            },
+            "Bank Fees": {
+                "EUR": -60.76
+            },
+            "Administrative Expenses": {
+                "EUR": -36.4,
+                "Notes": "Administrative fee for statute changes"
+            }
+        },
+        "04": {
+            "Membership Fees": {
+                "EUR": 423.46
+            },
+            "Donations": {
+                "EUR": 300
+            },
+            "Server Rent": {
+                "EUR": -382.98
+            },
+            "Domains": {
+                "EUR": -35.22,
+                "Notes": "Now separated from server costs for better clarity"
+            },
+            "Marketing": {
+                "EUR": -296.02,
+                "Notes": "Branded shirts/hoodies for events, stickers"
+            }
+        },
+        "05": {
+            "Membership Fees": {
+                "EUR": 80.23
+            },
+            "Donations": {
+                "EUR": 110
+            },
+            "Bank Fees": {
+                "EUR": -4.08
+            },
+            "Reimbursements": {
+                "EUR": 160,
+                "Notes": "Reimbursements for hoodies"
+            }
+        }
+    }
+}

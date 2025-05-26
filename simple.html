@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private.coffee</title>
+  </head>
+  <body>
+    <div style="font-family: Arial, sans-serif;
+                background-color: #f2f2f2;
+                color: #333;
+                line-height: 1.6;
+                padding: 20px;
+                max-width: 600px;
+                margin: auto">
+      <h2 style="color: #333;">Welcome to Private.coffee</h2>
+      <p>Thanks for using our Element instance! Now, why don't you join our rooms?</p>
+      <ul style="list-style: none; padding: 0;">
+        <li style="padding: 8px 0;">
+          <a style="color: #1a5dab;
+                    text-decoration: none"
+             href="https://element.private.coffee/#/#coffeespace:private.coffee">#coffeespace:private.coffee</a> - The Private.coffee Space, containing all rooms
+        </li>
+        <li style="padding: 8px 0;">
+          <a style="color: #1a5dab;
+                    text-decoration: none"
+             href="https://element.private.coffee/#/#private.coffee:private.coffee">#private.coffee:private.coffee</a> - General support for our services
+        </li>
+        <li style="padding: 8px 0;">
+          <a style="color: #1a5dab;
+                    text-decoration: none"
+             href="https://element.private.coffee/#/#matrix:private.coffee">#matrix:private.coffee</a> - Support for our Matrix server
+        </li>
+        <li style="padding: 8px 0;">
+          <a style="color: #1a5dab;
+                    text-decoration: none"
+             href="https://element.private.coffee/#/#coffeebreak:private.coffee">#coffeebreak:private.coffee</a> - ☕ Coffee Break ☕ - our off-topic room
+        </li>
+      </ul>
+      <hr>
+      <p>Private.coffee operates a collection of services that respect your privacy, here are some others:</p>
+      <ul style="list-style: none; padding: 0;">
+        
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://cryptpad.private.coffee">CryptPad</a> - Private, encrypted, real-time collaborative editor.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://coffeegpt.private.coffee">CoffeeGPT</a> - CoffeeGPT is a text and image generation service, only available for members of Private.coffee.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://transfer.coffee">Transfer.coffee</a> - Transfer files securely using peer-to-peer connections.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://myip.coffee">MyIP.Coffee</a> - Check your IP address.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://overleaf.private.coffee">Overleaf</a> - Overleaf is an online LaTeX editor for writing and sharing documents.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://cuddly.space">Mastodon</a> - Mastodon is a decentralized social network.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://cuddly.tube">PeerTube</a> - PeerTube is a decentralized video hosting platform.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://cuddly.pics">Pixelfed</a> - Pixelfed is a decentralized photo sharing platform.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://git.private.coffee">Forgejo</a> - Forgejo is our in-house Git forge.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://bbb.private.coffee">BigBlueButton</a> - BigBlueButton is an open-source video conferencing system.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://jitsi.private.coffee">Jitsi</a> - Jitsi is an open-source video conferencing system.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://ducks.now">Ducks.now</a> - 
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://hedgedoc.private.coffee">HedgeDoc</a> - HedgeDoc is an open-source collaborative markdown editor.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://facilmap.private.coffee">FacilMap</a> - FacilMap is an open-source map editor.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://ots.private.coffee">OTS - One Time Secrets</a> - OTS is a service for sharing secrets securely.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://cuddly.pw">AliasVault</a> - AliasVault is a password manager with built-in email aliasing.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://qrmaker.private.coffee">QRMaker</a> - QRMaker is a service for generating QR codes.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://freshrss.private.coffee">FreshRSS</a> - FreshRSS is a RSS feed reader.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://redlib.private.coffee">redlib</a> - redlib is a privacy-friendly alternative front-end to Reddit.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://cyberchef.private.coffee">CyberChef</a> - CyberChef is a web app for encryption, encoding, compression, and data analysis.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://traveling.coffee">Travelynx</a> - Travelynx is a service for logging your rail journeys. (German)
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://alltube.private.coffee">AllTube</a> - Download videos from YouTube, Vimeo, and more.
+            </li>
+          
+        
+          
+        
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://structables.private.coffee">Structables</a> - Browse Instructables without being tracked.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://quetre.private.coffee">Quetre</a> - Quetre is a privacy-friendly alternative front-end to Quora.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://wikimore.private.coffee">Wikimore</a> - Wikimore is an alternative front-end to Wikimedia wikis.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://priviblur.private.coffee">Priviblur</a> - Priviblur is a privacy-friendly alternative front-end to Tumblr.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://biblioreads.private.coffee">BiblioReads</a> - BiblioReads is a privacy-friendly alternative front-end to Goodreads.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://small.private.coffee">Small</a> - Small is a privacy-friendly alternative front-end to Medium.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://scribe.private.coffee">Scribe</a> - Scribe is a privacy-friendly alternative front-end to Medium.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://tent.private.coffee">Tent</a> - Tent is a privacy-friendly alternative front-end to Bandcamp.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://soundcloak.private.coffee">Soundcloak</a> - Soundcloak is a privacy-friendly alternative front-end to Soundcloud.
+            </li>
+          
+        
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://wishthis.private.coffee">wishthis</a> - wishthis is a service for creating and sharing wishlists.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://breezewiki.private.coffee">BreezeWiki</a> - BreezeWiki is a privacy-friendly alternative front-end to Fandom.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://ducksforducks.private.coffee">Ducks for Ducks</a> - Ducks for Ducks is a privacy-friendly alternative front-end to Geeks for Geeks.
+            </li>
+          
+        
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://penpot.private.coffee">Penpot</a> - Penpot is an open-source design and prototyping platform.
+            </li>
+          
+        
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://pcof.fi">YOURLS</a> - URL shortener for creating handy links.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://rallly.private.coffee">Rallly</a> - Rallly is a free collaborative scheduling service for voting and polls.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://librey.private.coffee">LibreY</a> - Privacy-friendly metasearch engine.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://gothub.private.coffee">GotHub</a> - Alternative GitHub interface that respects privacy.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://binternet.private.coffee">Binternet</a> - Binternet is a privacy-friendly alternative front-end to Pinterest.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://monerooo.private.coffee">Moner.ooo</a> - Moner.ooo is a service for checking Monero/fiat exchange rates.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://httpbin.private.coffee">httpbin</a> - httpbin is a service for testing HTTP requests.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://overpass.private.coffee">Overpass</a> - Overpass is an API for OpenStreetMap.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://googledonts.private.coffee">GoogleDonts</a> - GoogleDonts is a privacy-friendly proxy to Google Fonts.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://nocdnbs.private.coffee">nocdnbs</a> - nocdnbs is a privacy-friendly proxy to cdnjs.cloudflare.com
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://nobsdelivr.private.coffee">nobsdelivr</a> - nobsdelivr is a privacy-friendly proxy to cdn.jsdelivr.net
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://typenot.private.coffee">TypeNot</a> - TypeNot is a privacy-friendly proxy to Typekit.
+            </li>
+          
+        
+          
+            <li style="padding: 8px 0;">
+              <a style="color: #1a5dab;
+                        text-decoration: none"
+                 href="https://mjnml.private.coffee">mjnml</a> - mjnml is a privacy-friendly MJML renderer.
+            </li>
+          
+        
+      </ul>
+      <p>
+        For hosting inquiries for privacy-related, social, or wholesome projects, <a href="mailto:support@private.coffee"
+    style="color: #1a5dab;
+           text-decoration: none">get in touch</a>!
+      </p>
+    </div>
+  </body>
+</html>
