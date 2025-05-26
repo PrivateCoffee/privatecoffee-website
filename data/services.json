@@ -74,7 +74,7 @@
             "members_only": true,
             "tiny_description": "AI text and image generation",
             "short_description": "CoffeeGPT is a text and image generation service, only available for members of Private.coffee.",
-            "long_description": "CoffeeGPT is a text and image generation service based on open-source software like Open-WebUI, Ollama and ComfyUI, as well as free models like Gemma, FLUX and Llama. It is only available for members of Private.coffee.",
+            "long_description": "CoffeeGPT is a text and image generation service based on open-source software like Open-WebUI, Ollama and ComfyUI, as well as free models like Gemma, FLUX and Llama. It is only available for members of Private.coffee - to get access, please request an account by email or via Matrix.",
             "status": "OK",
             "links": [
                 {
