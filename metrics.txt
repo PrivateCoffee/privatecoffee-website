@@ -1,0 +1,5 @@
+# HELP privatecoffee_balance The balance of the private.coffee account
+# TYPE privatecoffee_balance gauge
+privatecoffee_balance{currency="EUR"} 135.07
+privatecoffee_balance{currency="BTC"} 0.000434
+privatecoffee_balance{currency="XMR"} 1.447661805527
