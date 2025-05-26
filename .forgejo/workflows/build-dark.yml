@@ -24,7 +24,7 @@ jobs:
       - name: Generate static site
         run: python3 main.py --theme dark --domains dark.private.coffee
 
-      - name: Deploy to pages-pride branch
+      - name: Deploy to pages-dark branch
         run: |
           # Configure Git
           git config --global user.name "Forgejo"

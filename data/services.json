@@ -282,6 +282,27 @@
             "exclude_from_simple": false
         },
         {
+            "name": "Ducks.now",
+            "url": "https://ducks.now",
+            "category": "Media & Content",
+            "homemade": "https://git.private.coffee/privatecoffee/ducks.now",
+            "fork": false,
+            "upstream": false,
+            "tiny_description": "duck image repository",
+            "short_descripion": "Ducks.now is a platform for sharing duck images",
+            "long_description": "Ducks.now is a modern, community-driven platform for sharing and discovering beautiful duck images.",
+            "status": "OK",
+            "links": [
+                {
+                    "name": "Go to Ducks.now",
+                    "url": "https://ducks.now"
+                }
+            ],
+            "icon": "camera",
+            "exclude_from_index": false,
+            "exclude_from_simple": false
+        },
+        {
             "name": "HedgeDoc",
             "url": "https://hedgedoc.private.coffee",
             "category": "Productivity & Collaboration",
