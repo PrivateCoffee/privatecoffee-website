@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="135" height="20" role="img" aria-label="LGBTIQ+">
+  <!-- This file was created as part of the Private.coffee project
+     It is licensed under the MIT license
+     For more information, please visit https://private.coffee -->
+  <title>LGBTIQ+</title>
+  <rect rx="3" width="135" height="20" fill="#555"></rect>
+  <rect x="53" width="82" height="20" fill="#e05d44"></rect>
+  <rect x="66.5" width="68.5" height="20" fill="#fecc00"></rect>
+  <rect x="80" width="55" height="20" fill="#61c354"></rect>
+  <rect x="93.5" width="41.5" height="20" fill="#007ec6"></rect>
+  <rect x="107" width="28" height="20" fill="#744ca1"></rect>
+  <rect x="120.5" width="14.5" height="20" rx="3" ry="3" fill="#8b00ff"></rect>
+  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="8">
+    <text x="27" y="15" fill="#fff">LGBTIQ+</text>
+  </g>
+</svg>
